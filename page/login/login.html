@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loginHtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>登录--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="loginBody">
+
+    <form class="layui-form layui-form-pane" action="">
+        <div class="login-title">后台管理系统</div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"><img src="../../images/login/account.svg"></label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                <p class="login-failure">用户名与密码不匹配</p>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"><img src="../../images/login/password.svg"></label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" id="imgCode">
+            <label class="layui-form-label"><img src="../../images/login/confirmed.svg"></label>
+            <div class="layui-input-block">
+                <input type="text" placeholder="请输入验证码" autocomplete="off" id="code" class="layui-input">
+                <img src="../../images/code.jpg" class="imgcode">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <button class="layui-btn layui-btn-lg layui-block layui-btn-normal" lay-filter="login" lay-submit>立即登录</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../../js/cache.js"></script>
+</body>
+
+</html>

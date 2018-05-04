@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加一级代理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent">
+        <div class="layui-layer-title">添加一级代理
+            <a href="../account/agentList.html"><i class="layui-icon" style="float: right;">&#x1006;</i></a></div>
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th colspan="4">帐户管理>添加代理帐号</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>上级用户：</td>
+                        <td colspan="4">
+                            <div class="addlstUser">
+                                <span>大股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                    <option value="0">请选择</option>
+                                    <option value="1">请选择</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="addlstUser">
+                                <span>股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                        <option value="0">请选择</option>
+                                        <option value="1">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="addlstUser">
+                                <span>总代：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                        <option value="0">请选择</option>
+                                        <option value="1">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>用户名：</td>
+
+                        <td>
+                            <div class="layui-inline"><input type="text" class="layui-input">
+                            </div>
+                            <span class="mark">*</span>
+                        </td>
+                        <td>昵称：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <span class="mark">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <span class="mark">*</span>
+                        </td>
+                        <td>昵称状态:</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                <option value="0">开启</option>
+                                <option value="1">关闭</option>
+                            </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>返点设置：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">默认模版</option>
+                                    <option value="1">默认模版1</option>
+                                    <option value="2">默认模版2</option>
+                                    <option value="3">默认模版3</option>
+                                    <option value="4">默认模版4</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>投注状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">开启</option>
+                                    <option value="1">关闭</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="magt10 layui-center">
+
+            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
