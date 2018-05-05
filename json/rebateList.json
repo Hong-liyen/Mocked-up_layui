@@ -1,28 +1,27 @@
 {
-	"code": 0,
-	"msg": "",
-	"count": 3,
-	"data": [
-		{
-			"rebateId": "1",
-			"rebateModuleName": "基础模板",
-			"rebateBet": "10000.00",
-			"rebateSupLimit": "10000000.00",
-			"rebateEdit": "1"
-		},
-		{
-			"rebateId": "2",
-			"rebateModuleName": "VIP代理返点",
-			"rebateBet": "123450.00",
-			"rebateSupLimit": "100000.00",
-			"rebateEdit": "0"
-		},
-		{
-			"rebateId": "3",
-			"rebateModuleName": "新代理返点",
-			"rebateBet": "123440.00",
-			"rebateSupLimit": "200000.00",
-			"rebateEdit": ""
-		}
-	]
+    "code": 0,
+    "msg": "",
+    "count": 3,
+    "data": [{
+            "rebateId": "1",
+            "rebateModuleName": "基础模板",
+            "rebateBet": "10000.00",
+            "rebateSupLimit": "10000000.00",
+            "rebateEdit": "1"
+        },
+        {
+            "rebateId": "2",
+            "rebateModuleName": "VIP代理返点",
+            "rebateBet": "123450.00",
+            "rebateSupLimit": "100000.00",
+            "rebateEdit": "0"
+        },
+        {
+            "rebateId": "3",
+            "rebateModuleName": "新代理返点",
+            "rebateBet": "123440.00",
+            "rebateSupLimit": "200000.00",
+            "rebateEdit": ""
+        }
+    ]
 }

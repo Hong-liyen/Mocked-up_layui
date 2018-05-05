@@ -1,0 +1,67 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 6,
+	"data": [
+		{
+			"subMemberFinanceId": "912048957",
+			"subMemberFinanceMemberId": "susan01",
+			"subMemberFinanceType": "5",
+			"subMemberFinanceAmount": "222.0",
+			"subMemberFinanceBalance": "222.21",
+			"subMemberFinanceTime": "2018-05-02 04:02:24",
+			"subMemberFinanceList": "165038081716039680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subMemberFinanceId": "912048856",
+			"subMemberFinanceMemberId": "susan26",
+			"subMemberFinanceType": "1",
+			"subMemberFinanceAmount": "235.0",
+			"subMemberFinanceBalance": "282.21",
+			"subMemberFinanceTime": "2018-05-02 04:02:24",
+			"subMemberFinanceList": "165038081716039680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subMemberFinanceId": "968516756",
+			"subMemberFinanceMemberId": "susan88",
+			"subMemberFinanceType": "2",
+			"subMemberFinanceAmount": "1235.0",
+			"subMemberFinanceBalance": "2281.32",
+			"subMemberFinanceTime": "2018-05-03 04:02:24",
+			"subMemberFinanceList": "165038081726040680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subMemberFinanceId": "912048957",
+			"subMemberFinanceMemberId": "susan01",
+			"subMemberFinanceType": "7",
+			"subMemberFinanceAmount": "222.0",
+			"subMemberFinanceBalance": "222.21",
+			"subMemberFinanceTime": "2018-05-02 04:02:24",
+			"subMemberFinanceList": "165038081716039680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subMemberFinanceId": "912048856",
+			"subMemberFinanceMemberId": "susan26",
+			"subMemberFinanceType": "8",
+			"subMemberFinanceAmount": "235.0",
+			"subMemberFinanceBalance": "282.21",
+			"subMemberFinanceTime": "2018-05-02 04:02:24",
+			"subMemberFinanceList": "165038081716039680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subMemberFinanceId": "968516756",
+			"subMemberFinanceMemberId": "susan88",
+			"subMemberFinanceType": "4",
+			"subMemberFinanceAmount": "1235.0",
+			"subMemberFinanceBalance": "2281.32",
+			"subMemberFinanceTime": "2018-05-03 04:02:24",
+			"subMemberFinanceList": "165038081726040680",
+			"subMemberFinanceNote": "从BWT平台转出到传统彩平台"
+		}
+	]
+}

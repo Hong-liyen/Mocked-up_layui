@@ -29,7 +29,7 @@
                     "icon": "",
                     "href": "",
                     "spread": false,
-                    "target": "_blank"
+                    "target": ""
                 },
                 {
                     "title": "代理",
@@ -70,7 +70,7 @@
                     "icon": "",
                     "href": "",
                     "spread": false,
-                    "target": "_blank"
+                    "target": ""
                 },
                 {
                     "title": "支付平台设定",
@@ -135,14 +135,14 @@
                         {
                             "title": "人工提出",
                             "icon": "",
-                            "href": "page/finance/storeList.html",
+                            "href": "",
                             "spread": false,
                             "target": "_blank"
                         },
                         {
                             "title": "批次处理",
                             "icon": "",
-                            "href": "page/login/login.html",
+                            "href": "",
                             "spread": false,
                             "target": "_blank"
                         }
@@ -170,7 +170,7 @@
                     ]
                 },
                 {
-                    "title": "子线金系统",
+                    "title": "子现金系统",
                     "icon": "",
                     "href": "",
                     "spread": false,
@@ -178,15 +178,14 @@
                     "thirdChildren": [{
                             "title": "会员记录",
                             "icon": "",
-                            "href": "",
+                            "href": "page/subFinance/memberFinance.html",
                             "spread": false
                         },
                         {
                             "title": "代理记录",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/subFinance/agentFinance.html",
+                            "spread": false
                         }
                     ]
                 },
@@ -244,8 +243,29 @@
         {
             "title": "运营管理",
             "icon": "&#xe634;",
-            "href": "page/img/images.html",
-            "spread": false
+            "href": "",
+            "spread": false,
+            "children": [{
+                    "title": "返水统计",
+                    "icon": "",
+                    "href": "page/agent/backwater.html",
+                    "spread": false
+                },
+                {
+                    "title": "返水查询",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "_blank"
+                },
+                {
+                    "title": "代理返水查询",
+                    "icon": "",
+                    "href": "page/agent/agentBackwater.html",
+                    "spread": false,
+                    "target": ""
+                }
+            ]
         },
         {
             "title": "平台管理",

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文章列表--layui后台管理模板 2.0</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form agentList">
+	<blockquote class="layui-elem-quote quoteBox">
+		<form class="layui-form">
+			<div class="layui-inline">
+				<div class="layui-form-item">
+						<label class="layui-form-label">时间（美东时间）</label>
+						<div class="layui-input-block">
+						  <select name="level" lay-verify="required">
+								<option value="0">上个月</option>
+								<option value="1">本月</option>
+						  </select>
+						</div>
+					</div>
+			</div>
+			<div class="layui-inline">
+					<div class="layui-input-inline">
+							<input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
+						</div>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
+						</div>
+			</div>
+
+			<div class="layui-inline">
+					<div class="layui-form-item">
+							<label class="layui-form-label">单号：</label>
+							<div class="layui-input-block">
+								<input type="text" class="layui-input searchVal" placeholder="请输入搜索单号" />
+							</div>
+						</div>
+				</div>
+
+				<div class="layui-inline">
+						<div class="layui-form-item">
+								<label class="layui-form-label">查询类别：</label>
+								<div class="layui-input-block">
+									<select name="city" lay-verify="required">
+										<option value="">全部</option>
+										<option value="0">代理返点</option>
+										<option value="1">额度转出</option>
+									</select>
+								</div>
+								</div>
+					</div>
+					
+					<div class="layui-inline">
+						<a class="layui-btn layui-btn-normal">查询</a>
+					</div>
+		</form>
+		
+	</blockquote>
+	<table id="agentFinance" lay-filter="agentFinance"></table>
+	<!--额度转换状态-->
+	<script type="text/html" id="subagentFinanceType">
+		{{#  if( d.subagentFinanceType == "0"){ }}
+		<span>层级-额度转换</span>
+		{{#  } else if( d.subagentFinanceType == "1") { }}
+		<span>系统-新增快开额度</span>
+		{{#  } else if( d.subagentFinanceType == "2") { }}
+		<span>API存入</span>
+		{{#  } else if( d.subagentFinanceType == "3") { }}
+		<span>API取出</span>
+		{{#  } else if( d.subagentFinanceType == "4") { }}
+		<span>开分-机率</span>
+		{{#  } else if( d.subagentFinanceType == "5") { }}
+		<span>洗分-机率</span>
+		{{#  } else if( d.subagentFinanceType == "6") { }}
+		<span>钱包存入</span>
+		{{#  } else if( d.subagentFinanceType == "7") { }}
+		<span>钱包取出</span>
+		{{#  } else if( d.subagentFinanceType == "8") { }}
+		<span>API存入异常</span>
+		{{#  } else if( d.subagentFinanceType == "9") { }}
+		<span>API取出异常</span>
+		{{#  } else { }}
+		<span>资料异常</span>
+		{{#  }}}
+	</script>
+
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="agentFinance.js"></script>
+</body>
+</html>

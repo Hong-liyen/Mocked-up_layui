@@ -1,0 +1,67 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 6,
+	"data": [
+		{
+			"subagentFinanceId": "912048957",
+			"subagentFinanceMemberId": "susan01",
+			"subagentFinanceType": "5",
+			"subagentFinanceAmount": "222.0",
+			"subagentFinanceBalance": "222.21",
+			"subagentFinanceTime": "2018-05-02 04:02:24",
+			"subagentFinanceList": "165038081716039680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subagentFinanceId": "912048856",
+			"subagentFinanceMemberId": "susan26",
+			"subagentFinanceType": "1",
+			"subagentFinanceAmount": "235.0",
+			"subagentFinanceBalance": "282.21",
+			"subagentFinanceTime": "2018-05-02 04:02:24",
+			"subagentFinanceList": "165038081716039680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subagentFinanceId": "968516756",
+			"subagentFinanceMemberId": "susan88",
+			"subagentFinanceType": "2",
+			"subagentFinanceAmount": "1235.0",
+			"subagentFinanceBalance": "2281.32",
+			"subagentFinanceTime": "2018-05-03 04:02:24",
+			"subagentFinanceList": "165038081726040680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subagentFinanceId": "912048957",
+			"subagentFinanceMemberId": "susan01",
+			"subagentFinanceType": "7",
+			"subagentFinanceAmount": "222.0",
+			"subagentFinanceBalance": "222.21",
+			"subagentFinanceTime": "2018-05-02 04:02:24",
+			"subagentFinanceList": "165038081716039680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subagentFinanceId": "912048856",
+			"subagentFinanceMemberId": "susan26",
+			"subagentFinanceType": "8",
+			"subagentFinanceAmount": "235.0",
+			"subagentFinanceBalance": "282.21",
+			"subagentFinanceTime": "2018-05-02 04:02:24",
+			"subagentFinanceList": "165038081716039680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		},
+		{
+			"subagentFinanceId": "968516756",
+			"subagentFinanceMemberId": "susan88",
+			"subagentFinanceType": "4",
+			"subagentFinanceAmount": "1235.0",
+			"subagentFinanceBalance": "2281.32",
+			"subagentFinanceTime": "2018-05-03 04:02:24",
+			"subagentFinanceList": "165038081726040680",
+			"subagentFinanceNote": "从BWT平台转出到传统彩平台"
+		}
+	]
+}

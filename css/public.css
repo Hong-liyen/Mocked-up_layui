@@ -1231,3 +1231,15 @@ h2.method {
 .addtemplate .addtemplateButton {
     margin: 5% 0 0 15px;
 }
+
+.agentbackwater table {
+    margin-top: 25px;
+}
+
+.backwater .title {
+    padding: 0 20px;
+}
+
+.backwater button {
+    margin: 0 20px;
+}

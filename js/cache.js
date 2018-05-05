@@ -152,7 +152,7 @@ layui.use(['form', 'jquery', "layer"], function() {
                 '</div>' +
                 '<div class="layui-form-item skinBtn">' +
                 '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-normal" lay-submit="" lay-filter="settingSuccess">设定完成</a>' +
-                '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary" lay-submit="" lay-filter="noSetting">朕再想想</a>' +
+                '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary" lay-submit="" lay-filter="noSetting">取消更换</a>' +
                 '</div>' +
                 '</form>' +
                 '</div>',
@@ -225,7 +225,7 @@ layui.use(['form', 'jquery', "layer"], function() {
                 '</div>' +
                 '<div class="layui-form-item skinBtn">' +
                 '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-normal" lay-submit="" lay-filter="changeSkin">确定更换</a>' +
-                '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary" lay-submit="" lay-filter="noChangeSkin">朕再想想</a>' +
+                '<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary" lay-submit="" lay-filter="noChangeSkin">取消更换</a>' +
                 '</div>' +
                 '</form>' +
                 '</div>',

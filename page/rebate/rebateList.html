@@ -36,10 +36,11 @@
         <!--编辑状态-->
         <script type="text/html" id="rebateEdit">
             {{# if( d.rebateEdit == "0"){ }}
-            <span> </span> {{# } else if( d.rebateEdit == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-normal">查看</a>
+            <a class="layui-btn layui-btn-xs">模版使用中</a> {{# } else if( d.rebateEdit == "1"){ }}
             <a class="layui-btn layui-btn-xs layui-btn-normal" href="../rebate/rebateEdit.html">修改</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">修改</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">权限</a> {{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-danger">权限</a> {{# }}}
         </script>
 
         <!--操作-->
