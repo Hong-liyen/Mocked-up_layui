@@ -449,7 +449,7 @@ html #layuicss-layer {
 }
 
 .layui-layer-btn {
-    text-align: right;
+    text-align: center;
     padding: 0 15px 12px;
     pointer-events: auto;
     user-select: none;

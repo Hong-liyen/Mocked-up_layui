@@ -1137,10 +1137,6 @@ h2.method {
     }
 }
 
-.addtemplate .layui-form-label {
-    width: auto;
-}
-
 .addtemplate .rebate {
     padding: 9px 15px;
     width: 85px;
@@ -1224,6 +1220,10 @@ h2.method {
     margin-bottom: 5%;
 }
 
+.addtemplate .addtemplateBasic .layui-form-label {
+    width: 90px;
+}
+
 .addtemplate .addtemplateBasic .layui-inline {
     width: 30%;
 }
@@ -1242,4 +1242,11 @@ h2.method {
 
 .backwater button {
     margin: 0 20px;
+}
+
+
+/* 20180505 Amanda */
+
+.loginBody .layui-form-label {
+    width: 60px;
 }

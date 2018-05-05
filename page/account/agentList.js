@@ -19,18 +19,18 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             cols: [
                 [
                     // {type: "checkbox", fixed:"left", width:50},
-                    { field: 'agentId', title: '序号', width: 60, align: "center" },
-                    { field: 'agentName', title: '用户名', width: 110, align: "center" },
-                    { field: 'agentNickName', title: '昵称', width: 90, align: "center" },
-                    { field: 'agentSup', title: '上级', width: 70, align: "center" },
+                    { field: 'agentId', title: '序号', width: 70, align: "center" },
+                    { field: 'agentName', title: '用户名', width: 145, align: "center" },
+                    { field: 'agentNickName', title: '昵称', width: 145, align: "center" },
+                    { field: 'agentSup', title: '上级', width: 80, align: "center" },
                     // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
-                    { field: 'agentBalance', title: '账户余额', width: 150, align: 'center' },
-                    { field: 'agentSubAgent', title: '下级代理', width: 90, align: "center" },
-                    { field: 'agentSubMember', title: '下级会员', width: 90, align: "center" },
-                    { field: 'agentLevel', title: '层级', width: 60, align: "center" },
-                    { field: 'agentRebate', title: '返点明细', width: 90, align: 'center' },
-                    { field: 'agentAccount', title: '账号', width: 70, align: 'center', templet: "#agentAccount" },
-                    { field: 'agentBet', title: '投注', width: 70, align: 'center', templet: "#agentBet" },
+                    { field: 'agentBalance', title: '账户余额', width: 180, align: 'center' },
+                    { field: 'agentSubAgent', title: '下级代理', width: 100, align: "center" },
+                    { field: 'agentSubMember', title: '下级会员', width: 100, align: "center" },
+                    { field: 'agentLevel', title: '层级', width: 70, align: "center" },
+                    { field: 'agentRebate', title: '返点明细', width: 100, align: 'center' },
+                    { field: 'agentAccount', title: '账号', width: 100, align: 'center', templet: "#agentAccount" },
+                    { field: 'agentBet', title: '投注', width: 100, align: 'center', templet: "#agentBet" },
                     // {field: 'agentTop', title: '是否置顶', align:'center', templet:function(d){
                     //     return '<input type="checkbox" name="agentTop" lay-filter="agentTop" lay-skin="switch" lay-text="是|否" '+d.agentTop+'>'
                     // }},
@@ -39,13 +39,13 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         title: '注册时间',
                         align: 'center',
                         sort: "true",
-                        minWidth: 130,
+                        minwidth: 160,
                         templet: function(d) {
                             return d.agentTime.substring(0, 10);
                         }
                     },
                     { field: 'agentLogin', title: '登录', width: 60, align: "center" },
-                    { title: '操作', width: 210, templet: '#agentListBar', fixed: "right", align: "center" },
+                    { title: '操作', width: 280, templet: '#agentListBar', fixed: "right", align: "center" },
                 ]
             ]
         });
@@ -212,7 +212,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         // })
                     });
             } else if (layEvent === 'Leveldetail') { //上級路徑
-                layer.confirm(obj.data.Level1 + obj.data.Level2 + obj.data.Level3 + obj.data.Level4 + obj.data.Level5 + obj.data.Level6, { title: '帐号层级' },
+                layer.confirm(obj.data.Level1 + obj.data.Level2 + obj.data.Level3 + obj.data.Level4 + obj.data.Level5 + obj.data.Level6, { title: '账号层级' },
                     function(index) {
                         tableIns.reload();
                         layer.close(index);
@@ -238,12 +238,12 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             } else if (layEvent === 'edit') { //编辑
                 editAgent(data);
             } else if (layEvent === 'authority') { //權限
-                layer.confirm('此帐户权限为 OOOO', { icon: 3, title: '帐户权限' }, function(index) {
+                layer.confirm('此账户权限为 OOOO', { icon: 3, title: '账户权限' }, function(index) {
                     tableIns.reload();
                     layer.close(index);
                 });
-            } else if (layEvent === 'info') { //帐户信息
-                layer.alert("帐户信息帐户信息帐户信息帐户信息帐户信息")
+            } else if (layEvent === 'info') { //账户信息
+                layer.alert("账户信息账户信息账户信息账户信息账户信息")
             } else if (layEvent === 'add') { //添加
                 addAgent(data);
             } else if (layEvent === 'add1st') { //添加
