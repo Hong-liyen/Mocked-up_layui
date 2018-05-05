@@ -1,0 +1,62 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 5,
+	"data": [
+		{
+			"rebateSearchListId": "13340",
+			"rebateSearchListName": "12",
+			"rebateSearchListTime": "2018-04-30 09：23：02",
+			"rebateSearchListStart": "2018-04-29 00：00：00",
+			"rebateSearchListEnd": "2018-04-29 23：59：59",
+			"rebateSearchListStatus": "0",
+			"rebateSearchListSum": "0/0.00",
+			"rebateSearchListWait": "4/897.8",
+			"rebateSearchListDetail": "1"
+		},
+		{
+			"rebateSearchListId": "13341",
+			"rebateSearchListName": "1dfajlsk",
+			"rebateSearchListTime": "2018-04-30 09：23：02",
+			"rebateSearchListStart": "2018-04-29 00：00：00",
+			"rebateSearchListEnd": "2018-04-29 23：59：59",
+			"rebateSearchListStatus": "0",
+			"rebateSearchListSum": "7/477068",
+			"rebateSearchListWait": "0/0.00",
+			"rebateSearchListDetail": "1"
+		},
+		{
+			"rebateSearchListId": "13342",
+			"rebateSearchListName": "lemzjxve",
+			"rebateSearchListTime": "2018-04-28 17：43：02",
+			"rebateSearchListStart": "2018-04-26 00：00：00",
+			"rebateSearchListEnd": "2018-04-26 23：59：59",
+			"rebateSearchListStatus": "1",
+			"rebateSearchListSum": "0/0.00",
+			"rebateSearchListWait": "14/202.38",
+			"rebateSearchListDetail": "0"
+		},
+		{
+			"rebateSearchListId": "13343",
+			"rebateSearchListName": "fdasjp",
+			"rebateSearchListTime": "2018-04-30 09：23：02",
+			"rebateSearchListStart": "2018-04-29 00：00：00",
+			"rebateSearchListEnd": "2018-04-29 23：59：59",
+			"rebateSearchListStatus": "0",
+			"rebateSearchListSum": "0/0.00",
+			"rebateSearchListWait": "14/199.74",
+			"rebateSearchListDetail": "0"
+		},
+		{
+			"rebateSearchListId": "13345",
+			"rebateSearchListName": "kkdj",
+			"rebateSearchListTime": "2018-04-20 09：23：02",
+			"rebateSearchListStart": "2018-04-16 00：00：00",
+			"rebateSearchListEnd": "2018-04-18 23：59：59",
+			"rebateSearchListStatus": "0",
+			"rebateSearchListSum": "14/168.94",
+			"rebateSearchListWait": "0/0.00",
+			"rebateSearchListDetail": "0"
+		}
+	]
+}

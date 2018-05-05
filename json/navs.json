@@ -254,9 +254,9 @@
                 {
                     "title": "返水查询",
                     "icon": "",
-                    "href": "",
+                    "href": "page/rebateSearch/rebateSearchList.html",
                     "spread": false,
-                    "target": "_blank"
+                    "target": ""
                 },
                 {
                     "title": "代理返水查询",
