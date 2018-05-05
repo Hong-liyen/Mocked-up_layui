@@ -1103,11 +1103,13 @@ h2.method {
 
 /* 2018/05/03 Amanda */
 
-.addagent .rebasebox {
+.addagent .rebasebox,
+.addagentone1stmember .rebasebox {
     margin-bottom: 15px;
 }
 
-.addagent .rebasebox .title {
+.addagent .rebasebox .title,
+.addagentone1stmember .rebasebox .title {
     display: inline-block;
     width: 80px;
     float: left;
@@ -1116,7 +1118,8 @@ h2.method {
     line-height: 38px;
 }
 
-.addagent .rebasebox .desc {
+.addagent .rebasebox .desc,
+.addagentone1stmember .rebasebox .desc {
     display: inline-block;
     width: 150px;
     height: 38px;
@@ -1125,19 +1128,22 @@ h2.method {
     padding-left: 15px;
 }
 
-.addagent tbody>tr>td:nth-child(odd) {
+.addagent tbody>tr>td:nth-child(odd),
+.addagentone1stmember tbody>tr>td:nth-child(odd) {
     background-color: #f2f2f2;
     text-align: right;
     width: 75px;
 }
 
 @media (max-width: 768px) {
-    .addagent tbody>tr>tdnth-child(odd) {
+    .addagent tbody>tr>tdnth-child(odd),
+    .addagentone1stmember tbody>tr>tdnth-child(odd) {
         padding: 9px 3px !important;
     }
 }
 
-.addtemplate .rebate {
+.addtemplate .rebate,
+.addagentone1stmember .rebate {
     padding: 9px 15px;
     width: 85px;
     font-weight: 400;
@@ -1146,12 +1152,14 @@ h2.method {
     margin-bottom: 10px;
 }
 
-.addtemplate .rebatebox {
+.addtemplate .rebatebox,
+.addagentone1stmember .rebatebox {
     margin-bottom: 15px;
     line-height: 38px;
 }
 
-.addtemplate .rebatebox .layui-input-block {
+.addtemplate .rebatebox .layui-input-block,
+.addagentone1stmember .rebatebox .layui-input-block {
     margin-left: 0;
 }
 
@@ -1199,7 +1207,8 @@ h2.method {
     line-height: 38px;
 }
 
-.addtemplate .layui-layer-title {
+.addtemplate .layui-layer-title,
+.addagentone1stmember .layui-layer-title {
     padding: 0 20px;
     height: 42px;
     line-height: 42px;

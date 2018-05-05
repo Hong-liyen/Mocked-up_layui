@@ -19,11 +19,11 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         cols: [
             [
                 // {type: "checkbox", fixed:"left", width:50},
-                { field: 'rebateId', title: '序号', width: 60, align: "center" },
-                { field: 'rebateModuleName', title: '用户名', width: 110, align: "center" },
-                { field: 'rebateBet', title: '有效投注', align: 'center' },
-                { field: 'rebateSupLimit', title: '返点上限', align: "center" },
-                { field: 'rebateEdit', title: '编辑', align: "center", templet: "#rebateEdit" }
+                { field: 'rebateId', title: '序号', width: 100, align: "center" },
+                { field: 'rebateModuleName', title: '用户名', width: 300, align: "center" },
+                { field: 'rebateBet', title: '有效投注', minwidth: 150, align: 'center' },
+                { field: 'rebateSupLimit', title: '返点上限', minwidth: 150, align: "center" },
+                { field: 'rebateEdit', title: '编辑', width: 320, align: "center", templet: "#rebateEdit" }
             ]
         ]
     });
