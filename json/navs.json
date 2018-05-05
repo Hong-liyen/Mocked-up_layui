@@ -256,7 +256,22 @@
                     "icon": "",
                     "href": "page/rebateSearch/rebateSearchList.html",
                     "spread": false,
-                    "target": ""
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "返水冲销明细",
+                            "icon": "",
+                            "spread": false,
+                            "href": "page/rebateSearch/rebateChargeoff.html",
+                            "target": ""
+                        },
+                        {
+                            "title": "待返水明细",
+                            "icon": "",
+                            "href": "page/subFinance/agentFinance.html",
+                            "spread": false,
+                            "target": ""
+                        }
+                    ]
                 },
                 {
                     "title": "代理返水查询",

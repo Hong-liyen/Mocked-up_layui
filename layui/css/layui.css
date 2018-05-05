@@ -1873,7 +1873,7 @@ hr {
     display: inline-block;
     height: 38px;
     line-height: 38px;
-    padding: 0 35px;
+    padding: 0 15px;
     background-color: #009688;
     color: #fff;
     white-space: nowrap;
@@ -3210,6 +3210,7 @@ input.layui-login::placeholder {
 }
 
 .layui-table-page>div {
+    float:right;
     height: 26px
 }
 
@@ -4655,86 +4656,104 @@ body .layui-util-face .layui-layer-content {
 }
 
 
-/* 20180502 StoreList form sepc --Sharlene */
-
-div.searchAgent,
-div.searchMember {
-    margin-top: -18px;
-    margin-bottom: 12px;
-    vertical-align: middle;
-    letter-spacing: 0.04em;
-}
-
-.storeList .layui-form-item,
-.agentList .layui-form-item {
-    margin-bottom: 0;
-}
-
-.storeList .layui-inline .layui-form-label,
-.agentList .layui-inline .layui-form-label {
-    width: auto;
-    padding: 9px 0px;
-}
-
-.storeList .layui-inline .layui-input-block,
-.agentList .layui-inline .layui-input-block {
-    display: inline-block;
-    margin-left: auto;
-}
-
-
 /* 20180502 StoreList btn sepc --Sharlene */
-
-
 /* 20180503 accountAgentList btn sepc --Sharlene */
-
-div.searchAgent a,
-div.searchMember a {
-    margin-right: 5px;
-    margin-top: -3px;
-}
-
-.storeList blockquote,
-.agentList blockquote {
-    margin-bottom: 30px;
-}
-
 .storeList .layui-btn+.layui-btn,
-.agentList .layui-btn+.layui-btn {
+.agentList .layui-btn+.layui-btn{
     margin-left: -3px;
 }
-
 .storeList .layui-inline,
-.agentList .layui-inline {
+.agentList .layui-inline{
     display: inline-block;
     margin-right: 20px !important;
 }
-
 .storeList .layui-inline:last-child,
-.agentList .layui-inline:last-child {
+.agentList .layui-inline:last-child{
     margin-right: 0px !important;
 }
 
 
 /* 20180502 StoreList form sepc --Sharlene */
-
+/* 20180504 reBateList form sepc --Sharlene */
 .storeList .layui-form-item,
-.agentList .layui-form-item {
+.agentList .layui-form-item,
+.rebateList .layui-form-item{
     margin-bottom: 0;
 }
-
 .storeList .layui-inline .layui-form-label,
-.agentList .layui-inline .layui-form-label {
+.agentList .layui-inline .layui-form-label,
+.rebateList .layui-inline .layui-form-label{
     width: auto;
     padding: 9px 0px;
 }
 
 .storeList .layui-inline .layui-input-block,
-.agentList .layui-inline .layui-input-block {
+.agentList .layui-inline .layui-input-block,
+.rebateList .layui-inline .layui-input-block{
     display: inline-block;
     margin-left: auto;
 }
 
-.agentList .layui-input-block {
+.agentList .layui-input-block,
+.rebateList .layui-input-block{
     width: 140px;
+}
+
+/* 20180504 StoreList,Agent Setting: blockquote, search result--Sharlene */
+.storeList blockquote,
+.agentList blockquote,
+.rebateList blockquote{
+    margin-bottom: 30px;
+}
+div.searchAgent,
+div.searchMember{
+    margin-top: -18px;
+    margin-bottom: 12px;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+}
+div.searchAgent a,
+div.searchMember a{
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+.line-height2-5{
+    line-height: 2.5;
+}
+
+.rebateSearchSum{
+    display:inline-block;
+    z-index: 999;
+    position: fixed;
+    bottom: 0 !important;
+    padding: 0px 0 10px 10px;
+}
+
+.rebateSearchSum p{
+    background-color: white;
+    padding: 10px;
+}
+
+table.rebateChargeoff th,
+table.rebateChargeoff td{
+    text-align: center;
+}
+
+table.rebateChargeoff  .layui-input-block{
+    margin-left: 0;
+    min-height: auto;
+}
+div.page-shift{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background-color: #fff;
+}
+.layui-table-page.page-shift > div{
+    margin-right: 10px;
+} 
+
+.layui-layer-content{
+    text-align:center;
 }

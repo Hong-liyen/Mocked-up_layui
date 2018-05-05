@@ -22,12 +22,16 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">日期：</label>
                         <div class="layui-input-inline">
-                            <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
-                        </div>
-                        <span>~</span>
+                            <input type="text" class="layui-input" id="dateStart">
+                          </div>
+                        <span class="line-height2-5">~</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
                         <div class="layui-input-inline">
-                            <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
-                        </div>
+                            <input type="text" class="layui-input" id="dateEnd">
+                          </div>
                     </div>
                 </div>
 
@@ -86,19 +90,60 @@
             <a class="layui-btn layui-btn-xs" lay-event="add">返水/冲销明细</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs" lay-event="add">返水/冲销明细</a>
             <a class="layui-btn layui-btn-xs layui-btn-primary">待返水明细</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger">删除事件</a> {{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-danger"  method="offset" onclick="pageDel()">删除事件</a> {{# }}}
         </script>
 
-        <!--操作-->
+        <!-- 操作
         <script type="text/html" id="rebateSearchListBar">
             <a class="layui-btn layui-btn-xs" lay-event="add">添加</a>
             <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="info">信息</a>
             <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">修改</a>
             <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="authority">权限</a>
-        </script>
+        </script> -->
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="rebateSearchList.js"></script>
+
+    <script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+<!-- ▼ 日期弹窗 ▼ -->
+<script>
+    //日期彈窗
+    layui.use('laydate', function(){
+    var laydate = layui.laydate;
+
+    //自定义格式
+    laydate.render({
+        elem: '#dateStart'
+        ,format: 'yyyy-MM-dd'
+        ,value: '2018-01-01'
+    });
+
+    laydate.render({
+        elem: '#dateEnd'
+        ,format: 'yyyy-MM-dd'
+        ,value: '2018-01-01'
+    });
+
+    });
+</script>
+<script>
+		// 删除弹窗
+		function pageDel() {
+			layer.open({
+				type:1,
+				closeBtn:1,
+				btn: ['删除事件','取消删除'],
+				btnAlign: 'c',
+				shadeClose:true,
+				title:'删除事件',
+				area:['260px','160px'],
+				content:'确定要删除事件吗？'
+			});
+        }
+</script>
+
 </body>
 
 </html>

@@ -51,11 +51,11 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         return d.rebateSearchListEnd.substring(0, 10);
                     }
                 },
-                { field: 'rebateSearchListStatus', title: '事件状态', width: 80, align: "center", templet: "#rebateSearchListStatus" },
+                { field: 'rebateSearchListStatus', title: '事件状态', width: 100, align: "center", templet: "#rebateSearchListStatus" },
                 // {field: 'rebateSearchListPaymentSystem', title: '支付类型',  align:'center',templet:"#rebateSearchListPaymentSystem"},
-                { field: 'rebateSearchListSum', title: '总人数/总金额', width: 150, align: 'center' },
-                { field: 'rebateSearchListWait', title: '待返水人数/金额', width: 90, align: "center" },
-                { field: 'rebateSearchListDetail', title: '查询明细', width: 90, align: "center", templet: "#rebateSearchListDetail" }
+                { field: 'rebateSearchListSum', title: '总人数/总金额', width: 130, align: 'center' },
+                { field: 'rebateSearchListWait', title: '待返水人数/金额', width: 150, align: "center" },
+                { field: 'rebateSearchListDetail', title: '查询明细', width: 330, align: "center", templet: "#rebateSearchListDetail" }
             ]
         ],
 
