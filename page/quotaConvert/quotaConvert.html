@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>人工额度转换</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody yoAuditTable">
+    <form class="layui-form storeList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <span>账号：</span>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input searchVal" placeholder=" ">
+                    </div>
+                    <a class="layui-btn layui-btn-normal search_btn">查询</a>
+                </div>
+            </div>
+
+        </blockquote>
+        <table class="layui-table rebateChargeoff">
+            <thead>
+                <tr>
+                    <th>总金额</th>
+                    <th>现金金额</th>
+                    <th>AG金额</th>
+                    <th>OG金额</th>
+                    <th>BB金额</th>
+                    <th>AB金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12220.0</td>
+                    <td>1099.0</td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                    <td>100.0</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">更新</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>操作</td>
+                    <td>
+                        <div class="layui-inline">
+                            <select name="">
+                                <option value="0">转入</option>
+                                <option value="1">转出</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>第三方平台</td>
+                    <td>
+                        <div class="layui-inline">
+                            <select name="">
+                                <option value="0">AG平台</option>
+                                <option value="1">OG平台</option>
+                                <option value="2">BB平台</option>
+                                <option value="3">AB平台</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>金额</td>
+                    <td>
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="magt10 layui-center">
+            <a class="layui-btn layui-btn-normal layui-btn-lg">确定</a>
+        </div>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script>
+        layui.use(['form', 'layer'], function() {
+            var form = layui.form
+            var $ = layui.jquery
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理存入</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="agentDeposit">
+        <blockquote class="layui-elem-quote quoteBox">
+            <label>账号：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="">
+            </div>
+            <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+        </blockquote>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">人工提出</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>账号:</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>现金余额:</td>
+                        <td>0.0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="layui-red">*</span>出款:</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="item1">
+                        <td>优惠稽核:</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
+                            </div>
+                        </td>
+                        <td>
+                    </tr>
+                    <tr id="item2">
+                        <td>常态性稽核:</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
+                            </div>
+                        </td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td>提出项目:</td>
+                        <td>
+                            <div class="layui-inline">
+                                <div class="layui-form-item">
+                                    <select name="" lay-filter="category" aria-invalid="false">
+                                        <option value="0">重复出款</option>
+                                        <option value="1">公司入款误存</option>
+                                        <option value="2">会员负数回冲</option>
+                                        <option value="3">手动申请出款</option>
+                                        <option value="4">扣除非法下注派彩</option>
+                                        <option value="5">放弃存款优惠</option>
+                                        <option value="6">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="magt10 layui-left">
+                <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确认</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        #item1,
+        #item2 {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+            //下拉选项判断
+            form.on('select(category)', function(data) {
+                category = data.value;
+                categoryName = data.elem[data.elem.selectedIndex].text;
+                form.render('select');
+                if (category == 3) {
+                    $('#item1, #item2').show()
+                } else if (category == 6) {
+                    $('#item1').hide()
+                    $('#item2').show()
+                } else {
+                    $('#item1, #item2').hide()
+                }
+                console.log(data.value)
+            });
+        });
+    </script>
+</body>
+
+</html>

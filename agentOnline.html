@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理在线人数</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form memberOnline">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <span>在线人员：</span>
+                        <a href="#" class="layui-blue">大大股东
+                            <span class="layui-red">1</span>
+                        </a>
+                        <a href="#" class="layui-blue">大股东
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">股东
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">总代理
+                            <span class="layui-red">1</span>
+                        </a>
+                        <a href="#" class="layui-blue">代理商
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">大大股东子账号
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">大股东子账号
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">股东子账号
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">总代理子账号
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">代理商子账号
+                            <span class="layui-red">0</span>
+                        </a>
+                        <a href="#" class="layui-blue">会员
+                            <span class="layui-red">3</span>
+                        </a>
+                        <a href="#" class="layui-blue active">全部
+                            <span class="layui-red">7</span>
+                        </a>
+                    </div>
+                    <div class="layui-inline">
+                        <a method="offser" onclick="dataOutput()" class="layui-btn layui-btn-primary">在线详情导出</a>
+                    </div>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-right">
+                        <div class="layui-inline">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">自动刷新：</label>
+                                <div class="layui-input-block">
+                                    <select name="">
+                                        <option value="0">不刷新</option>
+                                        <option value="1">60</option>
+                                        <option value="2">90</option>
+                                        <option value="3">120</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <span>秒</span>
+                            <a href="#" class="layui-blue">刷新</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </blockquote>
+        <table id="agentOnlineList" lay-filter="agentOnlineList"></table>
+
+        <!--编辑状态-->
+        <script type="text/html" id="agentOnlineState">
+            {{# if( d.agentOnlineState == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageOut()">踢出</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageLock()">锁定</a> {{# } else if( d.agentOnlineState == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageStop()">停用</a> {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageOut()">踢出</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageLock()">锁定</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="pageStop()">停用</a>{{# }}}
+        </script>
+        <script type="text/javascript" src="layui/layui.js"></script>
+        <script type="text/javascript" src="agentOnline.js"></script>
+        <script>
+            // 踢出弹窗
+            function pageOut() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '踢出',
+                    area: ['260px', '160px'],
+                    content: '是否确定要踢出此账号?'
+                });
+            }
+            // 锁定弹窗
+            function pageLock() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '锁定',
+                    area: ['260px', '160px'],
+                    content: '是否确定要锁定此账号?'
+                });
+            }
+            // 停用弹窗
+            function pageStop() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '停用',
+                    area: ['260px', '160px'],
+                    content: '是否确定要停用此账号?'
+                });
+            }
+            // 在线详情导出
+            function dataOutput() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '在线详情导出',
+                    area: ['300px', '200px'],
+                    content: '确定导出？'
+                });
+            }
+        </script>
+    </form>
+
+</body>
+
+</html>

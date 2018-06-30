@@ -1,0 +1,26 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "subId": "1",
+            "subName": "<a href='editSub.html' class='layui-blue'>star0515</a>",
+            "subAccount": "0",
+            "subNote": " ",
+            "subAddTime": "2018-05-25 01:20:02",
+            "subLoginTime": "2018-05-25 03:50:15",
+            "subLogin": "<a href='loginSub.html' class='layui-blue'>3</a>",
+            "subIP": "3"
+        },
+        {
+            "subId": "2",
+            "subName": "<a href='editSub.html' class='layui-blue'>yolanda01</a>",
+            "subAccount": "1",
+            "subNote": "测试账号",
+            "subAddTime": "2018-05-22 05:59:20",
+            "subLoginTime": "2018-05-24 05:14:59",
+            "subLogin": "<a href='loginSub.html' class='layui-blue'>4</a>",
+            "subIP": "1"
+        }
+    ]
+}

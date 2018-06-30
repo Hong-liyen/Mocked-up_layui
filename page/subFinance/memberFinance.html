@@ -1,225 +1,148 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>文章列表--layui后台管理模板 2.0</title>
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="../../css/public.css" media="all" />
-</head>
-<body class="childrenBody">
-<form class="layui-form agentList">
-	<blockquote class="layui-elem-quote quoteBox">
-		<form class="layui-form">
-			<div class="layui-inline">
-				<div class="layui-form-item">
-						<label class="layui-form-label">时间（美东时间）</label>
-						<div class="layui-input-block">
-						  <select name="level" lay-verify="required">
-								<option value="0">上个月</option>
-								<option value="1">本月</option>
-						  </select>
-						</div>
-					</div>
-			</div>
-			<div class="layui-inline">
-					<div class="layui-input-inline">
-							<input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
-						</div>
-						<div class="layui-input-inline">
-							<input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
-						</div>
-			</div>
 
-			<div class="layui-inline">
+<head>
+    <meta charset="utf-8">
+    <title>文章列表--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <!-- <div class="layui-inline">
 					<div class="layui-form-item">
-							<label class="layui-form-label">单号：</label>
+							<label class="layui-form-label">时间（美东时间）</label>
 							<div class="layui-input-block">
-								<input type="text" class="layui-input searchVal" placeholder="请输入搜索单号" />
+							<select name="level" lay-verify="required">
+									<option value="0">上个月</option>
+									<option value="1">本月</option>
+							</select>
 							</div>
 						</div>
-				</div>
+				</div> -->
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">时间（美东时间）</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+                        </div>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">会员查询：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">单号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal" placeholder="" />
+                        </div>
+                    </div>
+                </div>
 
-				<div class="layui-inline">
-						<a method="offset" onclick="pageFunc1()" class="layui-btn layui-btn-normal search_option">查询类别</a>
-				</div>
-				
-					
-					<div class="layui-inline">
-						<a class="layui-btn layui-btn-normal">查询</a>
-					</div>
-		</form>
-		
-	</blockquote>
-	<table id="agentFinance" lay-filter="agentFinance"></table>
-	<!--额度转换状态-->
-	<script type="text/html" id="subagentFinanceType">
-		{{#  if( d.subagentFinanceType == "0"){ }}
-		<span>层级-额度转换</span>
-		{{#  } else if( d.subagentFinanceType == "1") { }}
-		<span>系统-新增快开额度</span>
-		{{#  } else if( d.subagentFinanceType == "2") { }}
-		<span>API存入</span>
-		{{#  } else if( d.subagentFinanceType == "3") { }}
-		<span>API取出</span>
-		{{#  } else if( d.subagentFinanceType == "4") { }}
-		<span>开分-机率</span>
-		{{#  } else if( d.subagentFinanceType == "5") { }}
-		<span>洗分-机率</span>
-		{{#  } else if( d.subagentFinanceType == "6") { }}
-		<span>钱包存入</span>
-		{{#  } else if( d.subagentFinanceType == "7") { }}
-		<span>钱包取出</span>
-		{{#  } else if( d.subagentFinanceType == "8") { }}
-		<span>API存入异常</span>
-		{{#  } else if( d.subagentFinanceType == "9") { }}
-		<span>API取出异常</span>
-		{{#  } else { }}
-		<span>资料异常</span>
-		{{#  }}}
-	</script>
+                <div class="layui-inline">
+                    <a href="memberTable.html" class="layui-btn layui-btn-normal search_option">查询类别</a>
+                </div>
 
-<script type="text/javascript" src="../../layui/layui.js"></script>
-<script type="text/javascript" src="agentFinance.js"></script>
-<!-- <script>
-		layui.use('layer', function(){ //独立版的layer无需执行这一句
-		//   var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
-		 
-		  
-		  //边缘弹出
-			layer.open({
-			type: 1
-			,offset: 't' //具体配置参考：offset参数项
-			,content: '<div style="padding: 20px 80px;">内容</div>'
-			,btn: '关闭全部'
-			,btnAlign: 'c' //按钮居中
-			,shade: 0 //不显示遮罩
-			,yes: function(){
-				layer.closeAll();
-			}
-			});
-		  
-		});
-		</script>
-	-->
-	
-<script>
-	// 查询类别
- 		function pageFunc1() {
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal">查询</a>
+                </div>
+                <div class="layui-inline data-output">
+                    <a method="offser" onclick="dataOutput()" class="layui-btn layui-btn-primary">数据导出</a>
+                    <div class="layui-inline">
+                        <i class="layui-icon info-icon"> &#xe60b;</i>
+                    </div>
+                </div>
+            </form>
+
+        </blockquote>
+        <table id="memberFinance" lay-filter="memberFinance"></table>
+        <!--额度转换状态-->
+        <script type="text/html" id="subMemberFinanceType">
+            {{# if( d.subMemberFinanceType == "0"){ }}
+            <span>层级-额度转换</span> {{# } else if( d.subMemberFinanceType == "1") { }}
+            <span>系统-新增快开额度</span> {{# } else if( d.subMemberFinanceType == "2") { }}
+            <span>API存入</span> {{# } else if( d.subMemberFinanceType == "3") { }}
+            <span>API取出</span> {{# } else if( d.subMemberFinanceType == "4") { }}
+            <span>开分-机率</span> {{# } else if( d.subMemberFinanceType == "5") { }}
+            <span>洗分-机率</span> {{# } else if( d.subMemberFinanceType == "6") { }}
+            <span>钱包存入</span> {{# } else if( d.subMemberFinanceType == "7") { }}
+            <span>钱包取出</span> {{# } else if( d.subMemberFinanceType == "8") { }}
+            <span>API存入异常</span> {{# } else if( d.subMemberFinanceType == "9") { }}
+            <span>API取出异常</span> {{# } else { }}
+            <span>资料异常</span> {{# }}}
+        </script>
+    </form>
+
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="memberFinance.js"></script>
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
+            });
+        });
+        // 查询类别
+        // function pageFunc1() {
+        //     layer.open({
+        //         type:1,
+        //         // skin: 'layui-layer-nobg',
+        // 		closeBtn:1,
+        // 		btn: '确认',
+        // 		btnAlign: 'c',
+        // 		shadeClose:true,
+        //         title:'查询类别',
+        //         area:['800px','94%'],
+        // 		content:'<iframe src="memberTable.html" width="100%" height="97%"></iframe>'
+
+        //     });
+        // }
+        // 数据导出
+        function dataOutput() {
             layer.open({
-                type:1,
+                type: 1,
                 // skin: 'layui-layer-nobg',
-				closeBtn:1,
-				btn: '关闭全部',
-				btnAlign: 'c',
-				shadeClose:true,
-                title:'查询类别',
-                area:['620px','480px'],
-				content:'\
-				<div style="padding: 10px 10px 0 10px">\
-				<button class="layui-btn layui-btn-normal">全选</button>\
-				<table class="layui-table">\
-					<colgroup>\
-						<col width="90">\
-						<col width="90">\
-						<col width="90">\
-						<col width="90">\
-						<col width="90">\
-					</colgroup>\
-					<thead>\
-						<tr>\
-							<th><input type="checkbox" name="" title="出入款交易" lay-skin="primary">出入款交易</th>\
-							<th><input type="checkbox" name="" title="入款" lay-skin="primary">入款</th>\
-							<th><input type="checkbox" name="" title="出款" lay-skin="primary">出款</th>\
-							<th><input type="checkbox" name="" title="人工存入" lay-skin="primary">人工存入</th>\
-							<th><input type="checkbox" name="" title="额度转换" lay-skin="primary">额度转换</th>\
-						</tr> \
-					</thead>\
-					<tbody>\
-						<tr>\
-							<td rowspan="15"></td>\
-							<td><input type="checkbox" name="" title="入款" lay-skin="primary">入款</td>\
-							<td><input type="checkbox" name="" title="出款" lay-skin="primary">出款</td>\
-							<td><input type="checkbox" name="" title="人工存入" lay-skin="primary">人工存入</td>\
-							<td><input type="checkbox" name="" title="层级-额度转换" lay-skin="primary">层级-额度转换</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="返点" lay-skin="primary">返点</td>\
-							<td><input type="checkbox" name="" title="冲销" lay-skin="primary">冲销</td>\
-							<td><input type="checkbox" name="" title="人工存入存款优惠" lay-skin="primary">人工存入存款优惠</td>\
-							<td><input type="checkbox" name="" title="系统-新增快开额度" lay-skin="primary">系统-新增快开额度</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="公司入款" lay-skin="primary">公司入款</td>\
-							<td><input type="checkbox" name="" title="重复出款" lay-skin="primary">重复出款</td>\
-							<td><input type="checkbox" name="" title="人工存入汇款优惠" lay-skin="primary">人工存入汇款优惠</td>\
-							<td><input type="checkbox" name="" title="API存入" lay-skin="primary">API存入</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="公司入款优惠" lay-skin="primary">公司入款优惠</td>\
-							<td><input type="checkbox" name="" title="手动申请出款" lay-skin="primary">手动申请出款</td>\
-							<td><input type="checkbox" name="" title="人工存入取消出款" lay-skin="primary">人工存入取消出款</td>\
-							<td><input type="checkbox" name="" title="API取出" lay-skin="primary">API取出</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="公司汇款优惠" lay-skin="primary">公司汇款优惠</td>\
-							<td><input type="checkbox" name="" title="放弃存款优惠" lay-skin="primary">放弃存款优惠</td>\
-							<td><input type="checkbox" name="" title="退佣优惠" lay-skin="primary">退佣优惠</td>\
-							<td><input type="checkbox" name="" title="开分-几率" lay-skin="primary">开分-几率</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="线上存款" lay-skin="primary">线上存款</td>\
-							<td><input type="checkbox" name="" title="公司入款误存" lay-skin="primary">公司入款误存</td>\
-							<td><input type="checkbox" name="" title="负数额度归零" lay-skin="primary">负数额度归零</td>\
-							<td><input type="checkbox" name="" title="洗分-几率" lay-skin="primary">洗分-几率</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="线上存款手续费" lay-skin="primary">线上存款手续费</td>\
-							<td><input type="checkbox" name="" title="会员负数回冲" lay-skin="primary">会员负数回冲</td>\
-							<td><input type="checkbox" name="" title="取消实际出款" lay-skin="primary">取消实际出款</td>\
-							<td><input type="checkbox" name="" title="钱包存入" lay-skin="primary">钱包存入</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="线上存款优惠" lay-skin="primary">线上存款优惠</td>\
-							<td><input type="checkbox" name="" title="扣除非法下注派彩" lay-skin="primary">扣除非法下注派彩</td>\
-							<td><input type="checkbox" name="" title="取消出款扣除手续费" lay-skin="primary">取消出款扣除手续费</td>\
-							<td><input type="checkbox" name="" title="钱包取出" lay-skin="primary">钱包取出</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="系统取消出款" lay-skin="primary">系统取消出款</td>\
-							<td><input type="checkbox" name="" title="实际出款" lay-skin="primary">实际出款</td>\
-							<td><input type="checkbox" name="" title="取消出款扣除存款优惠" lay-skin="primary">取消出款扣除存款优惠</td>\
-							<td><input type="checkbox" name="" title="API存入异常" lay-skin="primary">API存入异常</td>\
-						</tr>\
-						<tr>\
-							<td><input type="checkbox" name="" title="其他" lay-skin="primary">其他</td>\
-							<td><input type="checkbox" name="" title="出款扣除手续费" lay-skin="primary">出款扣除手续费</td>\
-							<td><input type="checkbox" name="" title="存款优惠" lay-skin="primary">存款优惠</td>\
-							<td><input type="checkbox" name="" title="API取出异常" lay-skin="primary">API取出异常</td>\
-						</tr>\
-						<tr>\
-							<td></td>\
-							<td><input type="checkbox" name="" title="出款扣除存款优惠" lay-skin="primary">出款扣除存款优惠</td>\
-							<td><input type="checkbox" name="" title="代理人工存入" lay-skin="primary">代理人工存入</td>\
-							<td></td>\
-						</tr>\
-						<tr>\
-							<td></td>\
-							<td><input type="checkbox" name="" title="其他" lay-skin="primary">其他</td>\
-							<td><input type="checkbox" name="" title="其他" lay-skin="primary">其他</td>\
-							<td></td>\
-						</tr>\
-					</tbody>\
-				</table></div>'
+                closeBtn: 1,
+                btn: '确认',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '数据导出',
+                area: ['300px', '200px'],
+                content: '确定导出数据？'
+
             });
         }
-	
-</script>
+    </script>
 
 </body>
+
 </html>

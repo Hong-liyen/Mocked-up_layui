@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+
+<body class="childrenBody">
+    <form class="layui-form storeList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <div class="layui-upload layui-inline">
+                        <button type="button" class="layui-btn layui-btn-normal" id="test">选择文件</button>
+                        <button type="button" class="layui-btn layui-btn-normal" id="test1">档案上传</button>
+                    </div>
+                    <div class="layui-inline" id="select">
+                        <select name="" lay-filter="category" aria-invalid="false">
+                            <option value="0">人工存入</option>
+                            <option value="1">存款优惠</option>
+                            <option value="2">负数额度归零</option>
+                            <option value="3">取消出款</option>
+                            <option value="4">其他</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">动态口令：</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input searchVal" placeholder="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <input type="checkbox" name="" lay-skin="primary" title="稽核">
+                        <div class="layui-unselect layui-form-checkbox layui-form-checked" lay-skin="primary">
+                            <span>稽核</span>
+                            <i class="layui-icon"></i>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <a class="layui-btn search_btn layui-btn-normal" data-type="reload">模板下载</a>
+                    </div>
+                </div>
+            </form>
+        </blockquote>
+    </form>
+
+    <div>
+        <img id="batch1" class="batch" src="../../images/batch1.png" alt="" width="100%">
+        <img id="batch2" class="batch" src="../../images/batch2.png" alt="">
+        <img id="batch3" class="batch" src="../../images/batch3.png" alt="">
+        <img id="batch4" class="batch" src="../../images/batch4.png" alt="">
+    </div>
+    <br>
+    <style>
+        img[id*='batch'] {
+            display: none;
+        }
+        
+        #batch1 {
+            display: block;
+        }
+    </style>
+    <div class="attention">
+        注意事项
+        <br> *建议数量10000以下批次上传
+        <br> *上传档案限制2M以下
+        <br> *若会员账号资料不正确，则无无法上传
+    </div>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+                //下拉选项判断
+            form.on('select(category)', function(data) {
+                category = data.value;
+                categoryName = data.elem[data.elem.selectedIndex].text;
+                form.render('select');
+                if (category < 1) {
+                    $('#batch1').show().siblings().hide();
+                } else if (category == 1) {
+                    $('#batch2').show().siblings().hide();
+                } else if (category == 2 || category == 4) {
+                    $('#batch3').show().siblings().hide();
+                } else if (category == 3) {
+                    $('#batch4').show().siblings().hide();
+                }
+                console.log(data.value)
+            });
+            //监听提交
+            // form.on('submit(formDemo)', function(data) {
+            //     layer.msg(JSON.stringify(data.field));
+            //     return false;
+            // });
+        });
+        // 选完文件后不自动上传
+        layui.use('upload', function() {
+            var $ = layui.jquery,
+                upload = layui.upload;
+
+            upload.render({
+                elem: '#test',
+                url: '/upload/',
+                auto: false,
+                bindAction: '#test1',
+                done: function(res) {
+                    console.log(res)
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

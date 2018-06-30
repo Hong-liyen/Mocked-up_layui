@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>会员资讯管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+
+<body class="childrenBody">
+    <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="memberPopNews.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
+    <div class="layui-form">
+        <table class="layui-table addMemberPopNotice">
+            <tbody>
+                <tr>
+                    <th>标题：</th>
+                    <td>
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                    </td>
+                </tr>
+                <tr>
+                    <th>首次弹框：</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="titile1" lay-skin="primary" title="是">
+                                <input type="radio" name="titile1" lay-skin="primary" title="否">
+                            </div>
+                        </td>
+                </tr>
+                <tr>
+                    <th rowspan="2">代理：</th>
+                    <td>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                        </div>
+                        <a class="layui-btn layui-btn-m layui-btn-normal" href="#">增加</a>
+                        <a class="layui-btn layui-btn-m layui-btn-normal" href="#">批量增加</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>已选择</span>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" name="" lay-skin="primary" title="选择全部">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>作用层级：</th>
+                    <td>
+                        <div class="layui-block">
+                            <input type="checkbox" name="" lay-skin="primary" title="全选">
+                        </div>
+                        <div class="layui-block">
+                            <input type="checkbox" name="" lay-skin="primary" title="未分层">
+                            <input type="checkbox" name="" lay-skin="primary" title="洗码层">
+                            <input type="checkbox" name="" lay-skin="primary" title="bwt">
+                            <input type="checkbox" name="" lay-skin="primary" title="000">
+                            <input type="checkbox" name="" lay-skin="primary" title="11111">
+                            <input type="checkbox" name="" lay-skin="primary" title="Kelly测试层001">
+                            <input type="checkbox" name="" lay-skin="primary" title="Kelly测试层002">
+                            <input type="checkbox" name="" lay-skin="primary" title="科伦vip层">
+                            <input type="checkbox" name="" lay-skin="primary" title="kelly001">
+                            <input type="checkbox" name="" lay-skin="primary" title="kelly002">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>弹框宽度：</th>
+                    <td>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>弹框高度：</th>
+                    <td>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>使用图片：</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="ues1" lay-skin="primary" title="是">
+                                <input type="radio" name="ues1" lay-skin="primary" title="否">
+                            </div>
+                        </td>
+                </tr>
+                <tr>
+                    <th>内容：</td>
+                        <td>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="layui-center">
+        <div class="layui-inline">
+            <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">预览</button>
+            <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">新增</button>
+        </div>
+    </div>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+
+        });
+    </script>
+</body>
+
+</html>

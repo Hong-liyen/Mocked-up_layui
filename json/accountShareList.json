@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "shareId": "1",
+            "shareName": "zzz1111",
+            "shareNickName": "dfdfsf33",
+            "shareSupShare": "ceshihaitian",
+            "shareTopShare": "haitian",
+            "shareSub": "0 / 0 / 0",
+            "shareAccount": "0",
+            "shareBet": "0",
+            "shareTime": "2018-03-28",
+            "shareLogin": "<a href='loginShare.html' class='layui-blue'>1</a>"
+        },
+        {
+            "shareId": "2",
+            "shareName": "sefsg99",
+            "shareNickName": "二人",
+            "shareSupShare": "evan661",
+            "shareTopShare": "haitian",
+            "shareSub": "1 / 1 / 1",
+            "shareAccount": "1",
+            "shareBet": "1",
+            "shareTime": "2018-03-26",
+            "shareLogin": "<a href='loginShare.html' class='layui-blue'>0</a>"
+        }
+    ]
+}

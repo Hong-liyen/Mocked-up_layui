@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加一级代理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent">
+        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="mainAgentList.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
+        <div class="layui-form">
+            <table class="layui-table">
+                <tbody>
+                    <tr>
+                        <td>上级用户：</td>
+                        <td colspan="4">
+                            <p>zddfjt888 (总代)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- uifix_133 -->
+                        <td>
+                            <span>*</span>用户名：
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <!--  -->
+                        <!-- uifix_133 -->
+                        <td><span>*</span>昵称：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <!--  -->
+                    </tr>
+                    <tr>
+                        <!-- uifix_133 -->
+                        <td>
+                            <span>*</span>密码：
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <!--  -->
+                        <td>昵称状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                <option value="0">开启</option>
+                                <option value="1">关闭</option>
+                            </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>返点设置：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">默认模版</option>
+                                    <option value="1">VIP模板</option>
+                                    <option value="2">0.2-0.4返点模板</option>
+                                    <option value="3">0.1-0.6返点模板</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>投注状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">开启</option>
+                                    <option value="1">关闭</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="attention">
+                若替换的模板，最低值比原模版小（等于），最高值比原模版大（等于）；则可以替换原模版的值；<br>
+                并且下级代理值均按照原有设置的值不改变；对应下级的可设置范围再一级级的人工下放；<br>
+                模板替换时，不受有效投注/返点上限的影响
+            </div>
+        </div>
+        
+        <div class="magt10 layui-center">
+            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
+        </div>
+        <script type="text/javascript" src="../../layui/layui.js"></script>
+        <script type="text/javascript" src="../../js/index.js"></script>
+        <script>
+            //Demo
+            layui.use('form', function() {
+                var form = layui.form;
+
+                //监听提交
+                form.on('submit(formDemo)', function(data) {
+                    layer.msg(JSON.stringify(data.field));
+                    return false;
+                });
+            });
+        </script>
+</body>
+
+</html>

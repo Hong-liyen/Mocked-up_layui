@@ -1,0 +1,41 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "reportsGame": "游戏平台",
+            "reportsBet": "AG视讯",
+            "reportsAmount": "114",
+            "reportsEffectiveAmount": "26563.20",
+            "reportsProfit": "<div class='layui-red'>-299</div>"
+        },
+        {
+            "reportsGame": "注单量",
+            "reportsBet": "OG视讯",
+            "reportsAmount": "31710",
+            "reportsEffectiveAmount": "26563.20",
+            "reportsProfit": "12238.51"
+        },
+        {
+            "reportsGame": "下注金额",
+            "reportsBet": "BB视讯",
+            "reportsAmount": "56264",
+            "reportsEffectiveAmount": "26563.20",
+            "reportsProfit": "65.5"
+        },
+        {
+            "reportsGame": "有效投注额",
+            "reportsBet": "AB视讯",
+            "reportsAmount": "25566",
+            "reportsEffectiveAmount": "26563.20",
+            "reportsProfit": "<div class='layui-red'>-50.00</div>"
+        },
+        {
+            "reportsGame": "盈亏",
+            "reportsBet": "总计",
+            "reportsAmount": "113654",
+            "reportsEffectiveAmount": "26563.20",
+            "reportsProfit": "12025.01"
+        }
+    ]
+}

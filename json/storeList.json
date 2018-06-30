@@ -10,9 +10,8 @@
 			"storePaymentType": "payment个付支付宝APP",
 			"storeNumber": "CH******53",
 			"storeLevel": "测试层级01-level1&levelb  testset-level2 未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2595",
@@ -21,9 +20,8 @@
 			"storePaymentType": "payment汇银支付宝APP",
 			"storeNumber": "00******02",
 			"storeLevel": "测试层级01-level1&levelb  testset-level2 未分层 ceshi-level3",
-			"storeTop": "checked",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"1",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2596",
@@ -32,9 +30,8 @@
 			"storePaymentType": "payment土豆支付宝APP",
 			"storeNumber": "10******01",
 			"storeLevel": "测试层级01-level1&levelb  testset-level2 未分层 ceshi-level3",
-			"storeTop": "checked",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"1",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2597",
@@ -43,9 +40,8 @@
 			"storePaymentType": "payment个付支付宝APP",
 			"storeNumber": "10******03",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2598",
@@ -54,9 +50,8 @@
 			"storePaymentType": "payment快马聚合手机支付宝APP",
 			"storeNumber": "10******06",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2599",
@@ -65,9 +60,8 @@
 			"storePaymentType": "payment娱乐通支付宝APP",
 			"storeNumber": "10******01",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2610",
@@ -76,9 +70,8 @@
 			"storePaymentType": "payment汇银支付宝APP",
 			"storeNumber": "10******09",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2611",
@@ -87,9 +80,8 @@
 			"storePaymentType": "payment土豆支付宝APP",
 			"storeNumber": "61******02",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2612",
@@ -98,9 +90,8 @@
 			"storePaymentType": "payment个付支付宝APP",
 			"storeNumber": "61******04",
 			"storeLevel": "测试层级01-level1&levelb    testset-level2    未分层 ceshi-level3",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2613",
@@ -109,9 +100,8 @@
 			"storePaymentType": "payment个付支付宝APP",
 			"storeNumber": "68******02",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2614",
@@ -120,9 +110,8 @@
 			"storePaymentType": "payment娱乐通支付宝APP",
 			"storeNumber": "68******09",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2615",
@@ -131,9 +120,8 @@
 			"storePaymentType": "payment土豆支付宝APP",
 			"storeNumber": "18******02",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2616",
@@ -142,9 +130,8 @@
 			"storePaymentType": "payment汇银支付宝APP",
 			"storeNumber": "18******08",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2617",
@@ -153,9 +140,8 @@
 			"storePaymentType": "payment益云支付支付宝APP",
 			"storeNumber": "18******11",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2618",
@@ -164,9 +150,8 @@
 			"storePaymentType": "payment土豆支付宝APP",
 			"storeNumber": "18******15",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2619",
@@ -175,9 +160,8 @@
 			"storePaymentType": "payment快马聚合手机支付宝APP",
 			"storeNumber": "18******18",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		},
 		{
 			"storeId": "2620",
@@ -186,9 +170,8 @@
 			"storePaymentType": "payment汇银支付宝APP",
 			"storeNumber": "18******19",
 			"storeLevel": "测试层级01-level1&levelb testset-level2 未分层 ceshi-level3 QA-level4",
-			"storeTop": "",
-			"content" : " ",
-			"abstract": " "
+			"payuse":"0",
+			"storeListBar": "0"
 		}
 	]
 }

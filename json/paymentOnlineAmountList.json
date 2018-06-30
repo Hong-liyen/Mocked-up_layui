@@ -1,0 +1,49 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "paymentOnlineBetNumber": "229626876514009088",
+            "paymentOnlineAgent": "ddaili001",
+            "paymentOnlineMember": "qweasd",
+            "paymentOnlineMoney": "人民币",
+            "paymentOnlineLayer": "未分层",
+            "paymentOnlineTime": "2018-06-01 06:02:18",
+            "paymentOnlineAccount": "50"
+        },
+        {
+            "paymentOnlineBetNumber": "229626876514009088",
+            "paymentOnlineAgent": "ddaili001",
+            "paymentOnlineMember": "qweasd",
+            "paymentOnlineMoney": "人民币",
+            "paymentOnlineLayer": "未分层",
+            "paymentOnlineTime": "2018-06-01 06:02:18",
+            "paymentOnlineAccount": "50"
+        },
+        {
+            "paymentOnlineBetNumber": "229626876514009088",
+            "paymentOnlineAgent": "ddaili001",
+            "paymentOnlineMember": "qweasd",
+            "paymentOnlineMoney": "人民币",
+            "paymentOnlineLayer": "未分层",
+            "paymentOnlineTime": "2018-06-01 06:02:18",
+            "paymentOnlineAccount": "50"
+        },
+        {
+            "paymentOnlineBetNumber": "229626876514009088",
+            "paymentOnlineAgent": "ddaili001",
+            "paymentOnlineMember": "qweasd",
+            "paymentOnlineMoney": "人民币",
+            "paymentOnlineLayer": "未分层",
+            "paymentOnlineTime": "2018-06-01 06:02:18",
+            "paymentOnlineAccount": "50"
+        }, {
+            "paymentOnlineBetNumber": "",
+            "paymentOnlineAgent": "",
+            "paymentOnlineMember": "",
+            "paymentOnlineLayer": "",
+            "paymentOnlineTime": "小计",
+            "paymentOnlineAccount": "50"
+        }
+    ]
+}

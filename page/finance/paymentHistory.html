@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>入款历史记录</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody paymentHistoryBody">
+    <form class="layui-form ">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form" id="">
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">代理账号：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">会员账号：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">金额：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                            <span class="line-height2-5">~&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">订单号：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">日期：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="dateStart">
+                            </div>
+                            <span class="line-height2-5">~&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" id="dateEnd">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">银行：</label>
+                            <div class="layui-input-block bank-block">
+                                <select id="bankId" name="bankId">
+                                    <option value="0" selected>全部</option>
+                                    <option value="1">中国农业银行</option>
+                                    <option value="2">北京银行</option>
+                                    <option value="3">交通银行</option>
+                                    <option value="4">上海银行</option>
+                                    <option value="5">中国银行</option>
+                                    <option value="6">中国建设银行</option>
+                                    <option value="7">中国光大银行</option>
+                                    <option value="8">兴业银行</option>
+                                    <option value="9">中国民生银行</option>
+                                    <option value="10">招商银行</option>
+                                    <option value="11">中信银行</option>
+                                    <option value="12">广发银行</option>
+                                    <option value="13">华夏银行</option>
+                                    <option value="14">中国工商银行</option>
+                                    <option value="15">中国邮政储蓄银行</option>
+                                    <option value="16">深圳发展银行</option>
+                                    <option value="17">浦发银行</option>
+                                    <option value="18">平安银行</option>
+                                    <option value="19">渤海银行</option>
+                                    <option value="20">东莞银行</option>
+                                    <option value="21">广州银行</option>
+                                    <option value="22">杭州银行</option>
+                                    <option value="23">浙商银行</option>
+                                    <option value="24">宁波银行</option>
+                                    <option value="25">东亚银行</option>
+                                    <option value="26">温州银行</option>
+                                    <option value="27">晋商银行</option>
+                                    <option value="28">南京银行</option>
+                                    <option value="29">广州农商银行</option>
+                                    <option value="30">上海农商银行</option>
+                                    <option value="31">HKB银行</option>
+                                    <option value="32">珠海市农村信用</option>
+                                    <option value="33">顺德农商银行</option>
+                                    <option value="34">尧都农村信用合作联社</option>
+                                    <option value="35">浙江稠州商业银行</option>
+                                    <option value="36">北京农商银行</option>
+                                    <option value="37">中国农村信用合作社</option>
+                                    <option value="38">支付宝</option>
+                                    <option value="39">财付通</option>
+                                    <option value="40">深圳农商银行</option>
+                                    <option value="55">微信支付</option>
+                                    <option value="56">重庆农村商业银行</option>
+                                    <option value="57">吉林银行</option>
+                                    <option value="58">福建农村信用社</option>
+                                    <option value="105">工商银行信用卡</option>
+                                    <option value="106">招商银行信用卡</option>
+                                    <option value="107">建设银行信用卡</option>
+                                    <option value="108">交通银行信用卡</option>
+                                    <option value="109">农业银行信用卡</option>
+                                    <option value="110">中国银行信用卡</option>
+                                    <option value="111">兴业银行信用卡</option>
+                                    <option value="112">浦发银行信用卡</option>
+                                    <option value="113">光大银行信用卡</option>
+                                    <option value="114">平安银行信用卡</option>
+                                    <option value="115">广发银行信用卡</option>
+                                    <option value="116">上海银行信用卡</option>
+                                    <option value="117">宁波银行信用卡</option>
+                                    <option value="118">民生银行信用卡</option>
+                                    <option value="119">徽商银行</option>
+                                    <option value="120">江西农村信用社</option>
+                                    <option value="121">天津农商银行</option>
+                                    <option value="122">泉州银行</option>
+                                    <option value="123">包商银行</option>
+                                    <option value="124">西安银行</option>
+                                    <option value="125">桂林银行</option>
+                                    <option value="126">中旅银行</option>
+                                    <option value="127">河南农村信用社</option>
+                                    <option value="129">湖南省农村信用社联合社</option>
+                                    <option value="130">哈尔滨银行</option>
+                                    <option value="131">保定银行</option>
+                                    <option value="132">内蒙古银行</option>
+                                    <option value="133">广东省农村信用社</option>
+                                    <option value="134">天津银行</option>
+                                    <option value="135">唐山银行</option>
+                                    <option value="136">承德银行</option>
+                                    <option value="137">张家口银行</option>
+                                    <option value="138">秦皇岛银行</option>
+                                    <option value="139">邢台银行</option>
+                                    <option value="140">廊坊银行</option>
+                                    <option value="141">邯郸银行</option>
+                                    <option value="142">衡水银行</option>
+                                    <option value="143">大同市商业银行</option>
+                                    <option value="144">长治银行</option>
+                                    <option value="145">晋城银行</option>
+                                    <option value="146">晋中银行</option>
+                                    <option value="147">阳泉市商业银行</option>
+                                    <option value="148">乌海银行</option>
+                                    <option value="149">鄂尔多斯银行</option>
+                                    <option value="150">贵州银行</option>
+                                    <option value="151">富滇银行</option>
+                                    <option value="152">曲靖市商业银行</option>
+                                    <option value="153">玉溪市银行</option>
+                                    <option value="154">长安银行</option>
+                                    <option value="155">兰州银行</option>
+                                    <option value="156">青海银行</option>
+                                    <option value="157">宁夏银行</option>
+                                    <option value="158">石嘴山银行</option>
+                                    <option value="159">乌鲁木齐市商业银行</option>
+                                    <option value="160">昆仑银行</option>
+                                    <option value="161">新疆汇和银行</option>
+                                    <option value="162">库尔勒市商业银行</option>
+                                    <option value="163">哈密市商业银行</option>
+                                    <option value="164">宁波东海银行</option>
+                                    <option value="165">宁波通商银行</option>
+                                    <option value="166">厦门银行</option>
+                                    <option value="167">厦门国际银行</option>
+                                    <option value="168">青岛银行</option>
+                                    <option value="169">营口银行</option>
+                                    <option value="170">甘肃银行</option>
+                                    <option value="171">兰州银行</option>
+                                    <option value="172">朝阳银行</option>
+                                    <option value="173">盛京银行</option>
+                                    <option value="174">中原银行</option>
+                                    <option value="175">贵阳银行</option>
+                                    <option value="176">贵州农村信用社</option>
+                                    <option value="177">湖北农商银行</option>
+                                    <option value="178">锦州银行</option>
+                                    <option value="179">龙江银行</option>
+                                    <option value="180">江西银行</option>
+                                    <option value="181">柳州银行</option>
+                                    <option value="182">云南省农村信用社</option>
+                                    <option value="183">长沙银行</option>
+                                    <option value="185">成都银行</option>
+                                    <option value="187">日照银行</option>
+                                    <option value="190">沧州银行</option>
+                                    <option value="192">江苏银行</option>
+                                    <option value="194">苏州银行</option>
+                                    <option value="196">稠州银行</option>
+                                    <option value="198">福建海峡银行</option>
+                                    <option value="200">九江银行</option>
+                                    <option value="202">南昌银行</option>
+                                    <option value="204">烟台银行</option>
+                                    <option value="206">洛阳银行</option>
+                                    <option value="208">郑州银行</option>
+                                    <option value="210">重庆银行</option>
+                                    <option value="212">大连银行</option>
+                                    <option value="214">山东省农村信用社</option>
+                                    <option value="216">安徽省农村信用社联合社</option>
+                                    <option value="218">福建省农信联社</option>
+                                    <option value="220">山东省农村信用社联合社</option>
+                                    <option value="222">湖北省农村信用社</option>
+                                    <option value="224">广西壮族自治区农村信用联社</option>
+                                    <option value="226">四川省农村信用联社</option>
+                                    <option value="228">河北省农村信用社联合社</option>
+                                    <option value="230">山西省农村信用社</option>
+                                    <option value="232">内蒙古自治区农村信用社联合社</option>
+                                    <option value="234">辽宁省农村信用社联合社</option>
+                                    <option value="236">黑龙江省农村信用社联合社</option>
+                                    <option value="238">浙江省农村信用社联合社</option>
+                                    <option value="239">QQ</option>
+                                    <option value="240">云闪付</option>
+                                    <option value="241">攀枝花市商业银行</option>
+                                    <option value="242">广西北部湾银行</option>
+                                    <option value="243">浙江民泰商业银行</option>
+                                    <option value="244">恒丰银行</option>
+                                    <option value="245">辽阳银行</option>
+                                    <option value="246">葫芦岛银行</option>
+                                    <option value="247">昆山农商银行</option>
+                                    <option value="248">绵阳市商业银行</option>
+                                    <option value="249">广元市贵商村镇银行</option>
+                                    <option value="250">广东华兴银行</option>
+                                    <option value="251">台州银行</option>
+                                    <option value="252">江南农村商业银行</option>
+                                    <option value="253">甘肃农村信用社</option>
+                                    <option value="254">四川天府银行</option>
+                                    <option value="256">长城华西银行</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">处理状态：</label>
+                            <div class="layui-input-block">
+                                <select name="">
+                                    <option value="0">全部</option>
+                                    <option value="1">未处理</option>
+                                    <option value="2">已存入</option>
+                                    <option value="3">已取消</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">自动刷新：</label>
+                            <div class="layui-input-block">
+                                <select name="">
+                                    <option value="0">300秒</option>
+                                    <option value="1">10秒</option>
+                                    <option value="2">20秒</option>
+                                    <option value="3">30秒</option>
+                                    <option value="4">60秒</option>
+                                    <option value="5">不整理</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="layui-btn layui-btn-normal">进阶搜寻</a>
+                    <a class="layui-btn layui-btn-normal">查询</a>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">备注查询：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">提出额度：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                            <span class="line-height2-5">~&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                            <span class="line-height2-5">提出额度为1元至999,999,999,9元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <input type="checkbox" name="" lay-skin="primary" title="层级">
+                        <input type="checkbox" name="" lay-skin="primary" title="未分层">
+                        <input type="checkbox" name="" lay-skin="primary" title="洗码层1">
+                        <input type="checkbox" name="" lay-skin="primary" title="BWT">
+                        <input type="checkbox" name="" lay-skin="primary" title="000">
+                        <input type="checkbox" name="" lay-skin="primary" title="11111">
+                        <input type="checkbox" name="" lay-skin="primary" title="Kelly测试层001">
+                        <input type="checkbox" name="" lay-skin="primary" title="KellyVIP层002">
+                        <input type="checkbox" name="" lay-skin="primary" title="科伦vip层">
+                        <input type="checkbox" name="" lay-skin="primary" title="kelly001">
+                        <input type="checkbox" name="" lay-skin="primary" title="kelly002">
+                        <input type="checkbox" name="" lay-skin="primary" title="nina001哈哈">
+                        <input type="checkbox" name="" lay-skin="primary" title="VIP级别(Jimmy)">
+                        <input type="checkbox" name="" lay-skin="primary" title="super">
+                        <input type="checkbox" name="" lay-skin="primary" title="测试">
+                        <input type="checkbox" name="" lay-skin="primary" title="426测试新增层级">
+                        <input type="checkbox" name="" lay-skin="primary" title="alice使用">
+                        <input type="checkbox" name="" lay-skin="primary" title="15346353">
+                        <input type="checkbox" name="" lay-skin="primary" title="test">
+                        <input type="checkbox" name="" lay-skin="primary" title="qwewr12">
+                        <input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa">
+                    </div>
+                </div>
+            </form>
+        </blockquote>
+        <table id="paymentHistory" lay-filter="paymentHistory"></table>
+    </form>
+
+    <script>
+    </script>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="paymentHistory.js"></script>
+    <!-- <script type="text/javascript" src="../../js/cache.js"></script> -->
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        // 帐号动态口令
+        layui.use(['form', 'layer'], function() {
+                var form = layui.form
+                var $ = layui.jquery
+
+
+            })
+            //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>人工额度转换</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form storeList">
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="agentInquiry.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <blockquote class="layui-elem-quote quoteBox">
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">日期：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateStart">
+                    </div>
+                    <span class="line-height2-5">~</span>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateEnd">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn layui-btn-normal search_btn">查询</a>
+            </div>
+        </blockquote>
+        <table id="viewAccount" lay-filter="viewAccount"></table> 
+    </form>
+    <!--编辑状态-->
+    <script type="text/html" id="agentStatusBar">
+            {{# if( d.agentStatus == "0"){ }}
+            <span class="layui-blue">正常</span> 
+            {{# } else if( d.agentStatus == "1"){ }}
+            <span class="layui-red">停用</span>
+            {{# } else if( d.agentStatus == "2"){ }}
+            <span class="layui-blue">链锁</span>
+            {{# } else if( d.agentStatus == "3"){ }}
+            <a class="layui-blue">激活</a>
+            {{# } else { }}
+            <span class="layui-red">冷冻</span>
+            {{# }}}
+        </script>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="viewAccount.js"></script> 
+    <script> 
+         layui.use(['form', 'layer'], function() {
+            var form = layui.form
+            var $ = layui.jquery 
+
+            
+        }) 
+        
+    </script>
+</body>
+
+</html>

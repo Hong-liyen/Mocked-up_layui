@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <!-- uifix_131 -->
+                        <input type="text" class="layui-input searchVal" />
+                        <!--  -->
+                    </div>
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+
+                <div class="layui-inline">
+                    <a href="../account/addMainAgentGeneral.html" class="layui-btn layui-btn-normal">添加</a>
+                </div>
+            </form>
+
+        </blockquote>
+
+        <table id="mainAgentList" lay-filter="mainAgentList"></table>
+
+        <!--审核状态-->
+        <script type="text/html" id="mainAgentAccount">
+            {{# if( d.mainAgentAccount == "0"){ }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else if( d.mainAgentAccount == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# } else if( d.mainAgentAccount == "2") { }}
+            <span class="layui-red">冻结</span> {{# }}}
+        </script>
+
+        <script type="text/html" id="mainAgentBet">
+            {{# if( d.mainAgentBet == "0"){ }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# }}}
+        </script>
+
+        <!--操作-->
+        <script type="text/html" id="mainAgentListBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/addMainAgent.html">添加</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/editMainAgent.html">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/authorityMainAgent.html">权限</a>
+        </script>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="mainAgentList.js"></script>
+</body>
+
+</html>

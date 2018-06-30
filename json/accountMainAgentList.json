@@ -1,0 +1,71 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "mainAgentId": "1",
+            "mainAgentName": "susan006",
+            "mainAgentNickName": "请问",
+            "mainAgentShare": "susan00z",
+            "mainAgentSupShare": "susan00h",
+            "mainAgentTopShare": "haitian",
+            "mainAgentSub": "0 / 0",
+            "mainAgentAccount": "0",
+            "mainAgentBet": "0",
+            "mainAgentTime": "2018-05-23",
+            "mainAgentLogin": "<a href='#' class='layui-blue'>0</a>"
+        },
+        {
+            "mainAgentId": "2",
+            "mainAgentName": "yangyang0",
+            "mainAgentNickName": "测试",
+            "mainAgentShare": "yuyu11",
+            "mainAgentSupShare": "yuyu00",
+            "mainAgentTopShare": "haitian",
+            "mainAgentSub": "1 / 0",
+            "mainAgentAccount": "0",
+            "mainAgentBet": "0",
+            "mainAgentTime": "2018-04-27",
+            "mainAgentLogin": "<a href='#' class='layui-blue'>0</a>"
+        },
+        {
+            "mainAgentId": "3",
+            "mainAgentName": "qaefe88",
+            "mainAgentNickName": "打发",
+            "mainAgentShare": "sefsg99",
+            "mainAgentSupShare": "evan661",
+            "mainAgentTopShare": "haitian",
+            "mainAgentSub": "1 / 1",
+            "mainAgentAccount": "1",
+            "mainAgentBet": "1",
+            "mainAgentTime": "2018-03-26",
+            "mainAgentLogin": "<a href='#' class='layui-blue'>0</a>"
+        },
+        {
+            "mainAgentId": "4",
+            "mainAgentName": "evan6664",
+            "mainAgentNickName": "232432",
+            "mainAgentShare": "evan6663",
+            "mainAgentSupShare": "evan661",
+            "mainAgentTopShare": "haitian",
+            "mainAgentSub": "2 / 3",
+            "mainAgentAccount": "0",
+            "mainAgentBet": "1",
+            "mainAgentTime": "2018-03-22",
+            "mainAgentLogin": "<a href='loginMainAgent.html' class='layui-blue'>2</a>"
+        },
+        {
+            "mainAgentId": "5",
+            "mainAgentName": "ceshijimmy11",
+            "mainAgentNickName": "jmy",
+            "mainAgentShare": "cc1001",
+            "mainAgentSupShare": "ceshihaitian",
+            "mainAgentTopShare": "haitian",
+            "mainAgentSub": "2 / 20",
+            "mainAgentAccount": "0",
+            "mainAgentBet": "0",
+            "mainAgentTime": "2018-02-08",
+            "mainAgentLogin": "<a href='#' class='layui-blue'>0</a>"
+        }
+    ]
+}

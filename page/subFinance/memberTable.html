@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文章列表--layui后台管理模板 2.0</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/public.css" media="all" />
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form agentList">
+<div id="memberTable">
+	<div class="searchAgent">
+		<a class="layui-btn layui-btn-xs layui-btn-normal" href="memberFinance.html">
+			<i class="layui-icon">&#xe603;</i> 返回上頁</a>
+	</div>
+		
+	<table class="layui-table">
+		<thead>
+			<tr>
+				<th>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="出入款交易" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</th>
+				<th>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="入款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</th>
+				<th>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</th>
+				<th>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="人工存入" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</th>
+				<th>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="额度转换" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</th>
+			</tr> 
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="15"></td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="入款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="人工存入" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="层级-额度转换" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="返点" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="冲销" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="人工存入存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="系统-新增快开额度" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="公司入款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="重复出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="人工存入汇款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+						<form class="layui-form">
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<input type="checkbox" name="" title="API存入" lay-skin="primary">
+								</div>
+							</div>
+						</form>
+					</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="公司入款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="手动申请出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="人工存入取消出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="API取出" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="公司汇款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="放弃存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="退佣优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="开分-几率" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="线上存款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="公司入款误存" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="负数额度归零" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="洗分-几率" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="线上存款手续费" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="会员负数回冲" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+						<form class="layui-form">
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<input type="checkbox" name="" title="取消实际出款" lay-skin="primary">
+								</div>
+							</div>
+						</form>
+					</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="钱包存入" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="线上存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="扣除非法下注派彩" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="取消出款扣除手续费" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="钱包取出" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="系统取消出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="实际出款" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="取消出款扣除存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="API存入异常" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="其他" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="出款扣除手续费" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="API取出异常" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="出款扣除存款优惠" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="代理人工存入" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="其他" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td>
+					<form class="layui-form">
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<input type="checkbox" name="" title="其他" lay-skin="primary">
+							</div>
+						</div>
+					</form>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="magt10 layui-center">
+		<button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="agentFinance.js"></script>
+
+</body>
+</html>

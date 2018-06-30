@@ -16,21 +16,15 @@
 
 <body class="childrenBody">
     <div class="addagent">
-        <div class="layui-layer-title">添加一级代理
-            <a href="../account/agentList.html"><i class="layui-icon" style="float: right;">&#x1006;</i></a></div>
+        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="agentList.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
         <div class="layui-form">
             <table class="layui-table">
-                <thead>
-                    <tr>
-                        <th colspan="4">账户管理>添加代理账号</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                         <td>上级用户：</td>
                         <td colspan="4">
                             <div class="addlstUser">
-                                <span>大股东：</span>
+                                <span class="title">大股东：</span>
                                 <div class="layui-inline">
                                     <select name="">
                                     <option value="0">请选择</option>
@@ -39,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="addlstUser">
-                                <span>股东：</span>
+                                <span class="title">股东：</span>
                                 <div class="layui-inline">
                                     <select name="">
                                         <option value="0">请选择</option>
@@ -48,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="addlstUser">
-                                <span>总代：</span>
+                                <span class="title">总代：</span>
                                 <div class="layui-inline">
                                     <select name="">
                                         <option value="0">请选择</option>
@@ -60,30 +54,41 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>用户名：</td>
-
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>用户名：
+                            <!--  -->
                         <td>
                             <div class="layui-inline"><input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span>
                         </td>
-                        <td>昵称：</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>昵称：
+                            <!--  -->
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span>
                         </td>
                     </tr>
                     <tr>
-                        <td>密码：</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>密码：
+                            <!--  -->
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span>
                         </td>
-                        <td>昵称状态:</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>昵称状态：
+                            <!--  -->
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <select name="">
@@ -99,10 +104,9 @@
                             <div class="layui-inline">
                                 <select name="">
                                     <option value="0">默认模版</option>
-                                    <option value="1">默认模版1</option>
-                                    <option value="2">默认模版2</option>
-                                    <option value="3">默认模版3</option>
-                                    <option value="4">默认模版4</option>
+                                    <option value="1">VIP模板</option>
+                                    <option value="2">0.2-0.4返点模板</option>
+                                    <option value="3">0.1-0.6返点模板</option>
                                 </select>
                             </div>
                         </td>
@@ -118,28 +122,29 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="attention">
+                若替换的模板，最低值比原模版小（等于），最高值比原模版大（等于）；则可以替换原模版的值；<br> 并且下级代理值均按照原有设置的值不改变；对应下级的可设置范围再一级级的人工下放；
+                <br> 模板替换时，不受有效投注/返点上限的影响
+            </div>
         </div>
+
         <div class="magt10 layui-center">
-
             <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
-            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
-
         </div>
-    </div>
-    <script type="text/javascript" src="../../layui/layui.js"></script>
-    <script type="text/javascript" src="../../js/index.js"></script>
-    <script>
-        //Demo
-        layui.use('form', function() {
-            var form = layui.form;
+        <script type="text/javascript" src="../../layui/layui.js"></script>
+        <script type="text/javascript" src="../../js/index.js"></script>
+        <script>
+            //Demo
+            layui.use('form', function() {
+                var form = layui.form;
 
-            //监听提交
-            form.on('submit(formDemo)', function(data) {
-                layer.msg(JSON.stringify(data.field));
-                return false;
+                //监听提交
+                form.on('submit(formDemo)', function(data) {
+                    layer.msg(JSON.stringify(data.field));
+                    return false;
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>

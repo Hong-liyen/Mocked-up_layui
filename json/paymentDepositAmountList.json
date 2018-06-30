@@ -1,0 +1,24 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "paymentDepositId": "dsf4a64fa",
+            "paymentDepositItem": "人工存入",
+            "paymentDepositAmount": "100",
+            "paymentDepositAgent": "dabc12",
+            "paymentDepositNumber": "201805307677314429",
+            "paymentDepositNote": "操作者：changqitz1/",
+            "paymentDepositTime": "2018-05-30 06:48:34"
+        },
+        {
+            "paymentDepositId": "",
+            "paymentDepositItem": "小计",
+            "paymentDepositAmount": "100",
+            "paymentDepositAgent": "",
+            "paymentDepositNumber": "",
+            "paymentDepositNote": "",
+            "paymentDepositTime": ""
+        }
+    ]
+}

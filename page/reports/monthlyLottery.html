@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="monthlyReportLogin.html">帐务查询</a>
+            <a class="layui-btn layui-btn-gray" href="monthlyChangePassword.html">变更密码</a>
+            <a class="layui-btn layui-btn-gray" href="monthlyResetSub.html">重置子帐号密码</a>
+        </div>
+    </form>
+    <div class="loginShare"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../reports/monthlyAmountDetail.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table rebateChargeoff">
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead> 
+                    <tr>
+                        <th colspan="2">综合平台(BB平台/LEBO平台/AB平台/OGS视讯/OG视讯/DS平台)</th>
+                    </tr>
+                    <tr>
+                        <th>平台</th>
+                        <th>派彩</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OG</td>
+                        <td>74.50</td>
+                    </tr>
+                    <tr>
+                        <td>ABSX</td>
+                        <td>24.00</td>
+                    </tr>
+                    <tr>
+                        <td>DSSX</td>
+                        <td>22.50</td>
+                    </tr>
+                    <tr>
+                        <td>总计</td>
+                        <td>121.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+<script>
+    // IP位置删除
+    function del() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: '确定',
+            btnAlign: 'c',
+            shadeClose: true,
+            icon: 3,
+            title: '删除IP',
+            area: ['250px', '160px'],
+            content: '确认删除IP位置？'
+        });
+    }
+    
+    // IP位置添加 --默认启用
+    function add() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: '确定',
+            btnAlign: 'c',
+            shadeClose: true,
+            icon: 3,
+            title: '添加IP',
+            area: ['250px', '160px'],
+            content: '确认添加IP位置？'
+        });
+    }
+</script>
+
+</html>

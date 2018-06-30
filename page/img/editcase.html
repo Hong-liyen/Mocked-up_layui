@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>网站资讯系统-栏位</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody image addagent">
+    <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="images.html">图库</a>
+            <a class="layui-btn layui-btn-gray active" href="column.html">栏目</a>
+            <a class="layui-btn layui-btn-gray" href="uploadList.html">待上传</a>
+            <a class="layui-btn layui-btn-gray" href="alreadyuploadList.html">已上传</a>
+        </div>
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="column.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <table class="layui-table">
+            <colgroup>
+                <col width="100">
+                <col width="200">
+            </colgroup>
+            <!-- <thead>
+                <tr>
+                    <th>案件名称：</th>
+                    <th></th>
+                </tr>
+            </thead> -->
+            <tbody>
+                <tr>
+                    <td>案件名称：</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>是否本地链接：
+                    </td>
+                    <td>
+                        <div class="layui-inline">
+                            <select name="">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>是否使用窗口：
+                    </td>
+                    <td>
+                        <div class="layui-inline">
+                            <select name="">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>繁体地址：
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>简体地址：
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>英文地址：
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="magt10 layui-center">
+        <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="images.js"></script>
+</body>
+
+</html>

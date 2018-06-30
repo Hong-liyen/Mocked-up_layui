@@ -15,67 +15,75 @@
 </head>
 
 <body class="childrenBody">
-    <form class="layui-form layui-row">
+    <form class="layui-form layui-row userinfo">
         <div class="layui-col-md3 layui-col-xs12 user_right">
             <div class="layui-upload-list">
                 <img class="layui-upload-img layui-circle userFaceBtn userAvatar" id="userFace">
             </div>
-            <button type="button" class="layui-btn layui-btn-primary userFaceBtn"><i class="layui-icon">&#xe67c;</i> 我要换一个头像</button>
+            <button type="button" class="layui-btn layui-btn-primary userFaceBtn">
+                <i class="layui-icon">&#xe67c;</i> 我要换一个头像</button>
             <!-- <p>由于是纯静态页面，所以只能显示一张随机的图片</p> -->
         </div>
         <div class="layui-col-md6 layui-col-xs12">
             <div class="layui-form-item">
-                <label class="layui-form-label">用户名</label>
+                <label class="layui-form-label">用户名：</label>
                 <div class="layui-input-block">
                     <input type="text" value="woshipm01" disabled class="layui-input layui-disabled">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">昵称</label>
+                <label class="layui-form-label">昵称：</label>
                 <div class="layui-input-block">
                     <input type="text" value="123" disabled class="layui-input layui-disabled">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">原始密码</label>
+                <label class="layui-form-label">原始密码：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" placeholder="请输入原始密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">新密码</label>
+                <label class="layui-form-label">新密码：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" placeholder="请输入新密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">确认新密码</label>
+                <label class="layui-form-label">确认新密码：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" placeholder="请再次输入新密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">新增日期</label>
+                <label class="layui-form-label">新增日期：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" disabled placeholder="2018-04-23        03:29:18" class="layui-input layui-disabled">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">最后登录时间</label>
+                <label class="layui-form-label">最后登录时间：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" disabled placeholder="2018-04-23        03:29:18" class="layui-input layui-disabled">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">登录次数</label>
+                <label class="layui-form-label">登录次数：</label>
                 <div class="layui-input-block">
-                    <input type="text" value="" disabled placeholder="1" class="layui-input layui-disabled layui-login">
+                    <a href="" class="layui-blue" style="line-height: 36px;">1</a>
+                    <!-- <input type="text" value="" placeholder="1" class="layui-input layui-login"> -->
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">余额</label>
+                <label class="layui-form-label">余额：</label>
                 <div class="layui-input-block">
                     <input type="text" value="" disabled placeholder="1,052,396.97" class="layui-input layui-disabled">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">返点比例：</label>
+                <div class="layui-input-block">
+                    <a class="layui-btn layui-btn-normal" method="offset" onclick="look()">查看</a>
                 </div>
             </div>
             <!-- <div class="layui-form-item" pane="">
@@ -150,9 +158,30 @@
             </div>
         </div>
     </form>
-    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../layui/layui.all.js"></script>
     <script type="text/javascript" src="userInfo.js"></script>
     <script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+    <script>
+        //Demo 
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+        });
+        // 返水比例弹窗 
+        function look() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                align: 'l',
+                shadeClose: true,
+                title: '返点比例',
+                area: ['550px', '370px'],
+                content: '<table class="layui-table"><colgroup><col width="180"><col width="180"><col width="180"></colgroup><thead><tr><th>返点平台</th><th>最低返点</th><th>最高返点</th></tr></thead><tbody><tr><td>AG视讯</td><td>0.1</td><td>0.5</td></tr><tr><td>OG视讯</td><td>0.1</td><td>0.5</td></tr><tr><td>BB视讯</td><td>0.1</td><td>0.5</td></tr><tr><td>AB视讯</td><td>0.1</td><td>0.5</td></tr></tbody></table>'
+            });
+        }
+    </script>
 </body>
 
 </html>

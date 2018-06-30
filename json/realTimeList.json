@@ -1,0 +1,138 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 3,
+    "data": [{
+            "realTimeListId": "1",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "100.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "0",
+            "realTimeListJackpot": "35555.00"
+        },
+        {
+            "realTimeListId": "2",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "100.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "0",
+            "realTimeListJackpot": "35555.00"
+        },
+        {
+            "realTimeListId": "3",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "3",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "4",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "0",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "5",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "0",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "6",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "7",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "8",
+            "realTimeListGame": "XIN",
+            "realTimeListMember": "oppm001",
+            "realTimeListBetNumber": "1805041237414",
+            "realTimeListTime": "2018-03-16-23:34:34",
+            "realTimeListBetType": "电子游戏",
+            "realTimeListBetAmount": "50.00",
+            "realTimeListBet": "50.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "小计",
+            "realTimeListGame": "",
+            "realTimeListMember": "",
+            "realTimeListBetNumber": "",
+            "realTimeListTime": "",
+            "realTimeListBetType": "",
+            "realTimeListBetAmount": "400.00",
+            "realTimeListBet": "400.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+
+        }, {
+            "realTimeListId": "总计",
+            "realTimeListGame": "",
+            "realTimeListMember": "",
+            "realTimeListBetNumber": "",
+            "realTimeListTime": "",
+            "realTimeListBetType": "",
+            "realTimeListBetAmount": "400.00",
+            "realTimeListBet": "400.00",
+            "realTimeListProfit": "1",
+            "realTimeListJackpot": "35555.00"
+        }
+    ]
+}

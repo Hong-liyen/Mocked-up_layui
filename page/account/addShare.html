@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/shareList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="80">
+                    <col width="250">
+                    <col width="80">
+                    <col width="250">
+                </colgroup>
+                <!-- <thead>
+                    <tr>
+                        <th colspan="4">账户管理>会员修改</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td>上级用户：</td>
+                        <td colspan="4">
+                           <p>zzz1111 (股东)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- uifix_129 -->
+                        <td>
+                            <span>*</span>用户名：
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <!--  -->
+                        <!-- uifix_129 -->
+                        <td>
+                            <span>*</span>昵称：
+                        </td>
+                        <!--  -->
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- uifix_129 -->
+                        <td>
+                            <span>*</span>密码：
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <!--  -->
+                        <td>状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">开启</option>
+                                    <option value="1">关闭</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>投注状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">开启</option>
+                                    <option value="1">关闭</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>盘：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">A盘</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>投注状态：</td>
+                        <td colspan="3">
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">人民币(RMB)</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="magt10 layui-center">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+            <!-- <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">返回</button> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>操作日志</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody rebateSearchList">
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">操作人员：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">日期：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateStart">
+                        </div>
+                        <span class="line-height2-5">~</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateEnd">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">域名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">操作名称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">参数：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input searchVal">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+            </form>
+
+        </blockquote>
+        <table id="operationRecord" lay-filter="operationRecord"> 
+        </table>
+
+  
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="operationRecord.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script> 
+
+
+</body>
+
+</html>

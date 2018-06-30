@@ -1,0 +1,102 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 3,
+    "data": [{
+            "reportSearchListId": "1",
+            "reportSearchListGame": "传统彩",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "0",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        },
+        {
+            "reportSearchListId": "2",
+            "reportSearchListGame": "AB视讯",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "1",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        },
+        {
+            "reportSearchListId": "3",
+            "reportSearchListGame": "MG视讯",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "1",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+
+        }, {
+            "reportSearchListId": "4",
+            "reportSearchListGame": "BB体育",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "0",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        }, {
+            "reportSearchListId": "5",
+            "reportSearchListGame": "CMD体育",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "0",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+
+        }, {
+            "reportSearchListId": "6",
+            "reportSearchListGame": "PP电子",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "0",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        }, {
+            "reportSearchListId": "7",
+            "reportSearchListGame": "沙巴体育",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "1",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+
+        }, {
+            "reportSearchListId": "8",
+            "reportSearchListGame": "OG",
+            "reportSearchListQuantity": "400",
+            "reportSearchListAmount": "1800.00",
+            "reportSearchListBet": "1800.00",
+            "reportSearchListProfit": "1",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        }, {
+            "reportSearchListId": "小计",
+            "reportSearchListGame": "",
+            "reportSearchListQuantity": "",
+            "reportSearchListAmount": "",
+            "reportSearchListBet": "",
+            "reportSearchListProfit": "",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        }, {
+            "reportSearchListId": "总计",
+            "reportSearchListGame": "",
+            "reportSearchListQuantity": "",
+            "reportSearchListAmount": "",
+            "reportSearchListBet": "",
+            "reportSearchListProfit": "",
+            "reportSearchListPool": "",
+            "reportSearchListLottery": ""
+        }
+    ]
+}

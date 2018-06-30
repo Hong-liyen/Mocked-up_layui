@@ -1,0 +1,44 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "storeOrederNumber": "227380513413574656",
+            "storeOrederMember": "nihao1",
+            "storeWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>感觉自己</a>",
+            "storePayLevel": "未分层",
+            "storeTime": "2018-05-26 01:15:38",
+            "storeAmount": "5.00",
+            "storeOrdersSearchStatus": "1",
+            "storeCash": "payment新环球支付支付宝扫码",
+            "storeNote": "业务类型:买家,支付结果:成功,支付金额:5.00",
+            "storeOperate": "0",
+            "storePayDaily": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='look()'>查看</a>"
+        }, {
+            "storeOrederNumber": "227380513413574656",
+            "storeOrederMember": "nihao1",
+            "storeWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>感觉自己</a>",
+            "storePayLevel": "未分层",
+            "storeTime": "2018-05-26 01:15:38",
+            "storeAmount": "5.00",
+            "storeOrdersSearchStatus": "0",
+            "storeCash": "payment新环球支付支付宝扫码",
+            "storeNote": "",
+            "storeOperate": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='addList()'>手动补单</a>",
+            "storePayDaily": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='look()'>查看</a>"
+        },
+        {
+            "storeOrederNumber": "",
+            "storeOrederMember": "",
+            "storeWechat": "",
+            "storePayLevel": "",
+            "storeTime": "小计",
+            "storeAmount": "5.00",
+            "storeOrdersSearchStatus": "合计",
+            "storeCash": "5.00",
+            "storeNote": " ",
+            "storeOperate": "",
+            "storePayDaily": ""
+        }
+    ]
+}

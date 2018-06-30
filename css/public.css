@@ -180,7 +180,7 @@
     padding-bottom: 0;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     .history_box {
         height: auto !important;
         overflow-y: inherit;
@@ -200,7 +200,7 @@
 
 form input.layui-input[disabled] {
     background: #f2f2f2;
-    color: #595963 !important;
+    color: #666 !important;
 }
 
 .user_right {
@@ -390,7 +390,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -402,7 +402,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -414,7 +414,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -559,7 +559,7 @@ form input.layui-input[disabled] {
 }
 
 .icons li:hover {
-    background: rgba(13, 10, 49, .9);
+    background: rgba(13, 10, 49, 0.9);
     border-radius: 5px;
     color: #fff;
 }
@@ -701,8 +701,7 @@ h2.method {
 } */
 
 .loginBody .layui-form-item.layui-input-active label {
-    top: -10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -911,10 +910,13 @@ h2.method {
 /*图片管理*/
 
 #Images li {
-    width: 19%;
-    margin: 0.5% 0.5%;
+    width: 150px;
+    height: auto;
+    margin: 0.5% 0.5% 1.5%;
     float: left;
     overflow: hidden;
+    background: #f4f5f9;
+    color: #666;
 }
 
 #Images li img {
@@ -922,33 +924,85 @@ h2.method {
     cursor: pointer;
 }
 
-#Images li .operate {
+
+/* uifix_155  预览删除及图片滑入灰色*/
+
+#Images li .imgBox {
+    /* position: relative; */
+    font-size: 12px;
+}
+
+
+/* #Images li .imgPreview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: none;
+}
+
+#Images li .imgBox:hover img {
+    transition: all 0.5s;
+    filter: grayscale(100%);
+}
+
+#Images li .imgBox:hover .imgPreview {
+    display: block;
+    background-color: #1e9fff;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+
+/* uifix_155  预览删除*/
+
+#Images li .operatetop {
     display: block;
     height: 40px;
     width: 100%;
     background: #f4f5f9;
 }
 
-#Images li .operate .check {
+#Images li .operate {
+    display: block;
+    height: 40px;
+    padding-bottom: 1.5%;
+    width: 100%;
+    background: #f4f5f9;
+}
+
+
+/* uifix_155 */
+
+#Images li .operatetop .check,
+#Images li .size {
     float: left;
     margin-left: 11px;
+    font-size: 12px;
     height: 18px;
     padding: 11px 0;
     width: 74%;
     position: relative;
+    /* z-index: 2; */
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] {
+
+/* uifix_155 */
+
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] {
     width: 100%;
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] span {
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] span {
     padding: 0 5px 0 25px;
     width: 100%;
     box-sizing: border-box;
+    font-size: 12px;
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] i {
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] i {
     position: absolute;
     left: 0;
     top: 0;
@@ -957,15 +1011,31 @@ h2.method {
 #Images li .operate .img_del {
     float: right;
     margin: 9px 11px 0 0;
-    font-size: 22px !important;
+    font-size: 24px;
     cursor: pointer;
 }
 
 #Images li .operate .img_del:hover {
-    color: #f00;
+    color: #ff5823;
 }
 
-@media screen and (max-width:1050px) {
+#Images li .operate .file {
+    float: right;
+    margin: 9px 11px 0 0;
+    font-size: 18px !important;
+    cursor: pointer;
+}
+
+#Images li .operate .file:hover {
+    color: #1e9fff;
+}
+
+#Images li .operate span {
+    font-family: "Microsoft Yahei" !important;
+}
+
+
+/* @media screen and (max-width: 1050px) {
     #Images li {
         width: 24%;
     }
@@ -977,11 +1047,11 @@ h2.method {
     }
 }
 
-@media screen and (max-width:432px) {
+@media screen and (max-width: 432px) {
     #Images li {
         width: 99%;
     }
-}
+} */
 
 
 /*系统日志*/
@@ -1039,9 +1109,17 @@ h2.method {
 }
 
 
+/* 2018/05/08 Amanda */
+
+#userFaceBtn {
+    color: #343434;
+    border: 1px solid #e6e6e6;
+}
+
+
 /*响应式*/
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
     #userFaceBtn {
         height: 30px;
         line-height: 30px;
@@ -1077,18 +1155,21 @@ h2.method {
 /* 2018/05/02 Amanda */
 
 .mark {
-    color: red;
+    color: #ff5823;
     height: 38px;
     line-height: 38px;
     font-size: 20px;
 }
 
 .addagent input,
-.addagent.title {
+.addagent.title,
+.addmainagent input,
+.addmainagent.title {
     float: left;
 }
 
 .addagent select,
+.addmainagent select,
 .backwater select {
     height: 38px;
     line-height: 1.3;
@@ -1104,11 +1185,13 @@ h2.method {
 /* 2018/05/03 Amanda */
 
 .addagent .rebasebox,
+.addmainagent .rebasebox,
 .addagentone1stmember .rebasebox {
     margin-bottom: 15px;
 }
 
 .addagent .rebasebox .title,
+.addmainagent .rebasebox .title,
 .addagentone1stmember .rebasebox .title {
     display: inline-block;
     width: 80px;
@@ -1118,10 +1201,14 @@ h2.method {
     line-height: 38px;
 }
 
+
+/* 20180522 */
+
 .addagent .rebasebox .desc,
+.addmainagent .rebasebox .desc,
 .addagentone1stmember .rebasebox .desc {
     display: inline-block;
-    width: 150px;
+    width: 160px;
     height: 38px;
     line-height: 1.3;
     line-height: 38px;
@@ -1129,20 +1216,37 @@ h2.method {
 }
 
 .addagent tbody>tr>td:nth-child(odd),
+.addImage tbody>tr>td:nth-child(odd),
 .addagentone1stmember tbody>tr>td:nth-child(odd) {
     background-color: #f2f2f2;
-    text-align: right;
-    width: 75px;
+    /* uifix_135 */
+    text-align: left;
+    width: 80px;
+    /* uifix_135 */
 }
 
-@media (max-width: 768px) {
-    .addagent tbody>tr>tdnth-child(odd),
-    .addagentone1stmember tbody>tr>tdnth-child(odd) {
-        padding: 9px 3px !important;
-    }
+.addImage input {
+    width: 190px;
 }
 
-.addtemplate .rebate,
+.addImage tbody>tr>td:last-child {
+    text-align: left;
+}
+
+
+/* 2018/05/08 Amanda  */
+
+.addtemplate .rebate {
+    background-color: #f2f2f2;
+    display: block;
+    padding: 9px 15px;
+    /* width: 100%; */
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 .addagentone1stmember .rebate {
     padding: 9px 15px;
     width: 85px;
@@ -1163,48 +1267,116 @@ h2.method {
     margin-left: 0;
 }
 
+
+/* uifix_103 148 152 153*/
+
+.agentDeposit input,
+.addagent input {
+    width: 190px;
+}
+
+.agentDeposit td:nth-child(3n+1) {
+    text-align: right;
+}
+
+.addagent table.layui-table .layui-input-block,
+table.layui-table .layui-inline {
+    margin-bottom: 0;
+}
+
+.addagent .layui-table td,
+.layui-table th {
+    padding: 8px 15px;
+}
+
+.editMemberPopNotice th,
+.addMemberPopNotice th {
+    text-align: right;
+}
+
+.addNews td:nth-child(2n+1) {
+    text-align: right;
+}
+
+
+/* uifix_103 148 152 153*/
+
+
+/* 2018/05/08 Amanda */
+
+.backwater {
+    margin-top: 15px;
+}
+
 .backwater .title {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .backwater .layui-form-label {
     width: auto;
 }
 
-.addagent .layui-form-select .layui-edge {
+.addagent .layui-form-select .layui-edge,
+.addmainagent .layui-form-select .layui-edge {
     margin-top: 15px;
 }
 
 
 /* 20180504 Amanda */
 
-.addagent .layui-layer-title {
+.addagent .layui-layer-title,
+.addmainagent .layui-layer-title {
     padding: 0 20px;
 }
 
 .addagent .layui-icon,
+.addmainagent .layui-icon,
 .addtemplate .layui-icon {
     cursor: pointer;
 }
 
 .addagent .addlstUser,
+.addmainagent .addlstUser,
 .addagent .addlstUser span,
-.addagent .addlstUser input {
+.addmainagent .addlstUser span,
+.addagent .addlstUser input,
+.addmainagent .addlstUser input {
     display: inline-block;
+    color: #343434;
 }
 
-.addagent .addlstUser {
-    width: 25%;
+.addagent .addlstUser,
+.addmainagent .addlstUser {
+    width: auto;
+    margin-right: 10px;
+}
+
+.addagent .addlstUser:last-child,
+.addmainagent .addlstUser:last-child {
+    margin-right: 0;
 }
 
 .addagent .addlstUser span,
-.addagent .addlstUser input {
+.addmainagent .addlstUser span,
+.addagent .addlstUser input,
+.addmainagent .addlstUser input {
     float: left;
 }
 
-.addagent .addlstUser span {
+.addagent .addlstUser span,
+.addmainagent .addlstUser span {
     line-height: 38px;
+}
+
+.addagent span,
+.addmainagent span,
+.addhierarchy span {
+    color: #ff5823;
+    /* uifix_105 */
+    padding: 0 3px;
+    /* uifix_105 */
 }
 
 .addtemplate .layui-layer-title,
@@ -1226,11 +1398,44 @@ h2.method {
 }
 
 .addtemplate .addtemplateBasic {
-    margin-bottom: 5%;
+    margin: 15px 0;
 }
 
-.addtemplate .addtemplateBasic .layui-form-label {
-    width: 90px;
+
+/* 20180508 Amanda */
+
+.addtemplate .addtemplateBasic .layui-form-item,
+.addtemplate .rebatebox .layui-input-block,
+.backwater .layui-input-block {
+    margin-bottom: 15px;
+}
+
+.addtemplate .addtemplateBasic .layui-form-item .layui-form-label,
+.addtemplate .layui-form-item .rebatebox .layui-form-label,
+.addagentone1stmember .layui-form-label {
+    width: 100px;
+    text-align: left;
+}
+
+.addtemplate .layui-form-item .rebatebox .desc {
+    color: #666;
+}
+
+.addtemplate .layui-form-item .layui-input-inline,
+.backwater .layui-form-item .layui-inline {
+    width: 150px !important;
+}
+
+
+/* 20180607 span margin setting —Sharlene */
+
+.addtemplate .layui-form-item .layui-form-label span,
+.addagentone1stmember span {
+    display: inline-block;
+    /* line-height: 1.2; */
+    /* width: 15px; */
+    margin: auto 3px;
+    color: #ff5823;
 }
 
 .addtemplate .addtemplateBasic .layui-inline {
@@ -1238,19 +1443,42 @@ h2.method {
 }
 
 .addtemplate .addtemplateButton {
-    margin: 5% 0 0 15px;
+    margin: 20px 0 0 130px;
+}
+
+.addtemplate .addtemplateButton .layui-btn {
+    width: 150px;
 }
 
 .agentbackwater table {
     margin-top: 25px;
 }
 
-.backwater .title {
-    padding: 0 20px;
+
+/* 20180525 Sharlene */
+
+.addagent .tab {
+    margin-top: 10px;
 }
 
-.backwater button {
-    margin: 0 20px;
+
+/* 2018/05/08 */
+
+.backwater .title {
+    margin: 0 auto;
+    display: inline-block;
+    width: 50%;
+    padding: 0 15px;
+    text-align: left;
+}
+
+
+/* 20180607 button extanded Setting */
+
+.backwater button,
+.backwater a.layui-btn {
+    margin-left: 120px;
+    width: 150px;
 }
 
 
@@ -1259,3 +1487,413 @@ h2.method {
 .loginBody .layui-form-label {
     width: 60px;
 }
+
+
+/* 2018/05/08 amanda */
+
+
+/* uifix_117~119 */
+
+.backwater .layui-form-label,
+.addtemplate .layui-form-label {
+    text-align: left;
+    width: 85px;
+    color: #343434;
+}
+
+.userinfo .layui-form-label {
+    text-align: right;
+    width: 100px;
+    color: #343434;
+}
+
+
+/* uifix_117~119 */
+
+
+/* 20180523 Sharlene */
+
+.addhierarchy .layui-form-label {
+    width: 100px !important;
+}
+
+
+/* 2018/05/09 Amanda */
+
+.paymentWithdraw .layui-table,
+.hierarchy .layui-table,
+.agentDeposit .layui-table {
+    width: auto;
+}
+
+.hierarchy {
+    overflow-x: scroll;
+}
+
+.agentDeposit .layui-form-checkbox {
+    margin-bottom: 8px;
+}
+
+.agentDeposit #dep4 .layui-form-checkbox {
+    margin-bottom: 0;
+}
+
+.agentDeposit #item2 .layui-form-checkbox {
+    margin-bottom: 0;
+}
+
+.paymentWithdraw .magt10,
+.agentDeposit .magt10 {
+    display: inline-block;
+    width: 35%;
+    margin: 10px auto 0 !important;
+    text-align: center;
+}
+
+.agentDeposit p {
+    margin-bottom: 8px;
+}
+
+.attention {
+    position: fixed;
+    z-index: 2;
+    color: #ff5823;
+    bottom: 65px;
+    left: 20px;
+    line-height: 25px;
+}
+
+.attention02 {
+    color: #ff5823;
+    line-height: 25px;
+}
+
+
+/* 20180604 Amanda */
+
+.reportSearchAttention {
+    color: #ff5823;
+    line-height: 25px;
+}
+
+.rebateSearchList tr[data-index="5"] td,
+.storeOrdersSearch tr[data-index="2"] td {
+    border-right: none !important;
+}
+
+.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListName"] input.layui-input.layui-table-edit {
+    display: none !important;
+}
+
+.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListWait"],
+.storeOrdersSearch tr[data-index="2"] td[data-field="storeTime"],
+.storeOrdersSearch tr[data-index="2"] td[data-field="storeCash"] {
+    border-left: 1px solid #e6e6e6 !important;
+    border-right: 1px solid #e6e6e6 !important;
+    display: block !important;
+}
+
+
+/* 20180522 */
+
+span.mark {
+    width: auto;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.image .layui-block {
+    margin-bottom: 15px;
+}
+
+.image .layui-block:last-child {
+    margin-bottom: 0;
+}
+
+.image .operate span {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.image .operate i.img_del {
+    font-size: 20px !important;
+}
+
+.image .operate i.img_del>span {
+    font-size: 12px !important;
+}
+
+.editupload table {
+    text-align: center;
+}
+
+@media (max-width: 1440px) {
+    #storeList table.rebateChargeoff .layui-btn:nth-child(3) {
+        margin-top: 8px !important;
+    }
+}
+
+.contactUs .layui-form-label {
+    padding: 9px 0;
+    width: 70px;
+}
+
+.storeStopAmount .layui-checkbox {
+    float: left;
+    margin-right: 10px;
+}
+
+.storeOrdersSearch .layui-inline {
+    margin: 8px 0;
+}
+
+.storeOrderPopList th {
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.storeOrderPopList .layui-input-block,
+.storeStopAmount .layui-input-block {
+    margin-left: 0;
+    margin-bottom: 8px;
+}
+
+.storeOrderPopList .layui-form-label,
+.storeStopAmount .layui-form-label {
+    width: auto;
+}
+
+.storeOrderPopList td {
+    text-align: left;
+}
+
+.laytable-cell-1-storeStopAmount {
+    margin: 8px 0;
+    height: 38px;
+}
+
+
+/* 20180530 Amanda */
+
+.storeStoreList tr[data-index="0"] {
+    background-color: #f2f2f2;
+    color: #343434;
+    font-weight: bold;
+}
+
+
+/*20180530 第三方查询*/
+
+.reportSearch .component {
+    width: 180px;
+    height: 30px;
+    margin: 0 auto 5px;
+    position: relative;
+}
+
+.reportSearch .component .layui-input {
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    border: none;
+    transition: all 0.3s;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.reportSearch .component .layui-input::placeholder {
+    color: #666;
+}
+
+.reportSearch .component .layui-input .layui-icon {
+    color: rgba(233, 233, 233, 0.5);
+}
+
+.reportSearch .component .layui-input:focus {
+    background: #fff;
+    color: #000;
+}
+
+.reportSearch .component .layui-form-select dl {
+    top: 42px;
+    background: #fff;
+}
+
+.reportSearch .component .layui-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: #ccc;
+}
+
+.reportSearch .component dl dd {
+    color: #000 !important;
+}
+
+.reportSearch .component dl dd.layui-this {
+    color: #fff !important;
+}
+
+.reportSearch .component dl dd.layui-select-tips {
+    color: #999 !important;
+}
+
+
+/* 2018/05/29 yolanda */
+
+.paymentHistoryBody .layui-layer-page .layui-layer-content p,
+.paymentRecordsBody .layui-layer-page .layui-layer-content p {
+    line-height: 35px;
+}
+
+.paymentHistoryBody .layui-form-label,
+.paymentRecordsBody .layui-form-label {
+    width: auto;
+}
+
+.paymentHistoryBody .layui-block:last-child,
+.paymentRecordsBody .layui-block:last-child {
+    margin: 0 15px;
+}
+
+.paymentRecordsBody .layui-event {
+    margin: 3px 15px;
+}
+
+.paymentHistoryBody .layui-form-checkbox,
+.paymentRecordsBody .layui-form-checkbox {
+    margin: 6px 0;
+}
+
+.paymentHistoryBody .layui-table-cell,
+.paymentRecordsBody .layui-table-cell {
+    height: auto;
+}
+
+.paymentHistoryBody .layui-input-block {
+    margin-left: 100px;
+    min-height: 36px;
+}
+
+.paymentHistoryBody .bank-block {
+    margin-left: 75px;
+}
+
+.yo-info i.layui-icon {
+    margin-top: 0;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+
+/* 2018/05/30 yolanda  出款记录（稽核）*/
+
+.yoAuditTable table .layui-table-cell {
+    height: auto;
+    padding: 0 4px;
+}
+
+.yoAuditText {
+    padding: 15px;
+    color: #666;
+}
+
+.yoAuditText p {
+    padding: 6px 0;
+}
+
+.yoAuditText span {
+    line-height: 24px;
+}
+
+.yoAuditText .yoAuditTitle {
+    display: block;
+    font-weight: bold;
+    color: #2a63b4;
+}
+
+.yoAuditText .yoAuditCon {
+    padding: 6px 0;
+    display: block;
+    /* font-weight: bold; */
+    /* color: #28a745; */
+    /* line-height: 38px; */
+}
+
+.yoAuditText input {
+    margin-left: 5px;
+    width: 180px;
+    font-weight: normal;
+}
+
+.paymemtRebateTable {
+    text-align: center;
+}
+
+.paymemtRebateTable tr td:nth-child(3n+1) {
+    background-color: #f2f2f2;
+    color: #343434;
+    font-weight: bold;
+}
+
+.reportSearch .layui-block:first-child {
+    min-height: 45px;
+}
+
+.reportSearch .layui-block:first-child .layui-inline {
+    min-height: 65px;
+}
+
+.reportSearch .layui-block:first-child .layui-inline p {
+    line-height: 35px;
+    font-size: 12px;
+}
+
+.memberOnline blockquote a.active {
+    font-weight: bold;
+}
+
+
+/* 20180619 Amanda */
+
+.storeOrdersSearch .layui-form-switch,
+.alreadyupload .layui-form-switch {
+    width: 55px;
+}
+
+.storeOrdersSearch .layui-form-switch em,
+.alreadyupload .layui-form-switch em {
+    right: 16px;
+}
+
+.storeOrdersSearch .layui-form-onswitch i,
+.alreadyupload .layui-form-onswitch i {
+    left: 44px;
+}
+
+.storeOrdersSearch .layui-form-onswitch em,
+.alreadyupload .layui-form-onswitch em {
+    left: 12px;
+}
+
+.paymentRecordsBody .layui-form-switch {
+    width: 55px;
+}
+
+.paymentRecordsBody .layui-form-switch em {
+    right: 16px;
+}
+
+.paymentRecordsBody .layui-form-onswitch i {
+    left: 44px;
+}
+
+#hierarchyTable {
+    text-align: center;
+}
+
+
+/* 20180619 Amanda */
+
+
+/* 20180619 Amanda */

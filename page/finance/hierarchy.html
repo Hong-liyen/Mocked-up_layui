@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>层级管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody" id="storeList">
+    <form class="layui-form storeList">
+        <blockquote class="layui-elem-quote">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <a href="addHierarchy.html" class="layui-btn layui-btn-normal">新增层级</a>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal" method="offset" onclick="memberSearch()">会员查询</a>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal">统计资料更新</a>
+                </div>
+                <div class="layui-inline">
+                    <p>最后更新时间:
+                        <span> 2018-05-07 01:42:09</span>
+                    </p>
+                </div>
+                <div class="layui-inline  data-output">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">会员层级导出：</label>
+                        <div class="layui-input-block">
+                            <select name="arrange3" lay-verify="required">
+                                <option value="0">请选择层级</option>
+                                <option value="1">BWT</option>
+                                <option value="2">11111</option>
+                                <option value="3">VIP</option>
+                                <option value="5">TEST</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </blockquote>
+        <table lay-filter="h-Table" class="layui-table rebateChargeoff">
+            <thead>
+                <tr>
+                    <th rowspan="2" width="80">名称</th>
+                    <th rowspan="2" width="110">描述</th>
+                    <th colspan="6">分层条件</th>
+                    <th rowspan="2" width="100">会员人数</th>
+                    <th rowspan="2" width="150">备注</th>
+                    <th rowspan="2" width="250">功能</th>
+                    <th rowspan="2" width="100">功能设定</th>
+                </tr>
+                <tr>
+                    <th width="180">会员加入期间</th>
+                    <th width="120">存款次数</th>
+                    <th width="140">存款总额</th>
+                    <th width="150">最大存款额度</th>
+                    <th width="130">提款次数</th>
+                    <th width="140">提款总额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A0001</td>
+                    <td>未分层</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0</td>
+                    <td>0.0</td>
+                    <td>
+                        <a class="layui-blue" method="offset" onclick="memberNumber()">2504</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>A0031</td>
+                    <td>洗码层1</td>
+                    <td>
+                        2018-01-01 18:58:42
+                        <br> 2018-01-22 18:58:53
+                    </td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>1.0</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>
+                        <a class="layui-blue" method="offset" onclick="memberNumber()">2</a>
+                    </td>
+                    <td></td>
+                    <td>
+                        <a href="editHierarchy.html" class="layui-btn layui-btn-xs layui-btn-border-normal">修改</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="Levels()">分层</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal " method="offset" onclick="reUndefine()">回归</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>A0033</td>
+                    <td>BWT</td>
+                    <td>
+                        2014-02-01 16:09:33
+                        <br> 2014-06-14 16:09:35
+                    </td>
+                    <td>497</td>
+                    <td>10622842.35</td>
+                    <td>10482000.0 </td>
+                    <td>91</td>
+                    <td>10650709.12</td>
+                    <td>
+                        <a class="layui-blue" method="offset" onclick="memberNumber()">1</a>
+                    </td>
+                    <td></td>
+                    <td>
+                        <a href="editHierarchy.html" class="layui-btn layui-btn-xs layui-btn-border-normal">修改</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="Levels()">分层</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="reUndefine()">回归</a>
+                    </td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="layui-table-page page-shift">
+            <div id="layui-table-page1">
+                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+                    <span class="layui-laypage-count">共 3 条</span>
+                    <span class="layui-laypage-limits">
+                        <select lay-ignore="">
+                            <option value="10" selected="">10 条/页</option>
+                            <option value="20">20 条/页</option>
+                            <option value="30">30 条/页</option>
+                            <option value="40">40 条/页</option>
+                            <option value="50">50 条/页</option>
+                            <option value="60">60 条/页</option>
+                            <option value="70">70 条/页</option>
+                            <option value="80">80 条/页</option>
+                            <option value="90">90 条/页</option>
+                        </select>
+                    </span>
+                    <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-curr">
+                        <em class="layui-laypage-em"></em>
+                        <em>1</em>
+                    </span>
+                    <a href="javascript:;" class="layui-laypage-next" data-page="2">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-skip">到第
+                        <input type="text" min="1" value="1" class="layui-input">页
+                        <button type="button" class="layui-laypage-btn">确定</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../layui/lay/modules/form.js"></script>
+</body>
+<script>
+    // 查询会员名单
+    // uifix_138
+    function memberSearch() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送出查询', '关闭查询'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '查询会员名单',
+            area: ['500px', '340px'],
+            content: '<form  class="layui-form">\
+                        <div class="layui-form-item">\
+                            <textarea name="desc" placeholder="以半角逗号,分隔多个帐号，最大支持300会员查询" class="layui-textarea" style="height: 200px"></textarea>\
+                        </div>\
+                    </form>'
+        });
+    }
+    // 
+
+    // 层级分层
+    function Levels() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送交', '关闭'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '层级分层',
+            area: ['480px', '75%'],
+            content: '<iframe src="hierarchyTable.html" width="100%" height="96%"></iframe>'
+
+        });
+    }
+    // 回歸
+    function reUndefine() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '回归未分层',
+            area: ['350px', '250px'],
+            content: '<p style="padding: 10px 15px; line-height: 1.8;">该层级未锁定的会员将会被回归至未分层！确定执行吗?</p>'
+        });
+    }
+    // 设定币别
+    function payPlatform() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['查询', '关闭'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '支付平台设置',
+            area: ['350px', '300px'],
+            content: '<iframe src="hPayPlatform.html" width="100%" height="90%"></iframe>'
+
+        });
+    }
+    // 会员人数 
+    function memberNumber() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送出'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '会员分层锁定清单[未分层]',
+            area: ['800px', '550px'],
+            content: '<iframe src="hPayMember.html" width="100%" height="100%"></iframe>'
+        });
+    }
+</script>
+
+
+</html>

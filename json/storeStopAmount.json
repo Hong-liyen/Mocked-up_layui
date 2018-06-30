@@ -1,0 +1,26 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "storeId": "旺付通 owen",
+            "storeSystem": "payment旺付通网银支付",
+            "storeNumber": "69******66",
+            "storeLevel": "测试层级01-level1&levelb  level2 未分层",
+            "storeStopAmount": "<div class='layui-inline'><div class='layui-form-item'><div class='layui-checkbox'><input type='checkbox' name='' title='' lay-skin='primary'><div class='layui-unselect layui-form-checkbox' lay-skin='primary'><i class='layui-icon'>  </i></div></div><div class='layui-input-inline'><input type='text' class='layui-input' placeholder=''></div></div></div>",
+            "storeTimes": "0",
+            "storeaccumulateAmount": "0",
+            "storeFinalTime": "无"
+        },
+        {
+            "storeId": "赢通宝网银",
+            "storeSystem": "payment赢通宝网银",
+            "storeNumber": "90******01",
+            "storeLevel": "未分层",
+            "storeStopAmount": "<div class='layui-inline'><div class='layui-form-item'><div class='layui-checkbox'><input type='checkbox' name='' title='' lay-skin='primary'><div class='layui-unselect layui-form-checkbox' lay-skin='primary'><i class='layui-icon'>  </i></div></div><div class='layui-input-inline'><input type='text' class='layui-input' placeholder=''></div></div></div>",
+            "storeTimes": "0",
+            "storeaccumulateAmount": "0",
+            "storeFinalTime": "2018-05-26 16:06:51"
+        }
+    ]
+}

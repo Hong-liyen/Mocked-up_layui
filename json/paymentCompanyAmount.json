@@ -1,0 +1,65 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "paymentCompanyLayer": "未分层",
+            "paymentCompanyBetNumber": "229626876514009088",
+            "paymentCompanyShare": "dagudong1",
+            "paymentCompanyAgent": "ddaili001",
+            "paymentCompanyMember": "qweasd",
+            "paymentCompanyAccount": "中国农业银行",
+            "paymentCompanyWithdrawal": "1000",
+            "paymentCompanyWithdrawalAccount": "<div>中国农业银行</div><div>111234567891111</div>",
+            "paymentCompanyPeople": "tyler111",
+            "paymentCompanyTime": "2018-06-01 06:02:18"
+        },
+        {
+            "paymentCompanyLayer": "未分层",
+            "paymentCompanyBetNumber": "229626876514009088",
+            "paymentCompanyShare": "dagudong1",
+            "paymentCompanyAgent": "ddaili001",
+            "paymentCompanyMember": "qweasd",
+            "paymentCompanyAccount": "中国农业银行",
+            "paymentCompanyWithdrawal": "1000",
+            "paymentCompanyWithdrawalAccount": "<div>中国农业银行</div><div>111234567891111</div>",
+            "paymentCompanyPeople": "tyler111",
+            "paymentCompanyTime": "2018-06-01 06:02:18"
+        },
+        {
+            "paymentCompanyLayer": "未分层",
+            "paymentCompanyBetNumber": "229626876514009088",
+            "paymentCompanyShare": "dagudong1",
+            "paymentCompanyAgent": "ddaili001",
+            "paymentCompanyMember": "qweasd",
+            "paymentCompanyAccount": "中国农业银行",
+            "paymentCompanyWithdrawal": "1000",
+            "paymentCompanyWithdrawalAccount": "<div>中国农业银行</div><div>111234567891111</div>",
+            "paymentCompanyPeople": "tyler111",
+            "paymentCompanyTime": "2018-06-01 06:02:18"
+        },
+        {
+            "paymentCompanyLayer": "未分层",
+            "paymentCompanyBetNumber": "229626876514009088",
+            "paymentCompanyShare": "dagudong1",
+            "paymentCompanyAgent": "ddaili001",
+            "paymentCompanyMember": "qweasd",
+            "paymentCompanyAccount": "中国农业银行",
+            "paymentCompanyWithdrawal": "1000",
+            "paymentCompanyWithdrawalAccount": "<div>中国农业银行</div><div>111234567891111</div>",
+            "paymentCompanyPeople": "tyler111",
+            "paymentCompanyTime": "2018-06-01 06:02:18"
+        }, {
+            "paymentCompanyLayer": "",
+            "paymentCompanyBetNumber": "",
+            "paymentCompanyShare": "",
+            "paymentCompanyAgent": "",
+            "paymentCompanyMember": "",
+            "paymentCompanyAccount": "",
+            "paymentCompanyWithdrawal": "小计",
+            "paymentCompanyWithdrawalAccount": "0",
+            "paymentCompanyPeople": "",
+            "paymentCompanyTime": ""
+        }
+    ]
+}

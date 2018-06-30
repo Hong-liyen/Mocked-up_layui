@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="loginShare"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/memberList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table rebateChargeoff">
+                <colgroup>
+                    <col width="150">
+                    <col width="230">
+                    <col width="280">
+                    <col>
+                    <col width="230">
+                    <col width="230">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>序号 </th>
+                        <th>操作人员</th>
+                        <th>操作时间</th>
+                        <th>访问域名</th>
+                        <th>操作名称</th>
+                        <th>参数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>qazwsx123</p>
+                        <td>
+                            <p>2018-01-01 12:59:59</p>
+                        </td>
+                        <td>
+                            <p>http://www.try1024.com/api/wap/wapLogin/login</p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="magt10 layui-center">
+            <button class="layui-btn-danger layui-btn" lay-submit="" lay-filter="systemParameter">批量删除</button>
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+        </div> -->
+    </div>
+
+    
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+<script>
+    // IP位置删除
+    function del() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: '确定',
+            btnAlign: 'c',
+            shadeClose: true,
+            icon: 3,
+            title: '删除IP',
+            area: ['250px', '160px'],
+            content: '确认删除IP位置？'
+        });
+    }
+    
+    // IP位置添加 --默认启用
+    function add() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: '确定',
+            btnAlign: 'c',
+            shadeClose: true,
+            icon: 3,
+            title: '添加IP',
+            area: ['250px', '160px'],
+            content: '确认添加IP位置？'
+        });
+    }
+</script>
+
+</html>

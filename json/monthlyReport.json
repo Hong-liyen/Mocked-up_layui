@@ -1,0 +1,31 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "monthlyReportName": "海天盛筵4",
+            "monthlyReportPeriod": "2018年05月",
+            "monthlyReportAmount": "<a href='monthlyAmountDetail.html' class='layui-blue'>3,795</a>"
+        },
+        {
+            "monthlyReportName": "海天盛筵4",
+            "monthlyReportPeriod": "2018年04月",
+            "monthlyReportAmount": "<a class='layui-red'>-297</a>"
+        },
+        {
+            "monthlyReportName": "海天盛筵4",
+            "monthlyReportPeriod": "2018年03月",
+            "monthlyReportAmount": "<a class='layui-blue'>1,203</a>"
+        },
+        {
+            "monthlyReportName": "海天盛筵4",
+            "monthlyReportPeriod": "2018年02月",
+            "monthlyReportAmount": "<a class='layui-red'>-4,502</a>"
+        },
+        {
+            "monthlyReportName": "海天盛筵4",
+            "monthlyReportPeriod": "2018年01月",
+            "monthlyReportAmount": "<a class='layui-blue'>603</a>"
+        }
+    ]
+}

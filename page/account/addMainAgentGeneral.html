@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent"><!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/mainAgentList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="80">
+                    <col width="250">
+                    <col width="80">
+                    <col width="250">
+                </colgroup>
+                <!-- <thead>
+                    <tr>
+                        <th colspan="4">账户管理>会员修改</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td>选择上级：</td>
+                        <td colspan="3">
+                            <div class="addlstUser">
+                                <span class="title">大股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                    <option value="0">请选择</option>
+                                    <option value="1">ttttttttttt</option>
+                                    <option value="2">yuyuyuyu</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="addlstUser">
+                                <span class="title">股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                        <option value="0">请选择</option>
+                                        <option value="1">mala3er</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上级用户：</td>
+                        <td colspan="3">
+                           <p>mala3er (股东)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- uifix_132 -->
+                        <td>
+                            <span>*</span>用户名：
+                        </td>
+
+                        <td>
+                            <div class="layui-inline"><input type="text" class="layui-input">
+                            </div>
+                            <span>账号不能为空!</span>
+                        </td>
+                        <!--  -->
+                        <!-- uifix_132 -->
+                        <td>
+                            <span>*</span>昵称：
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <span>昵称不能为空!</span>
+                        </td>
+                        <!--  -->
+                    </tr>
+                    <tr>
+                        <!-- uifix_132 -->
+                        <td><span>*</span>密码：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <span>密码不能为空!</span>
+                        </td>
+                        <!--  -->
+                        <td>昵称状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                <option value="0">开启</option>
+                                <option value="1">关闭</option>
+                            </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>返点设置：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">默认模版</option>
+                                    <option value="1">VIP模板</option>
+                                    <option value="2">0.2-0.4返点模板</option>
+                                    <option value="3">0.1-0.6返点模板</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>投注状态：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="">
+                                    <option value="0">开启</option>
+                                    <option value="1">关闭</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="magt10 layui-center">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+            <!-- <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">返回</button> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>订单号查询</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody storeOrdersSearch">
+    <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="remitOrdersSearch.html">订单号查询</a>
+            <a class="layui-btn layui-btn-gray" href="remitStoreList.html">商号列表</a>
+            <a class="layui-btn layui-btn-gray" href="remitBankList.html">银行商家列表</a>
+            <a class="layui-btn layui-btn-gray" href="remitStoreOrder.html">设定商号顺序</a>
+            <a class="layui-btn layui-btn-gray" href="remitStopAmount.html">设定商号停用金额</a>
+            <a class="layui-btn layui-btn-gray" href="remitStoreSearch.html">商家信息查询</a>
+        </div>
+        <blockquote class="layui-elem-quote quoteBox">
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">日期（美东）时间区间：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateStart">
+                    </div>
+                    <span class="line-height2-5">~</span>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateEnd">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">会员账号：</label>
+                    <div class="layui-input-inline">
+                        <!-- uifix_142 -->
+                        <input type="text" class="layui-input searchVal" placeholder="">
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">订单号：</label>
+                    <div class="layui-input-inline">
+                        <!-- uifix_142 -->
+                        <input type="text" class="layui-input searchVal" placeholder="">
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">支付方式状态：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">启用</option>
+                            <option value="1">停用</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">支付平台：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">所有</option>
+                            <option value="1">支付宝</option>
+                            <option value="2">千网支付宝</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">会员支付层级：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">全部</option>
+                            <option value="1">未分层</option>
+                            <option value="2">分层一</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">更新秒数：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">300</option>
+                            <option value="1">10</option>
+                            <option value="2">20</option>
+                            <option value="3">60</option>
+                            <option value="4">不更新</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+            </div>
+
+        </blockquote>
+        <table id="remitOrdersSearch" lay-filter="remitOrdersSearch"></table>
+    </form>
+    <!--审核状态-->
+    <script type="text/html" id="remitOrdersSearchStatus">
+        {{# if( d.remitOrdersSearchStatus == "0"){ }}
+        <div class="layui-blue">
+            <span>成功</span>
+        </div> {{# } else if( d.remitOrdersSearchStatus == "1") { }}
+        <div class="layui-red">
+            <span>未处理</span>
+        </div> {{# }}}
+    </script>
+    <!--操作状态-->
+    <script type="text/html" id="remitOrdersSearchStatus">
+        {{# if( d.remitOrdersSearchStatus == "0"){ }}
+        <a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='addList()'>手动补单</a> {{# } else if( d.remitOrdersSearchStatus == "1") { }}
+        <span>无</span> {{# }}}
+    </script>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="remitOrdersSearch.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
+    <script>
+        // 微信昵称
+        function wehatName() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '历史微信昵称',
+                area: ['280px', '180px'],
+                content: '＠＠＠'
+            });
+        }
+        // 操作弹窗
+        function addList() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '人工补单操作',
+                area: ['660px', '560px'],
+                content: '<table class="layui-table remitOrderPopList"><tbody><tr><th>支付信息:</th><td><div class="layui-input-block"><label class="layui-form-label">单号：</label><div class="layui-input-inline"><input type="text" class="layui-input" placeholder="22741228972879"></div></div><div class="layui-input-block"><label class="layui-form-label">金流：</label><div class="layui-input-inline"><input type="text" class="layui-input" placeholder="未处理"></div></div><div class="layui-input-block"><label class="layui-form-label">会员：</label><div class="layui-input-inline"><input type="text" class="layui-input" placeholder="nihao1"></div></div><div class="layui-input-block"><label class="layui-form-label">金额：</label><div class="layui-input-inline"><input type="text" class="layui-input" placeholder="10.27"></div></div><div class="layui-input-block"><label class="layui-form-label">时间：</label><div class="layui-input-inline"><input type="text" class="layui-input" placeholder="2018-05-26 03:21:50"></div></div></td></tr><tr><th>操作原因:</th><td><div class="layui-input-inline"><input type="text" class="layui-input searchVal" placeholder=""></div></tr><tr><th>动态口令:</th><td><div class="layui-inline"><input type="text" class="layui-input"></div><span class="layui-red">（未绑定请留空）</span></td></tr></tbody></table>'
+            });
+        }
+        // 查看支付日志弹窗
+        function look() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '查看支付日志',
+                area: ['680px', '560px'],
+                content: '<table class="layui-table remitOrderPopList"><tbody><tr><th>订单号</th><th>会员账号</th><th>类型</th><th>时间</th><th>结果</th><th>地址</th><th>参数</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>'
+            });
+        }
+    </script>
+</body>
+
+</html>

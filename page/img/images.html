@@ -1,33 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>图片总数--layui后台管理模板</title>
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="../../css/public.css" media="all" />
+    <meta charset="utf-8">
+    <title>网站资讯系统-图库</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
-<body class="childrenBody">
-<form class="layui-form">
-	<blockquote class="layui-elem-quote news_search">
-		<div class="layui-inline">
-			<input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="全选">
-		</div>
-		<div class="layui-inline">
-			<a class="layui-btn layui-btn-sm layui-btn-danger batchDel">批量删除</a>
-		</div>
-		<div class="layui-inline">
-			<a class="layui-btn layui-btn-sm uploadNewImg">上传新图片</a>
-		</div>
-	</blockquote>
-	<ul class="layer-photos-demo" id="Images"></ul>
-</form>
-<script type="text/javascript" src="../../layui/layui.js"></script>
-<script type="text/javascript" src="images.js"></script>
+
+<body class="childrenBody image">
+    <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="images.html">图库</a>
+            <a class="layui-btn layui-btn-gray" href="column.html">栏目</a>
+            <a class="layui-btn layui-btn-gray" href="uploadList.html">待上传</a>
+            <a class="layui-btn layui-btn-gray" href="alreadyuploadList.html">已上传</a>
+        </div>
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-block">
+                    <span class="title">标题：</span>
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input searchVal" placeholder="">
+                        </div>
+                        <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
+                    </div>
+                    <button type="button" class="layui-btn layui-btn-normal" method="offset" onclick="addImage()">
+                        <i class="layui-icon">&#xe654;</i>新增图片
+                    </button>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <span class="title">分组：</span>
+                        <button type="button" class="layui-btn layui-btn-normal" method="offset" onclick="newGroup()">
+                            <i class="layui-icon">&#xe654;</i>新增分组
+                        </button>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" class="layui-btn layui-btn-normal">
+                        未分组
+                    </button>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" class="layui-btn layui-btn-normal">
+                        <i class="layui-icon">&#xe640;</i>优惠活动图
+                    </button>
+                    </div>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <span class="title">全选：</span>
+                        <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="">
+                        <button type="button" class="layui-btn layui-btn-normal">
+                            移动至分组
+                        </button>
+                    </div>
+                    <div class="layui-inline">
+                        <a class="layui-btn layui-btn layui-btn-danger batchDel">
+                            <i class="layui-icon">&#xe640;</i>删除</a>
+                    </div>
+                </div>
+            </form>
+
+        </blockquote>
+        <form class="layui-form">
+            <ul class="layer-photos-demo" id="Images"></ul>
+        </form>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="images.js"></script>
+    <script>
+        // 新增分组弹窗
+        function newGroup() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '新增分组',
+                area: ['280px', '180px'],
+                content: '分组名称：<input type="text">'
+            });
+        }
+        // 新增图片弹窗 
+        function addImage() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['新增', '取消'],
+                btnAlign: 'c',
+                align: 'l',
+                shadeClose: true,
+                title: '新增图片',
+                area: ['550px', '450px'],
+                content: '<iframe src="addImages.html" width="100%" height="90%"></iframe>'
+            });
+        }
+        // 编辑图片弹窗 
+        function editImage() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                align: 'l',
+                shadeClose: true,
+                title: '编辑图片',
+                area: ['550px', '300px'],
+                content: '\<table class="layui-table addImage"><tbody><tr><td>标题：</td><td><div class="layui-inline"><input type="text" class="layui-input"></div></td></tr><tr><td>图片分组：</td><td><div class="layui-inline"><select name=""><option value="0">未分组</option><option value="1">优惠活动图</option></select></div></td></tr></tbody></table>'
+            });
+        }
+    </script>
 </body>
+
 </html>

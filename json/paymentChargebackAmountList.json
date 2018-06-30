@@ -1,0 +1,50 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+            "paymentChargebackId": "qweasd",
+            "paymentChargebackItem": "出款扣除手续费",
+            "paymentChargebackAmount": "50",
+            "paymentChargebackAgent": "ddaili001",
+            "paymentChargebackNumber": "229635882091544576",
+            "paymentChargebackNote": "出款扣除行政费 ：0.00、重复出款手续费+常态性稽核扣除固定手续费：50.00",
+            "paymentChargebackTime": "2018-06-01 06:37:40"
+        },
+        {
+            "paymentChargebackId": "qweasd",
+            "paymentChargebackItem": "出款扣除手续费",
+            "paymentChargebackAmount": "50",
+            "paymentChargebackAgent": "ddaili001",
+            "paymentChargebackNumber": "229635882091544576",
+            "paymentChargebackNote": "出款扣除行政费 ：0.00、重复出款手续费+常态性稽核扣除固定手续费：50.00",
+            "paymentChargebackTime": "2018-06-01 06:37:40"
+        },
+        {
+            "paymentChargebackId": "qweasd",
+            "paymentChargebackItem": "出款扣除手续费",
+            "paymentChargebackAmount": "50",
+            "paymentChargebackAgent": "ddaili001",
+            "paymentChargebackNumber": "229635882091544576",
+            "paymentChargebackNote": "出款扣除行政费 ：0.00、重复出款手续费+常态性稽核扣除固定手续费：50.00",
+            "paymentChargebackTime": "2018-06-01 06:37:40"
+        },
+        {
+            "paymentChargebackId": "qweasd",
+            "paymentChargebackItem": "出款扣除存款优惠",
+            "paymentChargebackAmount": "50",
+            "paymentChargebackAgent": "ddaili001",
+            "paymentChargebackNumber": "229635882091544576",
+            "paymentChargebackNote": "出款扣除优惠：3.00",
+            "paymentChargebackTime": "2018-06-01 06:37:40"
+        }, {
+            "paymentChargebackId": "",
+            "paymentChargebackItem": "小计",
+            "paymentChargebackAmount": "383",
+            "paymentChargebackAgent": "",
+            "paymentChargebackNumber": "",
+            "paymentChargebackNote": "",
+            "paymentChargebackTime": ""
+        }
+    ]
+}

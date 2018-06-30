@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>网站资讯系统-图库(新增图片)</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody image">
+    <form class="layui-form storeList">
+        <table class="layui-table addImage">
+            <tbody>
+                <tr>
+                    <td>标题：</td>
+                    <td>
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>图片分组：</td>
+                    <td>
+                        <div class="layui-inline">
+                            <select name="">
+                                <option value="0">未分组</option>
+                                <option value="1">优惠活动图</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>图片：</td>
+                    <td>
+                        <input type="file" title="选择图片">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">温馨提醒
+                        <br/>1、png图片最大可上传600KB;
+                        <br/>2、jpg图片最大可上传400KB;</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+        });
+    </script>
+</body>
+
+</html>

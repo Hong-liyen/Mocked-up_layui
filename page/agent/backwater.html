@@ -17,21 +17,21 @@
 
 <body class="childrenBody">
     <div class="backwater">
-        <h2 class="title layui-left">返水统计</h2>
+        <!-- <h2 class="title layui-left">返水统计</h2> -->
         <form class="layui-form">
             <div class="layui-form-item">
                 <label class="layui-form-label">日期查询：</label>
                 <div class="layui-input-block">
                     <div class="layui-inline">
-                        <input type="text" class="layui-input" id="test1" placeholder="开始时间">
+                        <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
                     </div>
                     <div class="layui-inline">
-                        <input type="text" class="layui-input" id="test1" placeholder="结束时间">
+                        <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
                     </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label"><span class="layui-red">*</span>用户选择：</label>
+                <label class="layui-form-label">用户选择：</label>
                 <div class="layui-input-block">
                     <div class="layui-inline">
                         <select name="">
@@ -48,18 +48,19 @@
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label"><span class="layui-red">*</span>显示条件：</label>
+                <label class="layui-form-label">显示条件：</label>
                 <div class="layui-input-block">
                     <div class="layui-inline">
                         <select name="">
                             <option value="0">有优惠</option>
                             <option value="1">无优惠</option>
+                            <option value="2">全部优惠</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label"><span class="layui-red">*</span>返水平台：</label>
+                <label class="layui-form-label">返水平台：</label>
                 <div class="layui-input-block">
                     <input type="checkbox" name="" title="全部" lay-skin="primary" checked>
                     <input type="checkbox" name="" title="AG视讯" lay-skin="primary">
@@ -68,7 +69,7 @@
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label"><span class="layui-red">*</span>事件名称：</label>
+                <label class="layui-form-label">事件名称：</label>
                 <div class="layui-input-block">
                     <div class="layui-inline">
                         <input type="text" class="layui-input masterEmail" lay-verify="required|email" placeholder="">
@@ -84,14 +85,27 @@
 
 
     <script src="../../layui/layui.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
     <script>
+        //日期彈窗
         layui.use('laydate', function() {
             var laydate = layui.laydate;
 
-            //执行一个laydate实例
+            //自定义格式
             laydate.render({
-                elem: '#test1,#test2' //指定元素
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
             });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
         });
         //Demo
         layui.use('form', function() {

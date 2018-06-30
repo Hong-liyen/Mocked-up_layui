@@ -8,12 +8,44 @@
 }
 
 .hide {
-    display: none
+    display: none;
 }
 
-[thirdchildren] {
-    border: 1px solid red
+.layui-nav [thirdchildren] cite {
+    font-size: 0.9em;
+    padding-left: 1.8em;
 }
+
+.layui-nav .layui-this[thirdchildren] a[layer3].active {
+    display: block;
+    background: url(../images/arrow.png) right center no-repeat rgba(255, 255, 255, 0.1) !important;
+    background-position-x: -100px;
+}
+
+
+/* 20180505 3rd nav Setting --Sharlene */
+
+.layui-nav-tree dd[thirdchildren].layui-this {
+    background-color: transparent;
+}
+
+.layui-nav [thirdchildren] cite {
+    font-size: 0.9em;
+    padding-left: 1.8em;
+}
+
+.layui-nav .layui-this[thirdchildren] a[layer3].active {
+    display: block;
+    background: url(../images/arrow.png) right center no-repeat rgba(255, 255, 255, 0.1) !important;
+    background-position-x: -100px;
+}
+
+
+/* .layui-nav .layui-this a[layer2].active{
+    display: block;
+    background: url(../images/arrow.png) right center no-repeat rgba(255,255,255,0.1) !important;  
+    background-position-x: -100px;
+} */
 
 .seraph {
     font-size: 16px !important;
@@ -37,23 +69,28 @@
 }
 
 iframe {
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
     width: 100%;
     border: none;
 }
 
+
+/* 20180510 closeBox Spec Setting: Link props — Sharlene */
+
 .top_menu.layui-nav .layui-nav-child dd.layui-this a,
 .closeBox.layui-nav .layui-nav-child dd.layui-this a,
-.closeBox .layui-nav-child dd.layui-this,
+.closeBox.layui-nav .layui-nav-item a .closeBox.layui-nav-child dd.layui-this,
 .top_menu .layui-nav-child dd.layui-this {
+    transition: all .3s;
+    -webkit-transition: all .3s;
     background: none;
-    color: #333;
+    color: #343434;
 }
 
-.layui-nav .layui-nav-child a:hover,
-.layui-nav .layui-nav-child dd.layui-this a:hover {
-    /* background-color: #5FB878; */
+.closeBox.layui-nav .layui-nav-child>dd>a:hover,
+.closeBox.layui-nav .layui-nav-child dd:hover {
+    background-color: #487fcc;
     color: #fff;
 }
 
@@ -249,7 +286,7 @@ iframe {
 
 .hideMenu {
     float: left;
-    width: 20px;
+    width: 24px !important;
     height: 20px;
     margin-top: 15px;
     font-size: 17px;
@@ -351,7 +388,7 @@ iframe {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    border: 4px solid #44576b;
+    border: 4px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
@@ -394,6 +431,7 @@ iframe {
 
 .layui-nav-itemed .layui-nav-child a {
     padding-left: 40px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -413,11 +451,15 @@ iframe {
     border: none;
     transition: all 0.3s;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #e6e6e6;
 }
 
 .component .layui-input::placeholder {
-    color: #ccc;
+    color: rgba(233, 233, 233, 0.5);
+}
+
+.component .layui-input .layui-icon {
+    color: rgba(233, 233, 233, 0.5);
 }
 
 .component .layui-input:focus {
@@ -462,7 +504,7 @@ iframe {
 #top_tabs_box {
     padding-right: 138px;
     height: 40px;
-    border-bottom: 1px solid #e2e2e2;
+    /* border-bottom: 1px solid #e2e2e2; */
 }
 
 #top_tabs {
@@ -472,7 +514,7 @@ iframe {
 
 .layui-tab-title .layui-this {
     background-color: #fff;
-    color: #244d8c;
+    color: #55acee;
 }
 
 .layui-tab-title .layui-this:after {
@@ -499,9 +541,9 @@ iframe {
     position: absolute;
     right: 0;
     background-color: #fff !important;
-    color: #000;
-    border-left: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
+    color: #343434 !important;
+    /* border-left: 1px solid #e2e2e2; */
+    /* border-bottom: 1px solid #e2e2e2; */
 }
 
 .closeBox .layui-nav-item {
@@ -509,8 +551,8 @@ iframe {
 }
 
 .closeBox .layui-nav-item>a,
-.closeBox .layui-nav-item>a:hover {
-    color: #000;
+.closeBox .layui-nav-child .layui-nav .layui-nav-item a {
+    color: #343434;
 }
 
 .closeBox .layui-nav-child {
@@ -523,6 +565,7 @@ iframe {
 }
 
 .closeBox a i.caozuo {
+    color: #343434;
     font-size: 20px;
     position: absolute;
     top: 1px;
@@ -530,11 +573,11 @@ iframe {
 }
 
 .closeBox a span.layui-nav-more {
-    border-color: #333 transparent transparent;
+    border-color: #343434 transparent transparent;
 }
 
 .closeBox a span.layui-nav-more.layui-nav-mored {
-    border-color: transparent transparent #333;
+    border-color: transparent transparent #343434;
 }
 
 
@@ -750,6 +793,10 @@ iframe {
 .logo {
     line-height: 50px !important;
     max-height: 50px !important;
+}
+
+.header .logo {
+    border-bottom: 1px solid #326cc8;
 }
 
 .mobileTopLevelMenus {

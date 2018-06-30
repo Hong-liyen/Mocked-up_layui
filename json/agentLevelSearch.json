@@ -1,0 +1,41 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 6,
+    "data": [{
+            "agentLevelSearchLevel": "0",
+            "agentLevelSearchAccount": "okok111",
+            "agentLevelSearchMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=F6040F00BFAE5A2A4955868D940333F1",
+            "agentLevelSearchTime": "2018-05-26 05:44:52",
+            "agentLevelSearchIP": "180.232.84.51"
+        },
+        {
+            "agentLevelSearchLevel": "0",
+            "agentLevelSearchAccount": "okok111",
+            "agentLevelSearchMsg": "密码错误 访问设备：手机 http://www.try1024.com/api/wap/wapLogin/login,sessionid=63726523D4264A256AB84F1A41748276",
+            "agentLevelSearchTime": "2018-05-26 02:44:56",
+            "agentLevelSearchIP": "180.232.84.51"
+        },
+        {
+            "agentLevelSearchLevel": "0",
+            "agentLevelSearchAccount": "okok111",
+            "agentLevelSearchMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=9F090E10F07D8936E0E40B9660CFA494",
+            "agentLevelSearchTime": "2018-05-25 06:22:33",
+            "agentLevelSearchIP": "182.18.239.162"
+        },
+        {
+            "agentLevelSearchLevel": "0",
+            "agentLevelSearchAccount": "asdfqwer",
+            "agentLevelSearchMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=092DDB8B15609CB1A305F9F7AEAB5259",
+            "agentLevelSearchTime": "2018-05-26 05:25:08",
+            "agentLevelSearchIP": "180.232.84.51"
+        },
+        {
+            "agentLevelSearchLevel": "6",
+            "agentLevelSearchAccount": "haitianzi",
+            "agentLevelSearchMsg": "登录成功 http://hgoeaitian.sharksu.com/agent/agent",
+            "agentLevelSearchTime": "2018-05-26 03:26:00",
+            "agentLevelSearchIP": "180.232.84.51"
+        }
+    ]
+}

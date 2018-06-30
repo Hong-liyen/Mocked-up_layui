@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>即时稽核查询</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody yoAuditTable">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <span>日期：</span>
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input searchVal" placeholder=" ">
+                        </div>
+                    </div>
+                </div>
+                <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+            </form>
+        </blockquote>
+        <table id="withdrawCheck" lay-filter="withdrawCheck"></table>
+    </form>
+
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="withdrawCheckSearch.js"></script>
+    <script>
+        //Demo 
+        layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
+            var form = layui.form,
+                layer = parent.layer === undefined ? layui.layer : top.layer,
+                $ = layui.jquery,
+                laydate = layui.laydate,
+                laytpl = layui.laytpl,
+                table = layui.table;
+        });
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
+</body>
+
+</html>

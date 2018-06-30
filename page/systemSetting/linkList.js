@@ -36,7 +36,7 @@ layui.use(['form','layer','laydate','table','upload'],function(){
         ]]
     });
 
-    //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
+    //查询索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click",function(){
         if($(".searchVal").val() != ''){
             table.reload("linkListTab",{
@@ -44,11 +44,11 @@ layui.use(['form','layer','laydate','table','upload'],function(){
                     curr: 1 //重新从第 1 页开始
                 },
                 where: {
-                    key: $(".searchVal").val()  //搜索的关键字
+                    key: $(".searchVal").val()  //查询索的关键字
                 }
             })
         }else{
-            layer.msg("请输入搜索的内容");
+            layer.msg("请输入查询的内容");
         }
     });
 

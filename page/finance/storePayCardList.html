@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>银行商家对应表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody storePayCardList">
+    <form class="layui-form storeList">
+        <table class="layui-table rebateChargeoff">
+            <thead>
+                <tr>
+                    <th width="80">点卡类型</th>
+                    <th width="80"><input type='checkbox' name='' title='' lay-skin='primary'>全选</th>
+                    <th width="80">手续费</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="80">
+                        神州行充值卡
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        骏网一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        盛大游戏点卡
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        网易一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        久游一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        完美一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        纵游一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        天宏一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        天下通一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80">
+                        搜狐一卡通
+                    </td>
+                    <td width="80">
+                        <input type='checkbox' name='' title='' lay-skin='primary'>
+                    </td>
+                    <td width="80">
+                        <div class="layui-input-inline"><input type="text" class="layui-input" placeholder=""></div><div class="layui-input-inline">%</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="magt10 layui-center">
+            <a class="layui-btn layui-btn-normal layui-btn-lg">确定</a>
+        </div>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="storePayCardList.js"></script>
+    <script>
+        //Demo 
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+        });
+        // 修改弹窗
+        function pageModify() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '修改',
+                area: ['260px', '160px'],
+                content: '确定要修改吗？'
+            });
+        }
+    </script>
+</body>
+
+</html>

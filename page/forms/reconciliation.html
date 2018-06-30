@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>会员报表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody rebateSearchList">
+    <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="reconciliation.html">账务查询</a>
+            <a class="layui-btn layui-btn-gray" href="alterationPassword.html">更变密码</a>
+        </div>
+        <div class="layui-title">提交月结对账系统的密码</div>
+        <div class="layui-form agentDeposit">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td>密码：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="password" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="password" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="magt10 layui-left">
+                                <button class="layui-btn-normal layui-btn" lay-submit="">送出</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">年份：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateYear">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">期数名称：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateMonth">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+            </form>
+
+        </blockquote> 
+        <table class="layui-table rebateChargeoff">
+            <thead>
+                <tr>
+                    <th>厅主</th>
+                    <th>期数</th>
+                    <th>应交金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>海天盛筵4</td>
+                    <td>2018年02月</td>
+                    <td><a href='reconciliationMoney.html' class='layui-blue'>1,203</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script> 
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //年选择器
+            laydate.render({ 
+                elem: '#dateYear',
+                type: 'year',
+                value: '2018'
+            });
+            
+            //年月选择器
+            laydate.render({ 
+                elem: '#dateMonth',
+                type: 'month',
+                value: '2018-03'
+            });
+
+        });
+    </script> 
+
+</body>
+
+</html>

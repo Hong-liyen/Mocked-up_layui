@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 3,
+    "data": [{
+            "remitId": "科迅 owen",
+            "remitSystem": "科讯网银出款",
+            "remitNumber": "24******94",
+            "remitLevel": "",
+            "remitStopAmount": "<div class='layui-input-block'><div class='layui-inline'><div class='layui-form-item'><div class='layui-checkbox'><input type='checkbox' name='' title='' lay-skin='primary'><div class='layui-form-checkbox' lay-skin='primary'><i class='layui-icon'>  </i></div></div><div class='layui-input-inline'><input type='text' class='layui-input' placeholder='9999'></div></div></div></div>",
+            "remitTimes": "0",
+            "remitaccumulateAmount": "0",
+            "remitFinalTime": "无"
+        },
+        {
+            "remitId": "秒付网银owen",
+            "remitSystem": "秒付网银出款",
+            "remitNumber": "19******69",
+            "remitLevel": "",
+            "remitStopAmount": "<div class='layui-input-block'><div class='layui-inline'><div class='layui-form-item'><div class='layui-checkbox'><input type='checkbox' name='' title='' lay-skin='primary'><div class='layui-form-checkbox' lay-skin='primary'><i class='layui-icon'>  </i></div></div><div class='layui-input-inline'><input type='text' class='layui-input' placeholder='2345'></div></div></div></div>",
+            "remitTimes": "0",
+            "remitaccumulateAmount": "0",
+            "remitFinalTime": "2018-05-26 16:06:51"
+        },
+        {
+            "remitId": "讯付通owen",
+            "remitSystem": "讯付通网银出款",
+            "remitNumber": "Me******51",
+            "remitLevel": "",
+            "remitStopAmount": "<div class='layui-input-block'><div class='layui-inline'><div class='layui-form-item'><div class='layui-checkbox'><input type='checkbox' name='' title='' lay-skin='primary'><div class='layui-form-checkbox' lay-skin='primary'><i class='layui-icon'>  </i></div></div><div class='layui-input-inline'><input type='text' class='layui-input' placeholder='3456'></div></div></div></div>",
+            "remitTimes": "0",
+            "remitaccumulateAmount": "0",
+            "remitFinalTime": "无"
+        }
+    ]
+}

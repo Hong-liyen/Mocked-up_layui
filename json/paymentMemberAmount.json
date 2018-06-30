@@ -1,0 +1,46 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+        "paymentMemberName": "qweasd",
+        "paymentMemberItem": "实际出款",
+        "paymentMemberAmount": "50",
+        "paymentMemberAgent": "ddaili001",
+        "paymentMemberNumber": "229635882091544576",
+        "paymentMemberNote": "手动出款：50.00",
+        "paymentMemberTime": "2018-06-01 06:37:40"
+    }, {
+        "paymentMemberName": "qweasd",
+        "paymentMemberItem": "实际出款",
+        "paymentMemberAmount": "50",
+        "paymentMemberAgent": "ddaili001",
+        "paymentMemberNumber": "229635882091544576",
+        "paymentMemberNote": "申请出款 :150.00000",
+        "paymentMemberTime": "2018-06-01 06:37:40"
+    }, {
+        "paymentMemberName": "qweasd",
+        "paymentMemberItem": "实际出款",
+        "paymentMemberAmount": "50",
+        "paymentMemberAgent": "ddaili001",
+        "paymentMemberNumber": "229635882091544576",
+        "paymentMemberNote": "手动出款：50.00",
+        "paymentMemberTime": "2018-06-01 06:37:40"
+    }, {
+        "paymentMemberName": "qweasd",
+        "paymentMemberItem": "取消实际出款",
+        "paymentMemberAmount": "50",
+        "paymentMemberAgent": "ddaili001",
+        "paymentMemberNumber": "229635882091544576",
+        "paymentMemberNote": "操作者：changqitz1",
+        "paymentMemberTime": "2018-06-01 06:37:40"
+    }, {
+        "paymentMemberName": "",
+        "paymentMemberItem": "小计",
+        "paymentMemberAmount": "0",
+        "paymentMemberAgent": "",
+        "paymentMemberNumber": "",
+        "paymentMemberNote": "",
+        "paymentMemberTime": ""
+    }]
+}

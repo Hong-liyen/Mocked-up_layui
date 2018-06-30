@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>返点详情</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="searchAgent">
+        <a class="layui-btn layui-btn-xs layui-btn-normal" href="paymentAgentRebate.html">
+            <i class="layui-icon"></i> 返回上级</a>
+    </div>
+    <form class="layui-form storeList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">选择层级：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">全部</option>
+                            <option value="1">会员</option>
+                            <option value="2">代理</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账号：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" placeholder="请输入账号">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">日期查询：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateStart">
+                    </div>
+                    <span class="line-height2-5">~</span>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateEnd">
+                    </div>
+                </div>
+            </div>
+            <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+        </blockquote>
+        <table lay-filter="h-Table" class="layui-table rebateChargeoff">
+            <thead>
+                <tr>
+                    <th width="120">代理账号</th>
+                    <th width="120">项目</th>
+                    <th width="120">金额</th>
+                    <th width="120">备注</th>
+                    <th width="120">时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>okok111</td>
+                    <td>AG视讯</td>
+                    <td>1000</td>
+                    <td>返点已完成</td>
+                    <td>2018-05-02 02:44:15</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="layui-table-page page-shift">
+            <div id="layui-table-page1">
+                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+                    <span class="layui-laypage-count">共 3 条</span>
+                    <span class="layui-laypage-limits">
+                        <select lay-ignore="">
+                            <option value="10" selected="">10 条/页</option>
+                            <option value="20">20 条/页</option>
+                            <option value="30">30 条/页</option>
+                            <option value="40">40 条/页</option>
+                            <option value="50">50 条/页</option>
+                            <option value="60">60 条/页</option>
+                            <option value="70">70 条/页</option>
+                            <option value="80">80 条/页</option>
+                            <option value="90">90 条/页</option>
+                        </select>
+                    </span>
+                    <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-curr">
+                        <em class="layui-laypage-em"></em>
+                        <em>1</em>
+                    </span>
+                    <a href="javascript:;" class="layui-laypage-next" data-page="2">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-skip">到第
+                        <input type="text" min="1" value="1" class="layui-input">页
+                        <button type="button" class="layui-laypage-btn">确定</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        //Demo 
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交 
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

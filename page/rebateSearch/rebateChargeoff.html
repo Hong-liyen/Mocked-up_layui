@@ -2,283 +2,285 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>文章列表--layui后台管理模板 2.0</title>
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="../../css/public.css" media="all" />
+    <meta charset="utf-8">
+    <title>文章列表--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
 <body class="childrenBody">
-	<form class="layui-form agentList">
-		<blockquote class="layui-elem-quote quoteBox">
-			<form class="layui-form">
-				<div class="layui-inline">
-					<a class="layui-btn search_btn layui-btn-normal" data-type="reload">返回</a>
-					<span> 耗时：00秒 28毫秒</span>
-				</div>
-				<div class="layui-inline">
-					<div class="layui-form-item">
-						<span> 动态口令（操作人）</span>
-						<div class="layui-input-block">
-							<input type="text" name="title" required  lay-verify="required" placeholder="未綁定請留空" autocomplete="off" class="layui-input">
-						</div>
-					</div>
-				</div>
-				<div class="layui-inline">
-					<a class="layui-btn search_btn layui-btn-danger" method="offset" onclick="pageDel()" data-type="reload">冲销所选</a>
-				</div>
-				<div class="layui-inline">
-					<a class="layui-btn search_btn layui-btn-danger" method="offset" onclick="pageDelAll()" data-type="reload">冲销全部（1人）</a>
-				</div>
-				<div class="layui-inline">
-					<a class="layui-btn search_btn layui-btn-normal" method="offset" onclick="pageRebateData()" data-type="reload">选定返水数据导出</a>
-				</div>
-				<div class="layui-inline">
-					<a class="layui-btn search_btn layui-btn-normal" method="offset" onclick="pageRebateDataAll()" data-type="reload">全部返水数据导出（1人）</a>
-				</div>
-			</form>
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <a href="rebateSearchList.html" class="layui-btn search_btn layui-btn-normal" data-type="reload">
+                        <i class="layui-icon">&#xe603;</i>返回</a>
+                    <span> 耗时：00秒 28毫秒</span>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <span> 动态口令（操作人）</span>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required lay-verify="required" placeholder="未綁定請留空" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-danger" method="offset" onclick="pageDel()" data-type="reload">冲销所选</a>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-danger" method="offset" onclick="pageDelAll()" data-type="reload">冲销全部（1人）</a>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" method="offset" onclick="pageRebateData()" data-type="reload">选定返水数据导出</a>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" method="offset" onclick="pageRebateDataAll()" data-type="reload">全部返水数据导出（1人）</a>
+                </div>
+            </form>
 
-		</blockquote>
-		<table class="layui-table rebateChargeoff">
-			<colgroup>
-				<col width="60">
-				<col>
-				<col width="140">
-				<col>
-				<col width="120">
-				<col width="120">
-				<col width="120">
-				<col width="120">
-				<col>
-				<col>
-			</colgroup>
-			<thead>
-				<tr>
-					<th>
-						<form class="layui-form">
-							<div class="layui-form-item">
-								<div class="layui-input-block">
-									<input type="checkbox" name="" title=" " lay-skin="primary">
-								</div>
-							</div>
-						</form>
-					</th>
-					<th>
-						会员账号
-					</th>
-					<th></th>
-					<th>
-						小計
-					</th>
-					<th>
-						BB视讯
-					</th>
-					<th>
-						AG视讯
-					</th>
-					<th>
-						OG视讯
-					</th>
-					<th>
-						AB视讯
-					</th>
-					<th>
-						背景状况
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td rowspan="2">
-						<form class="layui-form">
-							<div class="layui-form-item">
-								<div class="layui-input-block">
-									<input type="checkbox" name="" title=" " lay-skin="primary">
-								</div>
-							</div>
-						</form>
-					</td>
-					<td rowspan="2">
-						AAA0524
-					</td>
-					<td>
-						有效总投注
-					</td>
-					<td>
-						11.50
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						11.50
-					</td>
-					<td rowspan="2">
-						返水已完成
-					</td>
-				</tr>
-				<tr>
-					<td>
-						返水金额
-					</td>
-					<td>
-						1.27
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						1.27
-					</td>
-				</tr>
-			</tbody>
-			<thead>
-				<tr>
-					<th></th>
-					<th>
-						总人数（冲销人数）
-					</th>
-					<th></th>
-					<th>
-						）总计
-					</th>
-					<th>
-						BB视讯
-					</th>
-					<th>
-						AG视讯
-					</th>
-					<th>
-						OG视讯
-					</th>
-					<th>
-						AB视讯
-					</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td rowspan="2">
-						本页
-					</td>
-					<td rowspan="2">
-						1人（0人）
-					</td>
-					<td>
-						有效总投注
-					</td>
-					<td>
-						11.50
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						11.50
-					</td>
-					<td rowspan="10">
+        </blockquote>
 
-					</td>
-				</tr>
-				<tr>
-					<td>
-						返水金额
-					</td>
-					<td>
-						1.27
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						1.27
-					</td>
-				</tr>
-				<tr>
-					<td rowspan="2">
-						总数
-					</td>
-					<td rowspan="2">
-						1人
-					</td>
-					<td>
-						有效总投注
-					</td>
-					<td>
-						11.50
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						11.50
-					</td>
-				</tr>
-				<tr>
-					<td>
-						返水金额
-					</td>
-					<td>
-						1.27
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						0.0
-					</td>
-					<td>
-						1.27
-					</td>
-				</tr>
+        <table class="layui-table rebateChargeoff">
+            <colgroup>
+                <col width="60">
+                <col>
+                <col width="140">
+                <col>
+                <col width="120">
+                <col width="120">
+                <col width="120">
+                <col width="120">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <form class="layui-form">
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <input type="checkbox" name="" title=" " lay-skin="primary">
+                                </div>
+                            </div>
+                        </form>
+                    </th>
+                    <th>
+                        会员账号
+                    </th>
+                    <th></th>
+                    <th>
+                        小計
+                    </th>
+                    <th>
+                        BB视讯
+                    </th>
+                    <th>
+                        AG视讯
+                    </th>
+                    <th>
+                        OG视讯
+                    </th>
+                    <th>
+                        AB视讯
+                    </th>
+                    <th>
+                        背景状况
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <form class="layui-form">
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <input type="checkbox" name="" title=" " lay-skin="primary">
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                    <td rowspan="2">
+                        AAA0524
+                    </td>
+                    <td>
+                        有效总投注
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                    <td rowspan="2">
+                        返水已完成
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        返水金额
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        总人数（冲销人数）
+                    </th>
+                    <th></th>
+                    <th>
+                        总计
+                    </th>
+                    <th>
+                        BB视讯
+                    </th>
+                    <th>
+                        AG视讯
+                    </th>
+                    <th>
+                        OG视讯
+                    </th>
+                    <th>
+                        AB视讯
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        本页
+                    </td>
+                    <td rowspan="2">
+                        1人（0人）
+                    </td>
+                    <td>
+                        有效总投注
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                    <td rowspan="10">
 
-			</tbody>
-		</table>
-		<div class="layui-table-page page-shift">
-			<div id="layui-table-page1">
-				<div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
-					<span class="layui-laypage-count">共 1 条</span>
-					<span class="layui-laypage-limits">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        返水金额
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        总数
+                    </td>
+                    <td rowspan="2">
+                        1人
+                    </td>
+                    <td>
+                        有效总投注
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        11.50
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        返水金额
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        0.0
+                    </td>
+                    <td>
+                        1.27
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="layui-table-page page-shift">
+            <div id="layui-table-page1">
+                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+                    <span class="layui-laypage-count">共 1 条</span>
+                    <span class="layui-laypage-limits">
 						<select lay-ignore="">
 							<option value="10" selected="">10 条/页</option>
 							<option value="20">20 条/页</option>
@@ -291,26 +293,26 @@
 							<option value="90">90 条/页</option>
 						</select>
 					</span>
-					<a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
-						<i class="layui-icon"></i>
-					</a>
-					<span class="layui-laypage-curr">
+                    <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-curr">
 						<em class="layui-laypage-em"></em>
 						<em>1</em>
 					</span>
-					<a href="javascript:;" class="layui-laypage-next" data-page="2">
-						<i class="layui-icon"></i>
-					</a>
-					<span class="layui-laypage-skip">到第
+                    <a href="javascript:;" class="layui-laypage-next" data-page="2">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-skip">到第
 						<input type="text" min="1" value="1" class="layui-input">页
 						<button type="button" class="layui-laypage-btn">确定</button>
 					</span>
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+        </div>
 
-	</form>
-	<!-- <script>
+    </form>
+    <!-- <script>
 		layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function () {
 			var laydate = layui.laydate //日期
 				,
@@ -340,66 +342,68 @@
 			});
 		});
 	</script> -->
-	<script type="text/javascript" src="../../layui/layui.js"></script>
-	<script type="text/javascript" src="../../layui/lay/modules/form.js"></script>
-	<!-- <script type="text/javascript" src="rebateSearchList.js"></script> -->
-	<script>
-		// 冲销弹窗
-		function pageDel() {
-			layer.open({
-				type:1,
-				closeBtn:1,
-				btn: ['冲销资料','取消冲销'],
-				btnAlign: 'c',
-				shadeClose:true,
-				title:'删除',
-				area:['260px','160px'],
-				content:'确定要冲销所选资料吗？'
-			});
-		}
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../layui/lay/modules/form.js"></script>
+    <!-- <script type="text/javascript" src="rebateSearchList.js"></script> -->
+    <script>
+        layui.use('table', function() {
+            var table = layui.table;
+        });
+        // 冲销弹窗
+        function pageDel() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['冲销资料', '取消冲销'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '删除',
+                area: ['260px', '160px'],
+                content: '确定要冲销所选资料吗？'
+            });
+        }
 
-		// 冲销全部资料弹窗
-		function pageDelAll() {
-			layer.open({
-				type:1,
-				closeBtn:1,
-				btn: ['冲销资料','取消冲销'],
-				btnAlign: 'c',
-				shadeClose:true,
-				title:'删除',
-				area:['260px','160px'],
-				content:'确定要冲销全部资料吗？'
-			});
-		}
-		// 选定返水数据导出弹窗
-		function pageRebateData() {
-			layer.open({
-				type:1,
-				closeBtn:1,
-				btn: ['确认导出','取消导出'],
-				btnAlign: 'c',
-				shadeClose:true,
-				title:'选定返水数据导出',
-				area:['260px','160px'],
-				content:'确定要选定返水数据导出吗？'
-			});
-		}
+        // 冲销全部资料弹窗
+        function pageDelAll() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['冲销资料', '取消冲销'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '删除',
+                area: ['260px', '160px'],
+                content: '确定要冲销全部资料吗？'
+            });
+        }
+        // 选定返水数据导出弹窗
+        function pageRebateData() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确认导出', '取消导出'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '选定返水数据导出',
+                area: ['260px', '160px'],
+                content: '确定要选定返水数据导出吗？'
+            });
+        }
 
-		// 全部返水数据导出弹窗
-		function pageRebateDataAll() {
-			layer.open({
-				type:1,
-				closeBtn:1,
-				btn: ['确认导出','取消导出'],
-				btnAlign: 'c',
-				shadeClose:true,
-				title:'全部返水数据导出',
-				area:['260px','160px'],
-				content:'确定要全部返水数据导出吗？'
-			});
-		}
-			
-	</script>
+        // 全部返水数据导出弹窗
+        function pageRebateDataAll() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确认导出', '取消导出'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '全部返水数据导出',
+                area: ['260px', '160px'],
+                content: '确定要全部返水数据导出吗？'
+            });
+        }
+    </script>
 </body>
 
 </html>

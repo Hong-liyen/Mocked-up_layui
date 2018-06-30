@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 15,
+    "data": [{
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "1"
+        },
+        {
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "0"
+        }, {
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "2"
+        }
+    ]
+}

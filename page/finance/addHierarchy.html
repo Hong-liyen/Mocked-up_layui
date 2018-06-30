@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>层级管理-新增层级</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addhierarchy addtemplate">
+        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="hierarchy.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
+        <form class="layui-form">
+            <div class="addtemplateBasic">
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>名称：</label>
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="" disabled>
+                        </div>
+                    <!--  -->
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>描述：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label">区间：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input" id="dateStart">
+                        </div>
+                        <div class="layui-form-mid">&minus;</div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input" id="dateEnd">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>存款次数：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>存款总额：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>最大存款金额：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>提取次数：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label"><span>*</span>提取总额：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- uifix_137 -->
+                    <label class="layui-form-label">备注：</label>
+                    <!--  -->
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <textarea name="desc" placeholder="" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <div class="addtemplateButton">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确定</button>
+        </div>
+        </div>
+
+        <script type="text/javascript" src="../../layui/layui.js"></script>
+        <script type="text/javascript" src="../../js/index.js"></script>
+        <script>
+            //Demo
+            layui.use('form', function() {
+                var form = layui.form;
+
+                //监听提交
+                form.on('submit(formDemo)', function(data) {
+                    layer.msg(JSON.stringify(data.field));
+                    return false;
+                });
+            });
+        </script>
+
+        <!-- ▼ 日期弹窗 ▼ -->
+        <script>
+            //日期彈窗
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+
+                //自定义格式
+                laydate.render({
+                    elem: '#dateStart',
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    type: 'datetime',
+                    value: '2018-01-01 00:00:00'
+                });
+
+                laydate.render({
+                    elem: '#dateEnd',
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    type: 'datetime',
+                    value: '2018-01-01 00:00:00'
+                });
+
+            });
+        </script>
+</body>
+
+</html>

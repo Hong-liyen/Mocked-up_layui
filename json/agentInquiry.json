@@ -1,0 +1,19 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 17,
+	"data": [
+		{
+            "time": "2018-05-02 04:13:51",
+            "distributor":"",
+            "account": "eer46",
+            "name": "张三",
+            "agentLevel":"",
+            "directMemberNum": "5",
+            "telephone": "123...15",
+            "E-mail": "123@123.com",
+            "QQNum": "4548720",
+            "agentStatus":"0"
+        }
+	]
+}

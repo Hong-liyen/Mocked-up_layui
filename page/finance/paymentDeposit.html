@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>人工存入</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="searchAgent">
+        <a class="layui-btn layui-btn-xs layui-btn-normal" href="paymentAmount.html">
+            <i class="layui-icon"></i> 返回上页</a>
+    </div>
+    <form class="layui-form storeList paymentWithdraw">
+        <blockquote class="layui-elem-quote quoteBox">
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">币别：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">人民币</option>
+                            <option value="1">欧元</option>
+                            <option value="2">英镑</option>
+                            <option value="3">港币</option>
+                            <option value="4">印尼币</option>
+                            <option value="5">日元</option>
+                            <option value="6">英镑</option>
+                            <option value="7">韩元</option>
+                            <option value="8">马币</option>
+                            <option value="9">坡币</option>
+                            <option value="5">泰铢</option>
+                            <option value="6">台币</option>
+                            <option value="7">美金</option>
+                            <option value="8">越南盾</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">选择层级：</label>
+                    <div class="layui-input-block">
+                        <select name="" lay-verify="required">
+                            <option value="0">全部</option>
+                            <option value="1">会员</option>
+                            <option value="2">代理</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账号：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" placeholder="请输入账号">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">日期查询：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateStart">
+                    </div>
+                    <span class="line-height2-5">~</span>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateEnd">
+                    </div>
+                </div>
+            </div>
+            <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+        </blockquote>
+        <table lay-filter="h-Table" class="layui-table paymemtRebateTable">
+            <thead>
+                <tr>
+                    <th colspan="2">人工存入</th>
+                </tr>
+                <tr>
+                    <th width="250">项目</th>
+                    <th width="350">金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>人工存入</td>
+                    <td>0.00（0）人</td>
+                </tr>
+                <tr>
+                    <td>负数额度归零</td>
+                    <td>0.00（0）人</td>
+                </tr>
+                <tr>
+                    <td>人工存入取消出款</td>
+                    <td>0.00（0）人</td>
+                </tr>
+                <tr>
+                    <td>其他人工存入</td>
+                    <td>0.00（0）人</td>
+                </tr>
+                <tr>
+                    <td>人工存入-体育投注-存入</td>
+                    <td>0.00（0）人</td>
+                </tr>
+
+                <tr>
+                    <td>总计</td>
+                    <td>
+                        <a href="paymentDepositAmountList.html" class="layui-blue">（0）人</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="attention02">
+        统计说明
+        <br> 总账人数与单日人数:
+        <br> 总账人数以及单日人数统计是唯一的，即总账人数如果选择的时间是多天，那么不管在哪一天有操作，总人数都是一个；也就是说总账人数并不是下面每天人数的简单相加，
+        <br>例如：查询区间是1号 至 2号，1号人数100，2号人数98，总账人数并不是100+98,只能是大于等于100.
+        <br>
+        <br> 给予返水：
+        <br>汇总列表显示的是返水的金额及人数，点进去后会有返水及冲销金额与人数，统计以确认出款或冲销的当天来统计。如1号创建返水事件，2号进行返水，那么金额与人数会统计在2号。
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        //Demo 
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交 
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

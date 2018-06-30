@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
-<body class="childrenBody">
+<body class="childrenBody rebateSearchList">
     <form class="layui-form agentList">
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
@@ -23,7 +23,7 @@
                         <label class="layui-form-label">日期：</label>
                         <div class="layui-input-inline">
                             <input type="text" class="layui-input" id="dateStart">
-                          </div>
+                        </div>
                         <span class="line-height2-5">~</span>
                     </div>
                 </div>
@@ -31,13 +31,12 @@
                     <div class="layui-form-item">
                         <div class="layui-input-inline">
                             <input type="text" class="layui-input" id="dateEnd">
-                          </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="layui-inline">
+                <!-- <div class="layui-inline">
                     <div class="layui-form-item">
-                        <!-- <label class="layui-form-label">层级：</label> -->
                         <div class="layui-input-block">
                             <select name="level" lay-verify="required">
 								<option value="0">全部层级</option>
@@ -49,7 +48,7 @@
 						  </select>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="layui-inline">
                     <div class="layui-form-item">
                         <label class="layui-form-label">事件状态：</label>
@@ -70,27 +69,30 @@
 
         </blockquote>
         <table id="rebateSearchList" lay-filter="rebateSearchList">
-            <div class="rebateSearchSum">
+            <!-- <div class="rebateSearchSum">
                 <p>总金额： <span>6169.90</span></p>
-            </div>
+            </div> -->
         </table>
-
 
 
 
         <!--审核状态-->
         <script type="text/html" id="rebateSearchListStatus">
             {{# if( d.rebateSearchListStatus == "0"){ }}
-            <span class="layui-blue">已处理</span> {{# } else if( d.rebateSearchListStatus == "1") { }}
-            <span class="layui-red">待处理</span> {{# }}}
+            <span>已处理</span> {{# } else if( d.rebateSearchListStatus == "1") { }}
+            <span>待处理</span> {{# }}}
         </script>
+
+
 
         <script type="text/html" id="rebateSearchListDetail">
             {{# if( d.rebateSearchListDetail == "0"){ }}
-            <a class="layui-btn layui-btn-xs" lay-event="add">返水/冲销明细</a> {{# } else { }}
-            <a class="layui-btn layui-btn-xs" lay-event="add">返水/冲销明细</a>
-            <a class="layui-btn layui-btn-xs layui-btn-primary">待返水明细</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger"  method="offset" onclick="pageDel()">删除事件</a> {{# }}}
+            <a> </a>
+            {{# } else if( d.rebateSearchListDetail == "1") { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebateChargeoff.html">返水/冲销明细</a> {{# } else if( d.rebateSearchListDetail == "2") { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebateChargeoff.html">返水/冲销明细</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebatePanding.html">待返水明细</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除事件</a> {{# }}}
         </script>
 
         <!-- 操作
@@ -103,46 +105,47 @@
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="rebateSearchList.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
-    <script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
 
-<!-- ▼ 日期弹窗 ▼ -->
-<script>
-    //日期彈窗
-    layui.use('laydate', function(){
-    var laydate = layui.laydate;
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
 
-    //自定义格式
-    laydate.render({
-        elem: '#dateStart'
-        ,format: 'yyyy-MM-dd'
-        ,value: '2018-01-01'
-    });
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
 
-    laydate.render({
-        elem: '#dateEnd'
-        ,format: 'yyyy-MM-dd'
-        ,value: '2018-01-01'
-    });
-
-    });
-</script>
-<script>
-		// 删除弹窗
-		function pageDel() {
-			layer.open({
-				type:1,
-				closeBtn:1,
-				btn: ['删除事件','取消删除'],
-				btnAlign: 'c',
-				shadeClose:true,
-				title:'删除事件',
-				area:['260px','160px'],
-				content:'确定要删除事件吗？'
-			});
+        });
+    </script>
+    <script>
+        // 删除弹窗
+        function pageDel() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['删除事件', '取消删除'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '删除事件',
+                area: ['260px', '160px'],
+                content: '确定要删除事件吗？'
+            });
         }
-</script>
+    </script>
+
 
 </body>
 

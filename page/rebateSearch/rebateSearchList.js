@@ -15,47 +15,54 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "rebateSearchListTable",
+        id: "rebateSearchList",
         cols: [
             [
                 // {type: "checkbox", fixed:"left", width:50},
                 { field: 'rebateSearchListId', title: '编号', width: 80, align: "center" },
-                { field: 'rebateSearchListName', title: '事件名称', width: 110, align: "center" },
+                { field: 'rebateSearchListName', title: '事件名称', width: 100, align: "center", edit: "text" },
                 {
                     field: 'rebateSearchListTime',
-                    title: '注册时间',
+                    title: '创建时间',
                     align: 'center',
-                    sort: "true",
-                    minWidth: 130,
+                    // sort: "true",
+                    minWidth: 200,
                     templet: function(d) {
-                        return d.rebateSearchListTime.substring(0, 10);
+                        return d.rebateSearchListTime.substring(0, 20);
                     }
                 },
                 {
                     field: 'rebateSearchListStart',
                     title: '返水区间（起）',
                     align: 'center',
-                    sort: "true",
-                    minWidth: 140,
+                    // sort: "true",
+                    minWidth: 200,
                     templet: function(d) {
-                        return d.rebateSearchListStart.substring(0, 10);
+                        return d.rebateSearchListStart.substring(0, 20);
                     }
                 },
                 {
                     field: 'rebateSearchListEnd',
                     title: '返水区间（迄）',
                     align: 'center',
-                    sort: "true",
-                    minWidth: 140,
+                    // sort: "true",
+                    minWidth: 200,
                     templet: function(d) {
-                        return d.rebateSearchListEnd.substring(0, 10);
+                        return d.rebateSearchListEnd.substring(0, 20);
                     }
                 },
-                { field: 'rebateSearchListStatus', title: '事件状态', width: 100, align: "center", templet: "#rebateSearchListStatus" },
+                { field: 'rebateSearchListStatus', title: '事件状态', width: 120, align: "center", templet: "#rebateSearchListStatus" },
                 // {field: 'rebateSearchListPaymentSystem', title: '支付类型',  align:'center',templet:"#rebateSearchListPaymentSystem"},
-                { field: 'rebateSearchListSum', title: '总人数/总金额', width: 130, align: 'center' },
+                { field: 'rebateSearchListSum', title: '总人数/总金额', width: 150, align: 'center' },
                 { field: 'rebateSearchListWait', title: '待返水人数/金额', width: 150, align: "center" },
-                { field: 'rebateSearchListDetail', title: '查询明细', width: 330, align: "center", templet: "#rebateSearchListDetail" }
+                {
+                    field: 'rebateSearchListDetail',
+                    title: '查询明细',
+                    width: 280,
+                    align: "center",
+                    templet: "#rebateSearchListDetail",
+                    fixed: "right"
+                }
             ]
         ],
 
@@ -139,3 +146,17 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     });
 
 })
+
+layui.use('table', function() {
+    var table = layui.table;
+
+    //监听单元格编辑
+    table.on('edit(rebateSearchList)', function(obj) {
+        var value = obj.value //得到修改后的值
+            ,
+            data = obj.data //得到所在行所有键值
+            ,
+            field = obj.field; //得到字段
+        layer.msg('编号： ' + data.rebateSearchListId + '， ' + '  事件名称更改为：' + value);
+    });
+});

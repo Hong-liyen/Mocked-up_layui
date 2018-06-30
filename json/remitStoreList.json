@@ -1,0 +1,55 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 6,
+	"data": [
+		{
+			"storeId": "1702",
+			"storeName": "秒付网银owen",
+			"storePaymentType": "秒付网银出款",
+			"storeNumber": "19******69",
+			"storeLevel": "BWT 科伦vip层 426测试新增层级 未分层 000 洗码层1 11111",
+			"remitStoreListBar": "0"
+		},
+		{
+			"storeId": "2016",
+			"storeName": "讯付通owen",
+			"storePaymentType": "讯付通网银出款",
+			"storeNumber": "Me******51",
+			"storeLevel": "426测试新增层级 未分层",
+			"remitStoreListBar": "0"
+		},
+		{
+			"storeId": "2557",
+			"storeName": "新E付出款",
+			"storePaymentType": "新e付网银出款",
+			"storeNumber": "02******39",
+			"storeLevel": "洗码层1 未分层",
+			"remitStoreListBar": "0"
+		},
+		{
+			"storeId": "3015",
+			"storeName": "d009客户商户号",
+			"storePaymentType": "新e付网银出款",
+			"storeNumber": "91******90",
+			"storeLevel": "洗码层1 未分层",
+			"remitStoreListBar": "0"
+		},
+		{
+			"storeId": "3674",
+			"storeName": "高通网银出款simon",
+			"storePaymentType": "高通网银出款",
+			"storeNumber": "13******24",
+			"storeLevel": "BWT kelly001 nina001哈哈 VIP级别(Jimmy) 洗码层1 11111 KellyVIP层002 kelly002 未分层 Kelly测试层001 科伦vip层 000",
+			"remitStoreListBar": "1"
+		},
+		{
+			"storeId": "5487",
+			"storeName": "好利宝网银出款",
+			"storePaymentType": "好利宝网银出款",
+			"storeNumber": "63******35",
+			"storeLevel": "BWT 科伦vip层 未分层 000 洗码层1 11111",
+			"remitStoreListBar": "0"
+		}
+	]
+}

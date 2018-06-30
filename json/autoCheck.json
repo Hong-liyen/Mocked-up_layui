@@ -1,0 +1,41 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 6,
+    "data": [{
+            "autoCheckLevel": "0",
+            "autoCheckAccount": "okok111",
+            "autoCheckMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=F6040F00BFAE5A2A4955868D940333F1",
+            "autoCheckTime": "2018-05-26 05:44:52",
+            "autoCheckIP": "180.232.84.51"
+        },
+        {
+            "autoCheckLevel": "0",
+            "autoCheckAccount": "okok111",
+            "autoCheckMsg": "密码错误 访问设备：手机 http://www.try1024.com/api/wap/wapLogin/login,sessionid=63726523D4264A256AB84F1A41748276",
+            "autoCheckTime": "2018-05-26 02:44:56",
+            "autoCheckIP": "180.232.84.51"
+        },
+        {
+            "autoCheckLevel": "0",
+            "autoCheckAccount": "okok111",
+            "autoCheckMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=9F090E10F07D8936E0E40B9660CFA494",
+            "autoCheckTime": "2018-05-25 06:22:33",
+            "autoCheckIP": "182.18.239.162"
+        },
+        {
+            "autoCheckLevel": "0",
+            "autoCheckAccount": "asdfqwer",
+            "autoCheckMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=092DDB8B15609CB1A305F9F7AEAB5259",
+            "autoCheckTime": "2018-05-26 05:25:08",
+            "autoCheckIP": "180.232.84.51"
+        },
+        {
+            "autoCheckLevel": "6",
+            "autoCheckAccount": "haitianzi",
+            "autoCheckMsg": "登录成功 http://hgoeaitian.sharksu.com/agent/agent",
+            "autoCheckTime": "2018-05-26 03:26:00",
+            "autoCheckIP": "180.232.84.51"
+        }
+    ]
+}

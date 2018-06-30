@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>网站资讯系统-图库（待上传）</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form uploadList storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="images.html">图库</a>
+            <a class="layui-btn layui-btn-gray" href="column.html">栏目</a>
+            <a class="layui-btn layui-btn-gray active" href="uploadList.html">待上传</a>
+            <a class="layui-btn layui-btn-gray" href="alreadyuploadList.html">已上传</a>
+        </div>
+
+        <table id="uploadList" lay-filter="uploadList">
+        </table>
+
+        <!--编辑状态-->
+        <script type="text/html" id="uploadListEdit">
+            {{# if( d.uploadListEdit == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>{{# } else if( d.uploadListEdit == "4"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="preview()">预览</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="upload()">上传</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除</a>{{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="upload()">上传</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除</a> {{# }}}
+        </script>
+
+        <!--操作-->
+        <!-- <script type="text/html" id="rebateListBar">
+            <a class="layui-btn layui-btn-xs" lay-event="add">添加</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="edit">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">删除</a>
+        </script> -->
+        <script>
+            // 删除弹窗
+            function pageDel() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定', '取消'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '删除模板',
+                    area: ['260px', '160px'],
+                    content: '确定要删除模板吗？'
+                });
+            }
+            // 预览弹窗 
+            function preview() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '预览',
+                    area: ['280px', '180px'],
+                    content: '预览地址： <input type = "text" > '
+                });
+            }
+            // 上传弹窗 
+            function upload() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '上传案件',
+                    area: ['260px', '160px'],
+                    content: '您确认上传编辑的案件吗？'
+                });
+            }
+        </script>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="uploadList.js"></script>
+</body>
+
+</html>

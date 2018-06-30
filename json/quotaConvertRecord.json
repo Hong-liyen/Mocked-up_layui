@@ -1,0 +1,73 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 17,
+	"data": [
+		{
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        },
+        {
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        },
+        {
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        },
+        {
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        },
+        {
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        },
+        {
+			"CR-memberAccount": "a12345",
+			"CR-intoPlatform": "AG平台",
+			"CR-outPlatform": "OG平台",
+			"CR-orderNumber": "21810408777478144",
+			"CR-orderNumberAPI": "21810408777478144",
+			"CR-transaction": "100.0",
+			"CR-time": "2018-05-02 03:03:44",
+			"CR-status" : "1",
+			"CR-note": "0.0"
+        }
+	]
+}

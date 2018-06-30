@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>联系我们</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+    
+    <style type="text/css">
+        input[id*="input-"],
+        div[id*="dynamicTable"]{
+            display: none;
+        }
+        #input-Account,
+        #dynamicTable01 {
+            display: block;
+        }
+     </style>
+</head>
+
+
+<body class="childrenBody contactUs">
+    <form class="layui-form storeList">
+        <!-- <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="loginHistoryIP.html">账号/IP查询</a>
+            <a class="layui-btn layui-btn-gray" href="loginHistoryAuto.html">自动稽核</a>
+            <a class="layui-btn layui-btn-gray" href="loginHistoryAgent.html">代理层级查询</a>
+        </div> -->
+        <blockquote class="layui-elem-quote">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <select name="" lay-filter="category">
+                            <option value="0">账号查询</option>
+                            <option value="1">IP查询</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input" id="input-Account" placeholder="请输入账号">
+                        <input type="text" class="layui-input" id="input-IP" placeholder="请输入IP">
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">时间区间：</label>
+                    </div>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+                    </div>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+                    </div>
+                    <div class="layui-inline">
+                        <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                    </div>
+
+                </div>
+            </form>
+        </blockquote>
+    </form>
+    <div id="dynamicTable01">
+        <table id="loginHistoryList" lay-filter="loginHistoryList"></table>
+    </div>
+    <div id="dynamicTable02">
+        <table id="loginHistoryIPList" lay-filter="loginHistoryIPList"></table>
+    </div>
+    <!--编辑状态-->
+    <script type="text/html" id="loginHistoryLevel">
+        {{# if( d.loginHistoryLevel == "0"){ }}
+        <span>会员</span> 
+        {{# } else if( d.loginHistoryLevel == "1"){ }}
+        <span>代理</span> 
+        {{# } else if( d.loginHistoryLevel == "2"){ }}
+        <span>总代</span> 
+        {{# } else if( d.loginHistoryLevel == "3"){ }}
+        <span>股东</span> 
+        {{# } else if( d.loginHistoryLevel == "4"){ }}
+        <span>大股东</span> 
+        {{# } else if( d.loginHistoryLevel == "5"){ }}
+        <span>大大股东</span> 
+        {{# } else if( d.loginHistoryLevel == "6"){ }}
+        <span>大大股东(子)</span> 
+        {{# }}}
+    </script>
+    <script type="text/html" id="loginHistoryIPLevel">
+        {{# if( d.loginHistoryIPLevel == "0"){ }}
+        <span>会员</span> 
+        {{# } else if( d.loginHistoryIPLevel == "1"){ }}
+        <span>代理</span> 
+        {{# } else if( d.loginHistoryIPLevel == "2"){ }}
+        <span>总代</span> 
+        {{# } else if( d.loginHistoryIPLevel == "3"){ }}
+        <span>股东</span> 
+        {{# } else if( d.loginHistoryIPLevel == "4"){ }}
+        <span>大股东</span> 
+        {{# } else if( d.loginHistoryIPLevel == "5"){ }}
+        <span>大大股东</span> 
+        {{# } else if( d.loginHistoryIPLevel == "6"){ }}
+        <span>大大股东(子)</span> 
+        {{# }}}
+    </script>
+
+    <script src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="loginHistoryList.js"></script>
+    <script type="text/javascript" src="loginHistoryIPList.js"></script>
+    <script> 
+        //轉換input
+        layui.use(['form', 'layer','table'], function() {
+            var form = layui.form;
+                table = layui.table;
+            var $ = layui.jquery
+                //下拉选项判断
+            form.on('select(category)', function(data) {
+                category = data.value;
+                categoryName = data.elem[data.elem.selectedIndex].text;
+                form.render('select');
+                table.render('select');
+                if (category == 0) {
+                    $('input#input-Account').show().siblings().hide()
+                    $('div#dynamicTable01').show()
+                    $('div#dynamicTable02').hide()
+                } else if (category == 1) {
+                    $('input#input-IP').show().siblings().hide()
+                    $('div#dynamicTable01').hide()
+                    $('div#dynamicTable02').show()
+                }
+                console.log(data.value)
+            });
+        });
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        //Demo 
+        layui.use('form', function() {
+            var form = layui.form;
+            //监听提交 
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

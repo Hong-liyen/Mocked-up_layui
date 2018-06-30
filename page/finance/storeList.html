@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>文章列表--layui后台管理模板 2.0</title>
+    <title>商号列表</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,56 +16,64 @@
 
 <body class="childrenBody">
     <form class="layui-form storeList">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="storeOrdersSearch.html">订单号查询</a>
+            <a class="layui-btn layui-btn-gray active" href="storeList.html">商号列表</a>
+            <!--uifix_delete
+            <a class="layui-btn layui-btn-gray" href="storeStoreList.html">银行商家对应表</a>
+            -->
+            <a class="layui-btn layui-btn-gray" href="storeOrder.html">设定商号顺序</a>
+            <a class="layui-btn layui-btn-gray" href="storeStopAmount.html">设定商号停用金额</a>
+            <a class="layui-btn layui-btn-gray" href="storeTimesStatistics.html">金额次数统计</a>
+            <a class="layui-btn layui-btn-gray" href="storeSearch.html">商家信息查询</a>
+            <a class="layui-btn layui-btn-gray" href="payList.html">支付白名单</a>
+        </div>
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
-                <!-- <div class="layui-inline">
-				<div class="layui-input-inline">
-					<input type="text" class="layui-input searchVal" placeholder="请输入搜索的内容" />
-				</div>
-				<a class="layui-btn search_btn" data-type="reload">搜索</a>
-			</div> -->
-                <div class="layui-inline">
+                <div class="layui-inline layui-btn-group">
                     <a class="layui-btn layui-btn-normal">启用区</a>
                     <a class="layui-btn layui-btn-primary">停用区</a>
                 </div>
                 <div class="layui-inline">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">层级：</label>
+                        <label class="layui-form-label">会员层级：</label>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="0">全部</option>
-							<option value="1">未分层</option>
-							<option value="2">A层</option>
-						  </select>
+                                <option value="0">全部</option>
+                                <option value="1">未分层</option>
+                                <option value="2">A层</option>
+                            </select>
                         </div>
                     </div>
-                    <!-- <a class="layui-btn layui-btn-danger layui-btn-normal delAll_btn">批量删除</a> -->
                 </div>
                 <div class="layui-inline">
                     <div class="layui-form-item">
                         <label class="layui-form-label">支付类型：</label>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="">内接支付</option>
-							<option value="0">外接支付</option>
-						  </select>
+                                <option value="">内接支付</option>
+                                <option value="0">外接支付</option>
+                            </select>
                         </div>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="">银行列表</option>
-							<option value="0">点卡列表</option>
-							<option value="1">微信扫描支付</option>
-						  </select>
+                                <option value="">银行列表</option>
+                                <option value="0">点卡列表</option>
+                                <option value="1">微信扫描支付</option>
+                            </select>
                         </div>
                     </div>
-                    <!-- <a class="layui-btn layui-btn-danger layui-btn-normal delAll_btn">批量删除</a> -->
                 </div>
-
+                <!--uifix_120-->
                 <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加商号</a>
+                    <a href="addRemitStoreList.html" class="layui-btn layui-btn-normal">查询</a>
+                </div>
+                <!--uifix_end-->
+                <div class="layui-inline">
+                    <a href="addStoreList.html" class="layui-btn layui-btn-normal">添加</a>
                 </div>
                 <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加外连商号</a>
+                    <a href="addOuterStore.html" class="layui-btn layui-btn-normal">添加外链商号</a>
                 </div>
             </form>
         </blockquote>
@@ -75,24 +83,68 @@
             {{# if(d.storePaymentSystem == "0"){ }}
             <span>內部连结</span> {{# } else { }}
             <span>外部连结</span> {{# }}}
-
-            <!-- {{#  if(d.storePaymentSystem == "0"){ }}
-		<span class="layui-blue">內部连结</span>
-		{{#  } else { }}
-		<span class="layui-darkblue">外部连结</span>
-		{{#  }}} -->
         </script>
 
         <!--操作-->
         <script type="text/html" id="storeListBar">
-            <a class="layui-btn layui-btn-xs" lay-event="del">停用</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger">恢复</a>
-            <a class="layui-btn layui-btn-xs layui-btn-normal">修改商家资讯</a>
-            <!-- <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="edit">修改商家资讯</a> -->
+            {{# if(d.storeListBar == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商号资讯</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <!--uifix_add-->
+            {{# if( d.payuse == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>
+            {{# }  else if( d.payuse == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosecard" href="javascript:void(0);">点卡选择</a>
+            {{# }}}
+            {{# } else { }}
+            <!--uifix_end-->
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商号资讯</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <!--uifix_add-->
+            {{# if( d.payuse == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>
+            {{# }  else if( d.payuse == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosecard" href="javascript:void(0);">点卡选择</a>
+            {{# }}}{{# }}}
+            <!--uifix_end-->
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="storeList.js"></script>
+    <script>
+        // 停用商家弹窗
+        function disabled() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '停用',
+                area: ['450px', '180px'],
+                content: '<span>动态口令(操作人)</span>\
+                            <div class="layui-inline">\
+                            <input type="text" class="layui-input">\
+                            </div>\
+                            <span class="layui-red">（未绑定请留空）</span>'
+            });
+        }
+        // 恢复商家弹窗
+        function recover() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '恢复',
+                area: ['260px', '160px'],
+                content: '是否确认修改？'
+            });
+        }
+    </script>
 </body>
 
 </html>

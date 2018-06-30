@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>商家信息查询</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form storeList storeSearch">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="storeOrdersSearch.html">订单号查询</a>
+            <a class="layui-btn layui-btn-gray" href="storeList.html">商号列表</a>
+            <!--uifix_delete
+            <a class="layui-btn layui-btn-gray" href="storeStoreList.html">银行商家对应表</a>
+            -->
+            <a class="layui-btn layui-btn-gray" href="storeOrder.html">设定商号顺序</a>
+            <a class="layui-btn layui-btn-gray" href="storeStopAmount.html">设定商号停用金额</a>
+            <a class="layui-btn layui-btn-gray" href="storeTimesStatistics.html">金额次数统计</a>
+            <a class="layui-btn layui-btn-gray active" href="storeSearch.html">商家信息查询</a>
+            <a class="layui-btn layui-btn-gray" href="payList.html">支付白名单</a>
+        </div>
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">时间区间：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateStart">
+                        </div>
+                        <span class="line-height2-5">~</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateEnd">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">更新秒数：</label>
+                        <div class="layui-input-block">
+                            <select name="city" lay-verify="required">
+                                <option value="">不更新</option>
+                                <option value="0">15</option>
+                                <option value="1">20</option>
+                                <option value="2">30</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+            </form>
+        </blockquote>
+        <table id="storeSearch" lay-filter="storeSearch"></table>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="storeSearch.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
+</body>
+
+</html>

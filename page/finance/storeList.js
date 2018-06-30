@@ -131,7 +131,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         if (layEvent === 'edit') { //编辑
             addStore(data);
         } else if (layEvent === 'del') { //删除
-            layer.confirm('确定删除此商户？', { icon: 3, title: '提示信息' }, function(index) {
+            layer.confirm('确定停用此商户？', { icon: 3, title: '提示信息' }, function(index) {
                 // $.get("删除文章接口",{
                 //     storeId : data.storeId  //将需要删除的storeId作为参数传入
                 // },function(data){
@@ -141,6 +141,36 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             });
         } else if (layEvent === 'look') { //预览
             layer.alert("此功能需要前台展示，实际开发中传入对应的必要参数进行文章内容页面访问")
+        } else if (layEvent === 'chosebank') { //银行选择//uifix_addoutpage
+            var index = layui.layer.open({
+                title: "新易付支付银行对应表",
+                type: 2,
+                content: "storePayBankList.html",
+                success: function (layero, index) {
+                    var body = layui.layer.getChildFrame('body', index);
+                }
+            })
+            layui.layer.full(index);
+            window.sessionStorage.setItem("index", index);
+            //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
+            $(window).on("resize", function () {
+                layui.layer.full(window.sessionStorage.getItem("index"));
+            })
+        } else if (layEvent === 'chosecard') { //银行选择//uifix_addoutpage
+            var index = layui.layer.open({
+                title: "网易点卡点卡对应表",
+                type: 2,
+                content: "storePayCardList.html",
+                success: function (layero, index) {
+                    var body = layui.layer.getChildFrame('body', index);
+                }
+            })
+            layui.layer.full(index);
+            window.sessionStorage.setItem("index", index);
+            //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
+            $(window).on("resize", function () {
+                layui.layer.full(window.sessionStorage.getItem("index"));
+            })
         }
     });
 

@@ -1,7 +1,13 @@
 {
     "contentManagement": [{
+            "title": "维修页面",
+            "icon": "&#xe670;",
+            "href": "page/repair.html",
+            "spread": false,
+            "target": "_blank"
+        }, {
             "title": "账号管理",
-            "icon": "&#xe630;",
+            "icon": "&#xe673;",
             "href": "",
             "spread": false,
             "children": [{
@@ -20,14 +26,14 @@
                 {
                     "title": "股东",
                     "icon": "",
-                    "href": "",
+                    "href": "page/account/shareList.html",
                     "spread": false,
                     "target": ""
                 },
                 {
                     "title": "总代",
                     "icon": "",
-                    "href": "page/account/addnone1stmember.html",
+                    "href": "page/account/mainAgentList.html",
                     "spread": false,
                     "target": ""
                 },
@@ -37,6 +43,12 @@
                     "href": "page/account/agentList.html",
                     "spread": false,
                     "target": ""
+                }, {
+                    "title": "修改一级代理",
+                    "icon": "",
+                    "href": "page/account/edit1stagent.html",
+                    "spread": false,
+                    "target": ""
                 },
                 {
                     "title": "会员",
@@ -44,8 +56,34 @@
                     "href": "page/account/memberList.html",
                     "spread": false,
                     "target": ""
-                },
-                {
+                }, {
+                    "title": "登录日志",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "账号/IP查询",
+                            "icon": "",
+                            "href": "page/account/loginHistoryIP.html",
+                            "target": ""
+                        },
+                        {
+                            "title": "自动稽核",
+                            "icon": "",
+                            "href": "page/account/autoCheck.html",
+                            "spread": false,
+                            "target": ""
+                        },
+                        {
+                            "title": "代理层级查询",
+                            "icon": "",
+                            "href": "page/account/agentLevelSearch.html",
+                            "spread": false,
+                            "target": ""
+                        }
+                    ]
+                }, {
                     "title": "返点设置",
                     "icon": "",
                     "href": "page/rebate/rebateList.html",
@@ -53,14 +91,13 @@
                     "target": ""
                 }
             ]
-        },
-        {
+        }, {
             "title": "现金系统",
-            "icon": "&#xe634;",
+            "icon": "&#xe672;",
             "href": "",
             "spread": false,
             "children": [{
-                    "title": "新线上付款设定",
+                    "title": "存取款设定",
                     "icon": "",
                     "href": "",
                     "spread": false
@@ -68,7 +105,7 @@
                 {
                     "title": "层级管理",
                     "icon": "",
-                    "href": "",
+                    "href": "page/finance/hierarchy.html",
                     "spread": false,
                     "target": ""
                 },
@@ -80,18 +117,18 @@
                     "thirdChildren": [{
                             "title": "线上入款",
                             "icon": "",
-                            "href": "page/finance/storeList.html",
+                            "href": "page/finance/storeOrdersSearch.html",
                             "target": ""
                         },
                         {
                             "title": "线上出款",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/remitOrdersSearch.html",
                             "spread": false,
                             "target": ""
                         },
                         {
-                            "title": "公司入款设定",
+                            "title": "线下入款",
                             "icon": "",
                             "href": "",
                             "spread": false,
@@ -106,17 +143,16 @@
                     "spread": false,
                     "target": "",
                     "thirdChildren": [{
-                            "title": "入款历史记录",
+                            "title": "入款记录",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/paymentHistory.html",
                             "spread": false
                         },
                         {
                             "title": "出款记录",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/finance/paymentRecords.html",
+                            "spread": false
                         }
                     ]
                 },
@@ -129,22 +165,26 @@
                     "thirdChildren": [{
                             "title": "人工存入",
                             "icon": "",
-                            "href": "page/finance/storeList.html",
+                            "href": "page/agent/agentDeposit.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "人工存入(厅主)",
+                            "icon": "",
+                            "href": "page/agent/lobbyDeposit.html",
                             "spread": false
                         },
                         {
                             "title": "人工提出",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/agent/agentWithdrawal.html",
+                            "spread": false
                         },
                         {
                             "title": "批次处理",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/agent/batchDispose.html",
+                            "spread": false
                         }
                     ]
                 },
@@ -157,20 +197,20 @@
                     "thirdChildren": [{
                             "title": "人工额度转换",
                             "icon": "",
-                            "href": "",
+                            "href": "page/quotaConvert/quotaConvert.html",
                             "spread": false
                         },
                         {
                             "title": "额度转换记录",
                             "icon": "",
-                            "href": "",
+                            "href": "page/quotaConvert/quotaConvertRecord.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
                 {
-                    "title": "子现金系统",
+                    "title": "现金流查询",
                     "icon": "",
                     "href": "",
                     "spread": false,
@@ -198,15 +238,15 @@
                     "thirdChildren": [{
                             "title": "取款稽核查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/withdrawCheckSearch.html",
                             "spread": false
                         },
                         {
                             "title": "即时稽核查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/payCheckSearch.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
@@ -219,30 +259,46 @@
                     "thirdChildren": [{
                             "title": "会员查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/memberInquiry.html",
                             "spread": false
                         },
                         {
                             "title": "代理查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/agentInquiry.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
                 {
                     "title": "出入款总账",
                     "icon": "",
-                    "href": "page/login/login.html",
+                    "href": "page/finance/paymentAmount.html",
                     "spread": false,
-                    "target": "_blank"
+                    "target": ""
+                }, {
+                    "title": "第三方查询realTime",
+                    "icon": "",
+                    "href": "page/mainSysReport/realTime.html",
+                    "spread": false
+                }, {
+                    "title": "第三方查询realTimeList",
+                    "icon": "",
+                    "href": "page/mainSysReport/realTimeList.html",
+                    "spread": false
+                }, {
+                    "title": "第三方查询02",
+                    "icon": "",
+                    "href": "page/mainSysReport/reportSearchList.html",
+                    "spread": false,
+                    "target": ""
                 }
             ]
         },
         {
             "title": "运营管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe674;",
             "href": "",
             "spread": false,
             "children": [{
@@ -256,22 +312,7 @@
                     "icon": "",
                     "href": "page/rebateSearch/rebateSearchList.html",
                     "spread": false,
-                    "target": "",
-                    "thirdChildren": [{
-                            "title": "返水冲销明细",
-                            "icon": "",
-                            "spread": false,
-                            "href": "page/rebateSearch/rebateChargeoff.html",
-                            "target": ""
-                        },
-                        {
-                            "title": "待返水明细",
-                            "icon": "",
-                            "href": "page/subFinance/agentFinance.html",
-                            "spread": false,
-                            "target": ""
-                        }
-                    ]
+                    "target": ""
                 },
                 {
                     "title": "代理返水查询",
@@ -284,33 +325,130 @@
         },
         {
             "title": "平台管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe675;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                    "title": "网站咨询系统",
+                    "icon": "",
+                    "href": "page/img/images.html",
+                    "spread": false
+                },
+                {
+                    "title": "公告管理",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "thirdChildren": [{
+                            "title": "公告信息",
+                            "icon": "",
+                            "href": "page/notice/noticeNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "管理信息",
+                            "icon": "",
+                            "href": "page/notice/manageNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "代理弹出公告",
+                            "icon": "",
+                            "href": "page/notice/agentPopNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员弹出公告",
+                            "icon": "",
+                            "href": "page/notice/memberPopNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员资讯管理",
+                            "icon": "",
+                            "href": "page/notice/memberInforManage.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员留言",
+                            "icon": "",
+                            "href": "page/notice/memberLeaveWord.html",
+                            "spread": false
+                        }
+                    ]
+                }
+            ]
         },
         {
             "title": "报表管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe676;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                "title": "报表",
+                "icon": "",
+                "href": "page/reports/reportsList.html",
+                "spread": false
+            }, {
+                "title": "月结对账系统",
+                "icon": "",
+                "href": "page/reports/monthlyReportLogin.html",
+                "spread": false
+            }]
+        }, {
+            "title": "員工管理",
+            "icon": "&#xe900;",
+            "href": "",
+            "spread": false,
+            "target": "",
+            "children": [{
+                "title": "子账号",
+                "icon": "",
+                "href": "page/account/subList.html",
+                "spread": false
+            }]
         },
         {
             "title": "注单管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe671;",
             "href": "",
             "spread": false
         },
         {
             "title": "角色管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe670;",
             "href": "",
             "spread": false
         },
         {
             "title": "日志管理",
-            "icon": "&#xe634;",
+            "icon": "&#xe677;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                "title": "登入记錄",
+                "icon": "",
+                "href": "",
+                "spread": false,
+                "thirdChildren": [{
+                        "title": "账号IP查询",
+                        "icon": "",
+                        "href": "",
+                        "spread": false
+                    },
+                    {
+                        "title": "IP设置",
+                        "icon": "",
+                        "href": "",
+                        "spread": false
+                    }
+                ]
+            }, {
+                "title": "操作记錄",
+                "icon": "",
+                "href": "page/record/operationRecord.html",
+                "spread": false
+            }]
         }
     ],
     "memberCenter": [{

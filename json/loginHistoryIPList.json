@@ -1,0 +1,41 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "loginHistoryIPLevel": "6",
+            "loginHistoryIPAccount": "haitianzi",
+            "loginHistoryIPMsg": "登录成功 http://hgoeaitian.sharksu.com/agent/agent",
+            "loginHistoryIPTime": "2018-05-26 03:26:00",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryIPLevel": "6",
+            "loginHistoryIPAccount": "haitian00",
+            "loginHistoryIPMsg": "登录成功 http://hgoeaitian.sharksu.com/agent/agent",
+            "loginHistoryIPTime": "2018-05-26 03:03:58",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryIPLevel": "0",
+            "loginHistoryIPAccount": "okok111",
+            "loginHistoryIPMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=9F090E10F07D8936E0E40B9660CFA494",
+            "loginHistoryIPTime": "2018-05-26 02:45:01",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryIPLevel": "0",
+            "loginHistoryIPAccount": "tim0002",
+            "loginHistoryIPMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=9F1D903F57E161EB33A320F14674EECC",
+            "loginHistoryIPTime": "2018-05-26 00:07:54",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryIPLevel": "1",
+            "loginHistoryIPAccount": "dduoli",
+            "loginHistoryIPMsg": "登录成功 http://hgoeaitian.sharksu.com/agent/agent",
+            "loginHistoryIPTime": "2018-05-25 08:59:02",
+            "loginHistoryIP": "180.232.84.51"
+        }
+    ]
+}

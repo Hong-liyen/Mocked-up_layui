@@ -1,0 +1,46 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "operationRecordId": "1",
+            "operationRecordName": "haitian",
+            "operationRecordTime": "2018-04-30 09：23：02",
+            "operationRecordDomain": "hgoeaitian.sharksu.com",
+            "operationRecordItems": "公司入款记录确认",
+            "operationRecordDetail": "信息已加密"
+        },
+        {
+            "operationRecordId": "2",
+            "operationRecordName": "ian123",
+            "operationRecordTime": "2018-04-30 09：23：02",
+            "operationRecordDomain": "hgoeaitian.sharksu.com",
+            "operationRecordItems": "人工存入",
+            "operationRecordDetail": " 存入金额=10&存入金额备注=&是否选择存款优惠=放弃&存款优惠=0&存款优惠备注=&是否选择汇款优惠=放弃&汇款优惠=0&汇款优惠备注=&是否需要综合打码量稽核=不需要&综合稽核打码量=0&是否需要常态性稽核=需要&人工存入项目=5其他"
+        },
+        {
+            "operationRecordId": "3",
+            "operationRecordName": "ian123",
+            "operationRecordTime": "2018-04-28 17：43：02",
+            "operationRecordDomain": "hgoeaitian.sharksu.com",
+            "operationRecordItems": "人工存入",
+            "operationRecordDetail": " 存入金额=10&存入金额备注=&是否选择存款优惠=放弃&存款优惠=0&存款优惠备注=&是否选择汇款优惠=放弃&汇款优惠=0&汇款优惠备注=&是否需要综合打码量稽核=不需要&综合稽核打码量=0&是否需要常态性稽核=需要&人工存入项目=5其他"
+        },
+        {
+            "operationRecordId": "4",
+            "operationRecordName": "qwe802321",
+            "operationRecordTime": "2018-04-30 09：23：02",
+            "operationRecordDomain": "hgoeaitian.sharksu.com",
+            "operationRecordItems": "修改会员弹出公告的处理",
+            "operationRecordDetail": "繁体内容=&英文内容=&简体内容="
+        },
+        {
+            "operationRecordId": "5",
+            "operationRecordName": "qwe802321",
+            "operationRecordTime": "2018-04-20 09：23：02",
+            "operationRecordDomain": "hgoeaitian.sharksu.com",
+            "operationRecordItems": "修改会员弹出公告的处理",
+            "operationRecordDetail": "启用禁用状态=启用"
+        }
+    ]
+}

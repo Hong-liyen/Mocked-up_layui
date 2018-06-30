@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序：</label>
+                        <div class="layui-input-block">
+                            <select name="arrange3" lay-verify="required">
+                                <option value="0">新增日期</option>
+                                <option value="1">姓名</option>
+						  </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
+                    </div>
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
+                </div>
+
+                <div class="layui-inline">
+                    <a href="../account/addTopShare.html" class="layui-btn layui-btn-normal">添加</a>
+                </div>
+            </form>
+
+        </blockquote>
+        <table id="topShareList" lay-filter="topShareList"></table>
+        <!--审核状态-->
+        <script type="text/html" id="topShareAccount">
+            {{# if( d.topShareAccount == "0"){ }}
+            <span class="layui-blue">启用</span> {{# } else if( d.topShareAccount == "1") { }}
+            <span class="layui-red">停用</span> {{# } else if( d.topShareAccount == "2") { }}
+            <span class="layui-red">冻结</span> {{# }}}
+        </script>
+
+        <script type="text/html" id="topShareBet">
+            {{# if( d.topShareBet == "0"){ }}
+            <span class="layui-blue">启用</span> {{# } else { }}
+            <span class="layui-red">停用</span> {{# }}}
+        </script>
+
+        <!--操作-->
+        <script type="text/html" id="topShareListBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/addTopShare.html">添加</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/editTopShare.html">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="authority">权限</a>
+        </script>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="topShareList.js"></script>
+</body>
+
+</html>

@@ -20,17 +20,17 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             [
                 // {type: "checkbox", fixed:"left", width:50},
                 { field: 'agentId', title: '序号', width: 60, align: "center" },
-                { field: 'agentName', title: '用户名', width: 110, align: "center" },
-                { field: 'agentNickName', title: '昵称', width: 90, align: "center" },
-                { field: 'agentSup', title: '上级', width: 70, align: "center" },
+                { field: 'agentName', title: '用户名', width: 200, align: "center" },
+                { field: 'agentNickName', title: '昵称', width: 150, align: "center" },
+                { field: 'agentSup', title: '上级', width: 120, align: "center" },
                 // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
-                { field: 'agentBalance', title: '账户余额', width: 150, align: 'center' },
-                { field: 'agentSubAgent', title: '下级代理', width: 90, align: "center" },
-                { field: 'agentSubMember', title: '下级会员', width: 90, align: "center" },
-                { field: 'agentLevel', title: '层级', width: 60, align: "center" },
-                { field: 'agentRebate', title: '返点明细', width: 90, align: 'center' },
-                { field: 'agentAccount', title: '账号', width: 70, align: 'center', templet: "#agentAccount" },
-                { field: 'agentBet', title: '投注', width: 70, align: 'center', templet: "#agentBet" },
+                { field: 'agentBalance', title: '账户余额', width: 250, align: 'center' },
+                // { field: 'agentSubAgent', title: '下级代理', width: 130, align: "center" },
+                // { field: 'agentSubMember', title: '直属会员', width: 130, align: "center" },
+                // { field: 'agentLevel', title: '层级', width: 80, align: "center" },
+                // { field: 'agentRebate', title: '返点', width: 110, align: 'center' },
+                { field: 'agentAccount', title: '账号', width: 120, align: 'center', templet: "#agentAccount" },
+                { field: 'agentBet', title: '投注', width: 120, align: 'center', templet: "#agentBet" },
                 // {field: 'agentTop', title: '是否置顶', align:'center', templet:function(d){
                 //     return '<input type="checkbox" name="agentTop" lay-filter="agentTop" lay-skin="switch" lay-text="是|否" '+d.agentTop+'>'
                 // }},
@@ -39,13 +39,13 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     title: '注册时间',
                     align: 'center',
                     sort: "true",
-                    minWidth: 130,
+                    width: 230,
                     templet: function(d) {
                         return d.agentTime.substring(0, 10);
                     }
                 },
-                { field: 'agentLogin', title: '登录', width: 60, align: "center" },
-                { title: '操作', width: 210, templet: '#agentListBar', fixed: "right", align: "center" }
+                { field: 'agentLogin', title: '登录', width: 120, align: "center" },
+                { title: '操作', width: 300, templet: '#agentListBar', fixed: "right", align: "center" }
             ]
         ]
     });
@@ -63,7 +63,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         }, 500);
     })
 
-    //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
+    //查询【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
             table.reload("searchMemberTable", {
@@ -71,11 +71,11 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     curr: 1 //重新从第 1 页开始
                 },
                 where: {
-                    key: $(".searchVal").val() //搜索的关键字
+                    key: $(".searchVal").val() //查询的关键字
                 }
             })
         } else {
-            layer.msg("请输入搜索的内容");
+            layer.msg("请输入查询的内容");
         }
     });
 
@@ -150,27 +150,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     $(".agentedit_btn").click(function() {
             agentedit();
         })
-        //批量删除
-        // $(".delAll_btn").click(function(){
-        //     var checkStatus = table.checkStatus('agentListTable'),
-        //         data = checkStatus.data,
-        //         agentId = [];
-        //     if(data.length > 0) {
-        //         for (var i in data) {
-        //             agentId.push(data[i].agentId);
-        //         }
-        //         layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
-        //             // $.get("删除文章接口",{
-        //             //     agentId : agentId  //将需要删除的agentId作为参数传入
-        //             // },function(data){
-        //             tableIns.reload();
-        //             layer.close(index);
-        //             // })
-        //         })
-        //     }else{
-        //         layer.msg("请选择需要删除的文章");
-        //     }
-        // })
 
     //上級查看
     table.on('tool(agentList)', function(obj) {
@@ -193,7 +172,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     tableIns.reload();
                     layer.close(index);
                 });
-        } else if (layEvent === 'Rebatedetail') { //返点明细
+        } else if (layEvent === 'Rebatedetail') { //返点
             layer.confirm('<table class="layui-table"><colgroup><col width="180"><col width="180"></colgroup><thead><tr><th>返点平台</th><th>明细</th></tr></thead>' +
                 '<tbody><tr><td>AG</td><td>' +
                 obj.data.RebateAG +
@@ -203,7 +182,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 obj.data.RebateBB +
                 '%</td></tr><tr><td>ALLBET</td><td>' +
                 obj.data.RebateALLBET +
-                '%</td></tr></tbody></table>', { title: '返点明细' },
+                '%</td></tr></tbody></table>', { title: '返点' },
                 function(index) {
                     tableIns.reload();
                     layer.close(index);

@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 3,
+    "data": [{
+            "remitOrderNumber": "203372302494511104",
+            "remitOrderMember": "lzh111",
+            "remitWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>＠＠＠</a>",
+            "remitPayLevel": "未分层",
+            "remitTime": "2018-03-20 19:15:35",
+            "remitAmount": "2.00",
+            "remitCashFlow": "32pay网银出款"
+        }, {
+            "remitOrderNumber": "203371559314305024",
+            "remitOrderMember": "lzh111",
+            "remitWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>＠＠＠</a>",
+            "remitPayLevel": "未分层",
+            "remitTime": "2018-03-20 19:12:38",
+            "remitAmount": "2.00",
+            "remitCashFlow": "32pay网银出款"
+        },
+        {
+            "remitOrderNumber": "",
+            "remitOrderMember": "",
+            "remitWechat": "",
+            "remitPayLevel": "小计",
+            "remitTime": "4.00",
+            "remitAmount": "合计",
+            "remitCashFlow": "4.00"
+        }
+    ]
+}

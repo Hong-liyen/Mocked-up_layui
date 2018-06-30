@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>会员资讯管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+
+<body class="childrenBody">
+    <form class="layui-form">
+        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="memberInforManage.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
+        
+        <form class="layui-form"> 
+            <div class="layui-form">
+                <table class="layui-table rebateChargeoff">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>最新消息内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018-4-1 14:19:46</td>
+                            <td>
+                                <textarea name="" id="" class="layui-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- <tfoot>
+                        <tr>
+                            <td colspan="2">
+                            </td>
+                        </tr>
+                    </tfoot> -->
+                </table> 
+                <div class="layui-center">
+                        <div class="layui-inline">
+                            <button type="button" class="layui-btn layui-btn-normal">新增</button>
+                            <button type="button" class="layui-btn layui-btn-normal">重设</button>
+                        </div>
+                </div>
+            </div>
+        </form>
+    </form>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+             
+        });
+    </script>
+</body>
+
+</html>

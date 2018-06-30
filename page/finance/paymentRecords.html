@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>出款记录</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody paymentRecordsBody">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">代理账号：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input searchVal" placeholder=" " />
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">会员账号：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input searchVal" placeholder=" " />
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <!--uifix_55-->
+                        <label class="layui-form-label">自动刷新：</label>
+                        <!--uifix_55_end-->
+                        <div class="layui-input-block">
+                            <select name="">
+                                <option value="0">300秒</option>
+                                <option value="1">10秒</option>
+                                <option value="2">20秒</option>
+                                <option value="3">30秒</option>
+                                <option value="4">60秒</option>
+                                <option value="5">不整理</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <!--uifix_56-->
+                        <label class="layui-form-label">日期：</label>
+                        <!--uifix_56_end-->
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateStart">
+                        </div>
+                        <span class="line-height2-5">~</span>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="dateEnd">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-block layui-event">
+                    <div class="layui-inline">
+                        <input type="checkbox" name="" lay-skin="primary" title="处理中" checked>
+                        <input type="checkbox" name="" lay-skin="primary" title="确定">
+                        <input type="checkbox" name="" lay-skin="primary" title="取消">
+                        <input type="checkbox" name="" lay-skin="primary" title="拒绝">
+                    </div>
+                    <a class="layui-btn layui-btn-normal search_btn">查询</a>
+                    <a class="layui-btn layui-btn-normal">进阶搜寻</a>
+                    <a class="layui-btn layui-btn-normal">数据导出</a>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">备注：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">提出额度：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                            <span class="line-height2-5">~&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder=" ">
+                            </div>
+                            <span class="line-height2-5">提出额度为1元至999,999,999,9元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-block">
+                    <div class="layui-inline">
+                        <input type="checkbox" name="" lay-skin="primary" title="层级">
+                        <input type="checkbox" name="" lay-skin="primary" title="未分层">
+                        <input type="checkbox" name="" lay-skin="primary" title="洗码层1">
+                        <input type="checkbox" name="" lay-skin="primary" title="BWT">
+                        <input type="checkbox" name="" lay-skin="primary" title="000">
+                        <input type="checkbox" name="" lay-skin="primary" title="11111">
+                        <input type="checkbox" name="" lay-skin="primary" title="Kelly测试层001">
+                        <input type="checkbox" name="" lay-skin="primary" title="KellyVIP层002">
+                        <input type="checkbox" name="" lay-skin="primary" title="科伦vip层">
+                        <input type="checkbox" name="" lay-skin="primary" title="kelly001">
+                        <input type="checkbox" name="" lay-skin="primary" title="kelly002">
+                        <input type="checkbox" name="" lay-skin="primary" title="nina001哈哈">
+                        <input type="checkbox" name="" lay-skin="primary" title="VIP级别(Jimmy)">
+                        <input type="checkbox" name="" lay-skin="primary" title="super">
+                        <input type="checkbox" name="" lay-skin="primary" title="测试">
+                        <input type="checkbox" name="" lay-skin="primary" title="426测试新增层级">
+                        <input type="checkbox" name="" lay-skin="primary" title="alice使用">
+                        <input type="checkbox" name="" lay-skin="primary" title="15346353">
+                        <input type="checkbox" name="" lay-skin="primary" title="test">
+                        <input type="checkbox" name="" lay-skin="primary" title="qwewr12">
+                        <input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa">
+                    </div>
+                </div>
+            </form>
+        </blockquote>
+        <table id="paymentRecords" lay-filter="paymentRecords"></table>
+
+        <!--操作-->
+        <script type="text/html" id="paymentAlready">
+            {{# if(d.paymentAlready == "0"){ }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="已出款 | 已取消"> {{# } else if(d.paymentAlready == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="已出款 | 已取消" checked=""> {{# } else if(d.paymentAlready == "2") { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">预备出款</a> {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">自动出款</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="fast">快速出款</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a>
+            <br>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">取消</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">拒绝</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">取消预备</a> {{# }}}
+        </script>
+        <script type="text/html" id="paymentOperatorBar">
+            <p>tracycs01</p>
+        </script>
+        <script type="text/html" id="paymentNoteBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="note">点击</a>
+        </script>
+    </form>
+
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="paymentRecords.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        //Demo 
+        layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
+            var form = layui.form,
+                layer = parent.layer ===
+                undefined ? layui.layer : top.layer,
+                $ = layui.jquery,
+                laydate = layui.laydate,
+                laytpl = layui.laytpl,
+                table = layui.table;
+        });
+    </script>
+</body>
+
+</html>

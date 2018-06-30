@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理存入</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="agentDeposit">
+        <blockquote class="layui-elem-quote quoteBox">
+            <label>会员账号：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="">
+            </div>
+            <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+        </blockquote>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">人工存入</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>会员账号:</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>现金余额:</td>
+                        <td>
+                            0.0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="layui-red">*</span>存入金额:</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="layui-red">*</span>登录密码:</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="">
+                            </div>
+                            <!-- <p class="layui-red">*如无设置可不用填写</p> -->
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>我的余额:</td>
+                        <td colspan="2">
+                            <span class="layui-red">140,23.00</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="magt10 layui-left">
+                <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确认</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

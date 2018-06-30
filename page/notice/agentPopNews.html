@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理弹出公告</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+
+<body class="childrenBody">
+    <div class="layui-title">弹跳公告</div>
+
+    <form class="layui-form">
+        <div class="layui-form">
+            <table class="layui-table rebateChargeoff">
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>弹跳公告内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018-4-1 14:19:46</td>
+                        <td>
+                            <textarea class="layui-textarea"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button" class="layui-btn layui-btn-normal">新增</button>
+                            <button type="button" class="layui-btn layui-btn-normal">重设</button>
+                        </td>
+                    </tr>
+                </tfoot> -->
+            </table>
+            <div class="layui-center">
+                    <div class="layui-inline">
+                        <button type="button" class="layui-btn layui-btn-normal">新增</button>
+                        <button type="button" class="layui-btn layui-btn-normal">重设</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="layui-title">目前弹跳公告</div>
+
+    <form class="layui-form">
+        <div class="layui-form">
+            <table class="layui-table rebateChargeoff">
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>目前显示弹跳公告阶层</th>
+                        <th></th>
+                        <th>功能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018-4-1 14:19:46</td>
+                        <td>全部</td>
+                        <td>
+                            <textarea class="layui-textarea"></textarea>
+                        </td>
+                        <td>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">停用</a>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+
+        });
+    </script>
+</body>
+
+</html>

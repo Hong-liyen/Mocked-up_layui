@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 17,
+    "data": [{
+        "rebateChargeoffMember": "AAA0524",
+        "rebateChargeoffName": "有效总投注",
+        "rebateChargeoffAmount": "11.50",
+        "rebateChargeoffBB": "0.0",
+        "rebateChargeoffAG": "0.0",
+        "rebateChargeoffOG": "0.0",
+        "rebateChargeoffAB": "0.0",
+        "rebateChargeoffBackground": "返水已完成"
+    }]
+}

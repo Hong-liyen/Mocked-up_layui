@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>代理列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form agentList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                         <label class="layui-form-label">排序：</label>
+                        <div class="layui-input-block">
+                            <select name="arrange1" lay-verify="required">
+							<option value="0">新增日期</option>
+							<option value="1">帐号</option>
+						  </select>
+                        </div>
+                        <div class="layui-input-block">
+                            <select name="arrange2" lay-verify="required">
+							<option value="0">降幂 (由大到小)</option>
+							<option value="1">升幂 (由小到大)</option>
+						  </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">账号：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" placeholder="请输入查询内容" />
+                    </div>
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+
+                <div class="layui-inline">
+                    <a href="../account/addSub.html" class="layui-btn layui-btn-normal">添加</a>
+                </div>
+            </form>
+
+        </blockquote>
+        <table id="subList" lay-filter="subList"></table>
+        <!--审核状态-->
+        <script type="text/html" id="subAccount">
+            {{# if( d.subAccount == "0"){ }}
+            <a method="offset" onclick="dynamicCommand()" class="layui-blue">启用</a> {{# } else if( d.subAccount == "1") { }}
+            <a method="offset" onclick="dynamicCommand()" class="layui-red">停用</a> {{# } else if( d.subAccount == "2") { }}
+            <a method="offset" onclick="dynamicCommand()" class="layui-red">冻结</a> {{# }}}
+        </script>
+
+        <!--操作-->
+        <script type="text/html" id="subListBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/IPSetting.html">IP设置</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">删除</a>
+        </script>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="subList.js"></script>
+</body>
+<script>
+    // 帐号动态口令
+    function dynamicCommand() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: '确定',
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '账号-动态口令',
+            area: ['450px', '200px'],
+            content: '<form  class="layui-form">\
+                        <div class="layui-form-item">\
+                            <span>动态口令(操作人)</span>\
+                            <div class="layui-inline">\
+                                <input type="password" name="password" autocomplete="off" class="layui-input">\
+                            </div>\
+                            <span class="layui-red">（未绑定请留空）<span>\
+                        </div>\
+                    </form>'
+        });
+    }
+</script>
+</html>

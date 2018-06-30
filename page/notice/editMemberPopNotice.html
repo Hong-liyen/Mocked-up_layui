@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent">
+        <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="memberPopNews.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <label>标题：</label>
+            <div class="layui-inline">
+                <input type="text" class="layui-input" placeholder="会员弹出公告，图片测试">
+            </div>
+            <div class="tab">
+                <a class="layui-btn layui-btn-normal">简体中文</a>
+                <a class="layui-btn layui-btn-primary">繁体中文</a>
+                <a class="layui-btn layui-btn-primary">English</a>
+            </div>
+            <table class="layui-table editMemberPopNotice">
+                <colgroup>
+                    <col width="100">
+                    <col>
+                </colgroup>
+                <!-- <thead>
+                    <tr>
+                        <th colspan="4">账户管理>会员修改</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td>首次弹窗：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="radio" name="agree" value="否" title="否" checked="">
+                                <input type="radio" name="agree" value="是" title="是">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>代理：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <button type="button" class="layui-btn layui-btn-normal" id="uploadDoc"><i class="layui-icon"></i>增加</button>
+                            <button type="button" class="layui-btn layui-btn-normal" id="test3"><i class="layui-icon"></i>批量增加</button>
+                            <div class="layui-form-item" pane="">
+                                <p class="tag-content layui-gray">已选择</p>
+                                <div class="layui-inline">
+                                    <input type="checkbox" name="like1[selectAll]" lay-skin="primary" title="选择全部" checked="">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>作用层级：</td>
+                        <td>
+                            <div class="layui-form-item" pane="">
+                                <div class="layui-block">
+                                    <input type="checkbox" name="like1[selectAll]" lay-skin="primary" title="全选">
+                                </div>
+                                <div class="layui-inline">
+                                    <input type="checkbox" name="like1[None]" lay-skin="primary" title="未分层" checked="">
+                                    <input type="checkbox" name="like1[1]" lay-skin="primary" title="洗码层1">
+                                    <input type="checkbox" name="like1[BWT]" lay-skin="primary" title="BWT">
+                                    <input type="checkbox" name="like1[000]" lay-skin="primary" title="000">
+                                    <input type="checkbox" name="like1[Kelly测试层001]" lay-skin="primary" title="Kelly测试层001">
+                                    <input type="checkbox" name="like1[VIP级别(Jimmy)]" lay-skin="primary" title="VIP级别(Jimmy)">
+                                    <input type="checkbox" name="like1[测试]" lay-skin="primary" title="测试">
+                                    <input type="checkbox" name="like1[426测试新增层级]" lay-skin="primary" title="426测试新增层级">
+                                    <input type="checkbox" name="like1[科伦vip层]" lay-skin="primary" title="科伦vip层">
+                                    <input type="checkbox" name="like1[qwewr12]" lay-skin="primary" title="qwewr12">
+                                    <input type="checkbox" name="like1[nina001]" lay-skin="primary" title="nina001">
+                                    <input type="checkbox" name="like1[kelly001]" lay-skin="primary" title="kelly001">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>弹窗宽度：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="600">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>弹窗高度：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="480">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>首次弹窗：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="radio" name="agree" value="否" title="否">
+                                <input type="radio" name="agree" value="是" title="是" checked="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>图片：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <button type="button" class="layui-btn layui-btn-normal" id="uploadImg"><i class="layui-icon"></i>选择图片</button>
+                            <div class="layui-upload-list">
+                                <img class="layui-upload-img" id="demo1" src="../../images/face.jpg">
+                                <p id="demoText"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="layui-center">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">预览</button>
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../layui/layui.all.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form,
+                upload = layui.upload;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+
+        layui.use('upload', function() {
+            var $ = layui.jquery,
+                upload = layui.upload;
+            //普通图片上传
+            upload.render({
+                elem: '#uploadDoc',
+                url: '/upload/',
+                accept: 'file' //普通文件
+                    ,
+                done: function(res) {
+                    console.log(res)
+                }
+            });
+            var uploadInst = upload.render({
+                elem: '#uploadImg',
+                url: '/upload/',
+                before: function(obj) {
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result) {
+                        $('#demo1').attr('src', result); //图片链接（base64）
+                    });
+                },
+                done: function(res) {
+                    //如果上传失败
+                    if (res.code > 0) {
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                },
+                error: function() {
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function() {
+                        uploadInst.upload();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

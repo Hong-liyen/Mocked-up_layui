@@ -1,10 +1,10 @@
 ﻿/** layui-v2.2.5 MIT License By https://www.layui.com */ ;
-! function (e, t) {
+! function(e, t) {
     "use strict";
     var i, n, a = e.layui && layui.define,
         o = {
-            getPath: function () {
-                var e = document.currentScript ? document.currentScript.src : function () {
+            getPath: function() {
+                var e = document.currentScript ? document.currentScript.src : function() {
                     for (var e, t = document.scripts, i = t.length - 1, n = i; n > 0; n--)
                         if ("interactive" === t[n].readyState) {
                             e = t[n].src;
@@ -20,11 +20,11 @@
             minLeft: [],
             btn: ["&#x786E;&#x5B9A;", "&#x53D6;&#x6D88;"],
             type: ["dialog", "page", "iframe", "loading", "tips"],
-            getStyle: function (t, i) {
+            getStyle: function(t, i) {
                 var n = t.currentStyle ? t.currentStyle : e.getComputedStyle(t, null);
                 return n[n.getPropertyValue ? "getPropertyValue" : "getAttribute"](i)
             },
-            link: function (t, i, n) {
+            link: function(t, i, n) {
                 if (r.path) {
                     var a = document.getElementsByTagName("head")[0],
                         s = document.createElement("link");
@@ -40,38 +40,38 @@
         },
         r = {
             v: "3.1.1",
-            ie: function () {
+            ie: function() {
                 var t = navigator.userAgent.toLowerCase();
                 return !!(e.ActiveXObject || "ActiveXObject" in e) && ((t.match(/msie\s(\d+)/) || [])[1] || "11")
             }(),
             index: e.layer && e.layer.v ? 1e5 : 0,
             path: o.getPath,
-            config: function (e, t) {
+            config: function(e, t) {
                 return e = e || {}, r.cache = o.config = i.extend({}, o.config, e), r.path = o.config.path || r.path, "string" == typeof e.extend && (e.extend = [e.extend]), o.config.path && r.ready(), e.extend ? (a ? layui.addcss("modules/layer/" + e.extend) : o.link("theme/" + e.extend), this) : this
             },
-            ready: function (e) {
+            ready: function(e) {
                 var t = "layer",
                     i = "",
                     n = (a ? "modules/layer/" : "theme/") + "default/layer.css?v=" + r.v + i;
                 return a ? layui.addcss(n, e, t) : o.link(n, e, t), this
             },
-            alert: function (e, t, n) {
+            alert: function(e, t, n) {
                 var a = "function" == typeof t;
                 return a && (n = t), r.open(i.extend({
                     content: e,
                     yes: n
                 }, a ? {} : t))
             },
-            confirm: function (e, t, n, a) {
+            confirm: function(e, t, n, a) {
                 var s = "function" == typeof t;
                 return s && (a = n, n = t), r.open(i.extend({
                     content: e,
-                    btn: o.btn,
+                    // btn: o.btn,
                     yes: n,
                     btn2: a
                 }, s ? {} : t))
             },
-            msg: function (e, n, a) {
+            msg: function(e, n, a) {
                 var s = "function" == typeof n,
                     f = o.config.skin,
                     c = (f ? f + " " + f + "-msg" : "") || "layui-layer-msg",
@@ -89,11 +89,11 @@
                 }, s && !o.config.skin ? {
                     skin: c + " layui-layer-hui",
                     anim: u
-                } : function () {
+                } : function() {
                     return n = n || {}, (n.icon === -1 || n.icon === t && !o.config.skin) && (n.skin = c + " " + (n.skin || "layui-layer-hui")), n
                 }()))
             },
-            load: function (e, t) {
+            load: function(e, t) {
                 return r.open(i.extend({
                     type: 3,
                     icon: e || 0,
@@ -101,7 +101,7 @@
                     shade: .01
                 }, t))
             },
-            tips: function (e, t, n) {
+            tips: function(e, t, n) {
                 return r.open(i.extend({
                     type: 4,
                     content: [e, t],
@@ -114,9 +114,9 @@
                 }, n))
             }
         },
-        s = function (e) {
+        s = function(e) {
             var t = this;
-            t.index = ++r.index, t.config = i.extend({}, t.config, o.config, e), document.body ? t.creat() : setTimeout(function () {
+            t.index = ++r.index, t.config = i.extend({}, t.config, o.config, e), document.body ? t.creat() : setTimeout(function() {
                 t.creat()
             }, 30)
         };
@@ -141,7 +141,7 @@
         resize: !0,
         scrollbar: !0,
         tips: 2
-    }, s.pt.vessel = function (e, t) {
+    }, s.pt.vessel = function(e, t) {
         var n = this,
             a = n.index,
             r = n.config,
@@ -149,16 +149,16 @@
             f = "object" == typeof r.title,
             c = r.maxmin && (1 === r.type || 2 === r.type),
             u = r.title ? '<div class="layui-layer-title" style="' + (f ? r.title[1] : "") + '">' + (f ? r.title[0] : r.title) + "</div>" : "";
-        return r.zIndex = s, t([r.shade ? '<div class="layui-layer-shade" id="layui-layer-shade' + a + '" times="' + a + '" style="' + ("z-index:" + (s - 1) + "; ") + '"></div>' : "", '<div class="' + l[0] + (" layui-layer-" + o.type[r.type]) + (0 != r.type && 2 != r.type || r.shade ? "" : " layui-layer-border") + " " + (r.skin || "") + '" id="' + l[0] + a + '" type="' + o.type[r.type] + '" times="' + a + '" showtime="' + r.time + '" conType="' + (e ? "object" : "string") + '" style="z-index: ' + s + "; width:" + r.area[0] + ";height:" + r.area[1] + (r.fixed ? "" : ";position:absolute;") + '">' + (e && 2 != r.type ? "" : u) + '<div id="' + (r.id || "") + '" class="layui-layer-content' + (0 == r.type && r.icon !== -1 ? " layui-layer-padding" : "") + (3 == r.type ? " layui-layer-loading" + r.icon : "") + '">' + (0 == r.type && r.icon !== -1 ? '<i class="layui-layer-ico layui-layer-ico' + r.icon + '"></i>' : "") + (1 == r.type && e ? "" : r.content || "") + '</div><span class="layui-layer-setwin">' + function () {
+        return r.zIndex = s, t([r.shade ? '<div class="layui-layer-shade" id="layui-layer-shade' + a + '" times="' + a + '" style="' + ("z-index:" + (s - 1) + "; ") + '"></div>' : "", '<div class="' + l[0] + (" layui-layer-" + o.type[r.type]) + (0 != r.type && 2 != r.type || r.shade ? "" : " layui-layer-border") + " " + (r.skin || "") + '" id="' + l[0] + a + '" type="' + o.type[r.type] + '" times="' + a + '" showtime="' + r.time + '" conType="' + (e ? "object" : "string") + '" style="z-index: ' + s + "; width:" + r.area[0] + ";height:" + r.area[1] + (r.fixed ? "" : ";position:absolute;") + '">' + (e && 2 != r.type ? "" : u) + '<div id="' + (r.id || "") + '" class="layui-layer-content' + (0 == r.type && r.icon !== -1 ? " layui-layer-padding" : "") + (3 == r.type ? " layui-layer-loading" + r.icon : "") + '">' + (0 == r.type && r.icon !== -1 ? '<i class="layui-layer-ico layui-layer-ico' + r.icon + '"></i>' : "") + (1 == r.type && e ? "" : r.content || "") + '</div><span class="layui-layer-setwin">' + function() {
             var e = c ? '<a class="layui-layer-min" href="javascript:;"><cite></cite></a><a class="layui-layer-ico layui-layer-max" href="javascript:;"></a>' : "";
             return r.closeBtn && (e += '<a class="layui-layer-ico ' + l[7] + " " + l[7] + (r.title ? r.closeBtn : 4 == r.type ? "1" : "2") + '" href="javascript:;"></a>'), e
-        }() + "</span>" + (r.btn ? function () {
+        }() + "</span>" + (r.btn ? function() {
             var e = "";
             "string" == typeof r.btn && (r.btn = [r.btn]);
             for (var t = 0, i = r.btn.length; t < i; t++) e += '<a class="' + l[6] + t + '">' + r.btn[t] + "</a>";
             return '<div class="' + l[6] + " layui-layer-btn-" + (r.btnAlign || "") + '">' + e + "</div>"
         }() : "") + (r.resize ? '<span class="layui-layer-resize"></span>' : "") + "</div>"], u, i('<div class="layui-layer-move"></div>')), n
-    }, s.pt.creat = function () {
+    }, s.pt.creat = function() {
         var e = this,
             t = e.config,
             a = e.index,
@@ -180,30 +180,30 @@
                 case 4:
                     f || (t.content = [t.content, "body"]), t.follow = t.content[1], t.content = t.content[0] + '<i class="layui-layer-TipsG"></i>', delete t.title, t.tips = "object" == typeof t.tips ? t.tips : [t.tips, !0], t.tipsMore || r.closeAll("tips")
             }
-            if (e.vessel(f, function (n, r, u) {
-                    c.append(n[0]), f ? function () {
-                        2 == t.type || 4 == t.type ? function () {
+            if (e.vessel(f, function(n, r, u) {
+                    c.append(n[0]), f ? function() {
+                        2 == t.type || 4 == t.type ? function() {
                             i("body").append(n[1])
-                        }() : function () {
+                        }() : function() {
                             s.parents("." + l[0])[0] || (s.data("display", s.css("display")).show().addClass("layui-layer-wrap").wrap(n[1]), i("#" + l[0] + a).find("." + l[5]).before(r))
                         }()
                     }() : c.append(n[1]), i(".layui-layer-move")[0] || c.append(o.moveElem = u), e.layero = i("#" + l[0] + a), t.scrollbar || l.html.css("overflow", "hidden").attr("layer-full", a)
                 }).auto(a), i("#layui-layer-shade" + e.index).css({
                     "background-color": t.shade[1] || "#000",
                     opacity: t.shade[0] || t.shade
-                }), 2 == t.type && 6 == r.ie && e.layero.find("iframe").attr("src", s[0]), 4 == t.type ? e.tips() : e.offset(), t.fixed && n.on("resize", function () {
+                }), 2 == t.type && 6 == r.ie && e.layero.find("iframe").attr("src", s[0]), 4 == t.type ? e.tips() : e.offset(), t.fixed && n.on("resize", function() {
                     e.offset(), (/^\d+%$/.test(t.area[0]) || /^\d+%$/.test(t.area[1])) && e.auto(a), 4 == t.type && e.tips()
-                }), t.time <= 0 || setTimeout(function () {
+                }), t.time <= 0 || setTimeout(function() {
                     r.close(e.index)
                 }, t.time), e.move().callback(), l.anim[t.anim]) {
                 var u = "layer-anim " + l.anim[t.anim];
-                e.layero.addClass(u).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+                e.layero.addClass(u).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
                     i(this).removeClass(u)
                 })
             }
             t.isOutAnim && e.layero.data("isOutAnim", !0)
         }
-    }, s.pt.auto = function (e) {
+    }, s.pt.auto = function(e) {
         var t = this,
             a = t.config,
             o = i("#" + l[0] + e);
@@ -211,7 +211,7 @@
         var s = [o.innerWidth(), o.innerHeight()],
             f = o.find(l[1]).outerHeight() || 0,
             c = o.find("." + l[6]).outerHeight() || 0,
-            u = function (e) {
+            u = function(e) {
                 e = o.find(e), e.height(s[1] - f - c - 2 * (0 | parseFloat(e.css("padding-top"))))
             };
         switch (a.type) {
@@ -222,7 +222,7 @@
                 "" === a.area[1] ? a.maxHeight > 0 && o.outerHeight() > a.maxHeight ? (s[1] = a.maxHeight, u("." + l[5])) : a.fixed && s[1] >= n.height() && (s[1] = n.height(), u("." + l[5])) : u("." + l[5])
         }
         return t
-    }, s.pt.offset = function () {
+    }, s.pt.offset = function() {
         var e = this,
             t = e.config,
             i = e.layero,
@@ -232,7 +232,7 @@
             top: e.offsetTop,
             left: e.offsetLeft
         })
-    }, s.pt.tips = function () {
+    }, s.pt.tips = function() {
         var e = this,
             t = e.config,
             a = e.layero,
@@ -247,18 +247,18 @@
             },
             f = a.find(".layui-layer-TipsG"),
             c = t.tips[0];
-        t.tips[1] || f.remove(), s.autoLeft = function () {
+        t.tips[1] || f.remove(), s.autoLeft = function() {
             s.left + o[0] - n.width() > 0 ? (s.tipLeft = s.left + s.width - o[0], f.css({
                 right: 12,
                 left: "auto"
             })) : s.tipLeft = s.left
-        }, s.where = [function () {
+        }, s.where = [function() {
             s.autoLeft(), s.tipTop = s.top - o[1] - 10, f.removeClass("layui-layer-TipsB").addClass("layui-layer-TipsT").css("border-right-color", t.tips[1])
-        }, function () {
+        }, function() {
             s.tipLeft = s.left + s.width + 10, s.tipTop = s.top, f.removeClass("layui-layer-TipsL").addClass("layui-layer-TipsR").css("border-bottom-color", t.tips[1])
-        }, function () {
+        }, function() {
             s.autoLeft(), s.tipTop = s.top + s.height + 10, f.removeClass("layui-layer-TipsT").addClass("layui-layer-TipsB").css("border-right-color", t.tips[1])
-        }, function () {
+        }, function() {
             s.tipLeft = s.left - o[0] - 10, s.tipTop = s.top, f.removeClass("layui-layer-TipsR").addClass("layui-layer-TipsL").css("border-bottom-color", t.tips[1])
         }], s.where[c - 1](), 1 === c ? s.top - (n.scrollTop() + o[1] + 16) < 0 && s.where[2]() : 2 === c ? n.width() - (s.left + s.width + o[0] + 16) > 0 || s.where[3]() : 3 === c ? s.top - n.scrollTop() + s.height + o[1] + 16 - n.height() > 0 && s.where[0]() : 4 === c && o[0] + 16 - s.left > 0 && s.where[1](), a.find("." + l[5]).css({
             "background-color": t.tips[1],
@@ -267,7 +267,7 @@
             left: s.tipLeft - (t.fixed ? n.scrollLeft() : 0),
             top: s.tipTop - (t.fixed ? n.scrollTop() : 0)
         })
-    }, s.pt.move = function () {
+    }, s.pt.move = function() {
         var e = this,
             t = e.config,
             a = i(document),
@@ -275,11 +275,11 @@
             l = s.find(t.move),
             f = s.find(".layui-layer-resize"),
             c = {};
-        return t.move && l.css("cursor", "move"), l.on("mousedown", function (e) {
+        return t.move && l.css("cursor", "move"), l.on("mousedown", function(e) {
             e.preventDefault(), t.move && (c.moveStart = !0, c.offset = [e.clientX - parseFloat(s.css("left")), e.clientY - parseFloat(s.css("top"))], o.moveElem.css("cursor", "move").show())
-        }), f.on("mousedown", function (e) {
+        }), f.on("mousedown", function(e) {
             e.preventDefault(), c.resizeStart = !0, c.offset = [e.clientX, e.clientY], c.area = [s.outerWidth(), s.outerHeight()], o.moveElem.css("cursor", "se-resize").show()
-        }), a.on("mousemove", function (i) {
+        }), a.on("mousemove", function(i) {
             if (c.moveStart) {
                 var a = i.clientX - c.offset[0],
                     o = i.clientY - c.offset[1],
@@ -302,10 +302,10 @@
                     height: c.area[1] + o
                 }), c.isResize = !0, t.resizing && t.resizing(s)
             }
-        }).on("mouseup", function (e) {
+        }).on("mouseup", function(e) {
             c.moveStart && (delete c.moveStart, o.moveElem.hide(), t.moveEnd && t.moveEnd(s)), c.resizeStart && (delete c.resizeStart, o.moveElem.hide())
         }), e
-    }, s.pt.callback = function () {
+    }, s.pt.callback = function() {
         function e() {
             var e = a.cancel && a.cancel(t.index, n);
             e === !1 || r.close(t.index)
@@ -313,57 +313,57 @@
         var t = this,
             n = t.layero,
             a = t.config;
-        t.openLayer(), a.success && (2 == a.type ? n.find("iframe").on("load", function () {
+        t.openLayer(), a.success && (2 == a.type ? n.find("iframe").on("load", function() {
             a.success(n, t.index)
-        }) : a.success(n, t.index)), 6 == r.ie && t.IE6(n), n.find("." + l[6]).children("a").on("click", function () {
+        }) : a.success(n, t.index)), 6 == r.ie && t.IE6(n), n.find("." + l[6]).children("a").on("click", function() {
             var e = i(this).index();
             if (0 === e) a.yes ? a.yes(t.index, n) : a.btn1 ? a.btn1(t.index, n) : r.close(t.index);
             else {
                 var o = a["btn" + (e + 1)] && a["btn" + (e + 1)](t.index, n);
                 o === !1 || r.close(t.index)
             }
-        }), n.find("." + l[7]).on("click", e), a.shadeClose && i("#layui-layer-shade" + t.index).on("click", function () {
+        }), n.find("." + l[7]).on("click", e), a.shadeClose && i("#layui-layer-shade" + t.index).on("click", function() {
             r.close(t.index)
-        }), n.find(".layui-layer-min").on("click", function () {
+        }), n.find(".layui-layer-min").on("click", function() {
             var e = a.min && a.min(n);
             e === !1 || r.min(t.index, a)
-        }), n.find(".layui-layer-max").on("click", function () {
-            i(this).hasClass("layui-layer-maxmin") ? (r.restore(t.index), a.restore && a.restore(n)) : (r.full(t.index, a), setTimeout(function () {
+        }), n.find(".layui-layer-max").on("click", function() {
+            i(this).hasClass("layui-layer-maxmin") ? (r.restore(t.index), a.restore && a.restore(n)) : (r.full(t.index, a), setTimeout(function() {
                 a.full && a.full(n)
             }, 100))
         }), a.end && (o.end[t.index] = a.end)
-    }, o.reselect = function () {
-        i.each(i("select"), function (e, t) {
+    }, o.reselect = function() {
+        i.each(i("select"), function(e, t) {
             var n = i(this);
             n.parents("." + l[0])[0] || 1 == n.attr("layer") && i("." + l[0]).length < 1 && n.removeAttr("layer").show(), n = null
         })
-    }, s.pt.IE6 = function (e) {
-        i("select").each(function (e, t) {
+    }, s.pt.IE6 = function(e) {
+        i("select").each(function(e, t) {
             var n = i(this);
             n.parents("." + l[0])[0] || "none" === n.css("display") || n.attr({
                 layer: "1"
             }).hide(), n = null
         })
-    }, s.pt.openLayer = function () {
+    }, s.pt.openLayer = function() {
         var e = this;
-        r.zIndex = e.config.zIndex, r.setTop = function (e) {
-            var t = function () {
+        r.zIndex = e.config.zIndex, r.setTop = function(e) {
+            var t = function() {
                 r.zIndex++, e.css("z-index", r.zIndex + 1)
             };
             return r.zIndex = parseInt(e[0].style.zIndex), e.on("mousedown", t), r.zIndex
         }
-    }, o.record = function (e) {
+    }, o.record = function(e) {
         var t = [e.width(), e.height(), e.position().top, e.position().left + parseFloat(e.css("margin-left"))];
         e.find(".layui-layer-max").addClass("layui-layer-maxmin"), e.attr({
             area: t
         })
-    }, o.rescollbar = function (e) {
+    }, o.rescollbar = function(e) {
         l.html.attr("layer-full") == e && (l.html[0].style.removeProperty ? l.html[0].style.removeProperty("overflow") : l.html[0].style.removeAttribute("overflow"), l.html.removeAttr("layer-full"))
-    }, e.layer = r, r.getChildFrame = function (e, t) {
+    }, e.layer = r, r.getChildFrame = function(e, t) {
         return t = t || i("." + l[4]).attr("times"), i("#" + l[0] + t).find("iframe").contents().find(e)
-    }, r.getFrameIndex = function (e) {
+    }, r.getFrameIndex = function(e) {
         return i("#" + e).parents("." + l[4]).attr("times")
-    }, r.iframeAuto = function (e) {
+    }, r.iframeAuto = function(e) {
         if (e) {
             var t = r.getChildFrame("html", e).outerHeight(),
                 n = i("#" + l[0] + e),
@@ -375,9 +375,9 @@
                 height: t
             })
         }
-    }, r.iframeSrc = function (e, t) {
+    }, r.iframeSrc = function(e, t) {
         i("#" + l[0] + e).find("iframe").attr("src", t)
-    }, r.style = function (e, t, n) {
+    }, r.style = function(e, t, n) {
         var a = i("#" + l[0] + e),
             r = a.find(".layui-layer-content"),
             s = a.attr("type"),
@@ -389,7 +389,7 @@
         }) : r.css({
             height: parseFloat(t.height) - f - c - parseFloat(r.css("padding-top")) - parseFloat(r.css("padding-bottom"))
         }))
-    }, r.min = function (e, t) {
+    }, r.min = function(e, t) {
         var a = i("#" + l[0] + e),
             s = a.find(l[1]).outerHeight() || 0,
             f = a.attr("minLeft") || 181 * o.minIndex + "px",
@@ -402,7 +402,7 @@
             position: "fixed",
             overflow: "hidden"
         }, !0), a.find(".layui-layer-min").hide(), "page" === a.attr("type") && a.find(l[4]).hide(), o.rescollbar(e), a.attr("minLeft") || o.minIndex++, a.attr("minLeft", f)
-    }, r.restore = function (e) {
+    }, r.restore = function(e) {
         var t = i("#" + l[0] + e),
             n = t.attr("area").split(",");
         t.attr("type");
@@ -414,9 +414,9 @@
             position: t.attr("position"),
             overflow: "visible"
         }, !0), t.find(".layui-layer-max").removeClass("layui-layer-maxmin"), t.find(".layui-layer-min").show(), "page" === t.attr("type") && t.find(l[4]).show(), o.rescollbar(e)
-    }, r.full = function (e) {
+    }, r.full = function(e) {
         var t, a = i("#" + l[0] + e);
-        o.record(a), l.html.attr("layer-full") || l.html.css("overflow", "hidden").attr("layer-full", e), clearTimeout(t), t = setTimeout(function () {
+        o.record(a), l.html.attr("layer-full") || l.html.css("overflow", "hidden").attr("layer-full", e), clearTimeout(t), t = setTimeout(function() {
             var t = "fixed" === a.css("position");
             r.style(e, {
                 top: t ? 0 : n.scrollTop(),
@@ -425,16 +425,16 @@
                 height: n.height()
             }, !0), a.find(".layui-layer-min").hide()
         }, 100)
-    }, r.title = function (e, t) {
+    }, r.title = function(e, t) {
         var n = i("#" + l[0] + (t || r.index)).find(l[1]);
         n.html(e)
-    }, r.close = function (e) {
+    }, r.close = function(e) {
         var t = i("#" + l[0] + e),
             n = t.attr("type"),
             a = "layer-anim-close";
         if (t[0]) {
             var s = "layui-layer-wrap",
-                f = function () {
+                f = function() {
                     if (n === o.type[1] && "object" === t.attr("conType")) {
                         t.children(":not(." + l[5] + ")").remove();
                         for (var a = t.find("." + s), r = 0; r < 2; r++) a.unwrap();
@@ -448,28 +448,28 @@
                     }
                     "function" == typeof o.end[e] && o.end[e](), delete o.end[e]
                 };
-            t.data("isOutAnim") && t.addClass("layer-anim " + a), i("#layui-layer-moves, #layui-layer-shade" + e).remove(), 6 == r.ie && o.reselect(), o.rescollbar(e), t.attr("minLeft") && (o.minIndex--, o.minLeft.push(t.attr("minLeft"))), r.ie && r.ie < 10 || !t.data("isOutAnim") ? f() : setTimeout(function () {
+            t.data("isOutAnim") && t.addClass("layer-anim " + a), i("#layui-layer-moves, #layui-layer-shade" + e).remove(), 6 == r.ie && o.reselect(), o.rescollbar(e), t.attr("minLeft") && (o.minIndex--, o.minLeft.push(t.attr("minLeft"))), r.ie && r.ie < 10 || !t.data("isOutAnim") ? f() : setTimeout(function() {
                 f()
             }, 200)
         }
-    }, r.closeAll = function (e) {
-        i.each(i("." + l[0]), function () {
+    }, r.closeAll = function(e) {
+        i.each(i("." + l[0]), function() {
             var t = i(this),
                 n = e ? t.attr("type") === e : 1;
             n && r.close(t.attr("times")), n = null
         })
     };
     var f = r.cache || {},
-        c = function (e) {
+        c = function(e) {
             return f.skin ? " " + f.skin + " " + f.skin + "-" + e : ""
         };
-    r.prompt = function (e, t) {
+    r.prompt = function(e, t) {
         var a = "";
         if (e = e || {}, "function" == typeof e && (t = e), e.area) {
             var o = e.area;
             a = 'style="width: ' + o[0] + "; height: " + o[1] + ';"', delete e.area
         }
-        var s, l = 2 == e.formType ? '<textarea class="layui-layer-input"' + a + "></textarea>" : function () {
+        var s, l = 2 == e.formType ? '<textarea class="layui-layer-input"' + a + "></textarea>" : function() {
                 return '<input type="' + (1 == e.formType ? "password" : "text") + '" class="layui-layer-input">'
             }(),
             f = e.success;
@@ -479,18 +479,18 @@
             content: l,
             skin: "layui-layer-prompt" + c("prompt"),
             maxWidth: n.width(),
-            success: function (t) {
+            success: function(t) {
                 s = t.find(".layui-layer-input"), s.val(e.value || "").focus(), "function" == typeof f && f(t)
             },
             resize: !1,
-            yes: function (i) {
+            yes: function(i) {
                 var n = s.val();
                 "" === n ? s.focus() : n.length > (e.maxlength || 500) ? r.tips("&#x6700;&#x591A;&#x8F93;&#x5165;" + (e.maxlength || 500) + "&#x4E2A;&#x5B57;&#x6570;", s, {
                     tips: 1
                 }) : t && t(n, i, s)
             }
         }, e))
-    }, r.tab = function (e) {
+    }, r.tab = function(e) {
         e = e || {};
         var t = e.tab || {},
             n = "layui-this",
@@ -499,7 +499,7 @@
             type: 1,
             skin: "layui-layer-tab" + c("tab"),
             resize: !1,
-            title: function () {
+            title: function() {
                 var e = t.length,
                     i = 1,
                     a = "";
@@ -507,7 +507,7 @@
                     for (a = '<span class="' + n + '">' + t[0].title + "</span>"; i < e; i++) a += "<span>" + t[i].title + "</span>";
                 return a
             }(),
-            content: '<ul class="layui-layer-tabmain">' + function () {
+            content: '<ul class="layui-layer-tabmain">' + function() {
                 var e = t.length,
                     i = 1,
                     a = "";
@@ -515,10 +515,10 @@
                     for (a = '<li class="layui-layer-tabli ' + n + '">' + (t[0].content || "no content") + "</li>"; i < e; i++) a += '<li class="layui-layer-tabli">' + (t[i].content || "no  content") + "</li>";
                 return a
             }() + "</ul>",
-            success: function (t) {
+            success: function(t) {
                 var o = t.find(".layui-layer-title").children(),
                     r = t.find(".layui-layer-tabmain").children();
-                o.on("mousedown", function (t) {
+                o.on("mousedown", function(t) {
                     t.stopPropagation ? t.stopPropagation() : t.cancelBubble = !0;
                     var a = i(this),
                         o = a.index();
@@ -526,12 +526,12 @@
                 }), "function" == typeof a && a(t)
             }
         }, e))
-    }, r.photos = function (t, n, a) {
+    }, r.photos = function(t, n, a) {
         function o(e, t, i) {
             var n = new Image;
-            return n.src = e, n.complete ? t(n) : (n.onload = function () {
+            return n.src = e, n.complete ? t(n) : (n.onload = function() {
                 n.onload = null, t(n)
-            }, void(n.onerror = function (e) {
+            }, void(n.onerror = function(e) {
                 n.onerror = null, i(e)
             }))
         }
@@ -547,8 +547,8 @@
                 if (0 === u.length) return r.msg("&#x6CA1;&#x6709;&#x56FE;&#x7247;")
             } else {
                 var p = i(t.photos),
-                    h = function () {
-                        u = [], p.find(t.img).each(function (e) {
+                    h = function() {
+                        u = [], p.find(t.img).each(function(e) {
                             var t = i(this);
                             t.attr("layer-index", e), u.push({
                                 alt: t.attr("alt"),
@@ -559,7 +559,7 @@
                         })
                     };
                 if (h(), 0 === u.length) return;
-                if (n || p.on("click", t.img, function () {
+                if (n || p.on("click", t.img, function() {
                         var e = i(this),
                             n = e.attr("layer-index");
                         r.photos(i.extend(t, {
@@ -572,35 +572,35 @@
                         }), !0), h()
                     }), !n) return
             }
-            s.imgprev = function (e) {
+            s.imgprev = function(e) {
                 s.imgIndex--, s.imgIndex < 1 && (s.imgIndex = u.length), s.tabimg(e)
-            }, s.imgnext = function (e, t) {
+            }, s.imgnext = function(e, t) {
                 s.imgIndex++, s.imgIndex > u.length && (s.imgIndex = 1, t) || s.tabimg(e)
-            }, s.keyup = function (e) {
+            }, s.keyup = function(e) {
                 if (!s.end) {
                     var t = e.keyCode;
                     e.preventDefault(), 37 === t ? s.imgprev(!0) : 39 === t ? s.imgnext(!0) : 27 === t && r.close(s.index)
                 }
-            }, s.tabimg = function (e) {
+            }, s.tabimg = function(e) {
                 if (!(u.length <= 1)) return f.start = s.imgIndex - 1, r.close(s.index), r.photos(t, !0, e)
-            }, s.event = function () {
-                s.bigimg.hover(function () {
+            }, s.event = function() {
+                s.bigimg.hover(function() {
                     s.imgsee.show()
-                }, function () {
+                }, function() {
                     s.imgsee.hide()
-                }), s.bigimg.find(".layui-layer-imgprev").on("click", function (e) {
+                }), s.bigimg.find(".layui-layer-imgprev").on("click", function(e) {
                     e.preventDefault(), s.imgprev()
-                }), s.bigimg.find(".layui-layer-imgnext").on("click", function (e) {
+                }), s.bigimg.find(".layui-layer-imgnext").on("click", function(e) {
                     e.preventDefault(), s.imgnext()
                 }), i(document).on("keyup", s.keyup)
             }, s.loadi = r.load(1, {
                 shade: !("shade" in t) && .9,
                 scrollbar: !1
-            }), o(u[d].src, function (n) {
+            }), o(u[d].src, function(n) {
                 r.close(s.loadi), s.index = r.open(i.extend({
                     type: 1,
                     id: "layui-layer-photos",
-                    area: function () {
+                    area: function() {
                         var a = [n.width, n.height],
                             o = [i(e).width() - 100, i(e).height() - 100];
                         if (!t.full && (a[0] > o[0] || a[1] > o[1])) {
@@ -620,33 +620,33 @@
                     isOutAnim: !1,
                     skin: "layui-layer-photos" + c("photos"),
                     content: '<div class="layui-layer-phimg"><img src="' + u[d].src + '" alt="' + (u[d].alt || "") + '" layer-pid="' + u[d].pid + '"><div class="layui-layer-imgsee">' + (u.length > 1 ? '<span class="layui-layer-imguide"><a href="javascript:;" class="layui-layer-iconext layui-layer-imgprev"></a><a href="javascript:;" class="layui-layer-iconext layui-layer-imgnext"></a></span>' : "") + '<div class="layui-layer-imgbar" style="display:' + (a ? "block" : "") + '"><span class="layui-layer-imgtit"><a href="javascript:;">' + (u[d].alt || "") + "</a><em>" + s.imgIndex + "/" + u.length + "</em></span></div></div></div>",
-                    success: function (e, i) {
+                    success: function(e, i) {
                         s.bigimg = e.find(".layui-layer-phimg"), s.imgsee = e.find(".layui-layer-imguide,.layui-layer-imgbar"), s.event(e), t.tab && t.tab(u[d], e), "function" == typeof y && y(e)
                     },
-                    end: function () {
+                    end: function() {
                         s.end = !0, i(document).off("keyup", s.keyup)
                     }
                 }, t))
-            }, function () {
+            }, function() {
                 r.close(s.loadi), r.msg("&#x5F53;&#x524D;&#x56FE;&#x7247;&#x5730;&#x5740;&#x5F02;&#x5E38;<br>&#x662F;&#x5426;&#x7EE7;&#x7EED;&#x67E5;&#x770B;&#x4E0B;&#x4E00;&#x5F20;&#xFF1F;", {
                     time: 3e4,
                     btn: ["&#x4E0B;&#x4E00;&#x5F20;", "&#x4E0D;&#x770B;&#x4E86;"],
-                    yes: function () {
+                    yes: function() {
                         u.length > 1 && s.imgnext(!0, !0)
                     }
                 })
             })
         }
-    }, o.run = function (t) {
-        i = t, n = i(e), l.html = i("html"), r.open = function (e) {
+    }, o.run = function(t) {
+        i = t, n = i(e), l.html = i("html"), r.open = function(e) {
             var t = new s(e);
             return t.index
         }
-    }, e.layui && layui.define ? (r.ready(), layui.define("jquery", function (t) {
+    }, e.layui && layui.define ? (r.ready(), layui.define("jquery", function(t) {
         r.path = layui.cache.dir, o.run(layui.$), e.layer = r, t("layer", r)
-    })) : "function" == typeof define && define.amd ? define(["jquery"], function () {
+    })) : "function" == typeof define && define.amd ? define(["jquery"], function() {
         return o.run(e.jQuery), r
-    }) : function () {
+    }) : function() {
         o.run(e.jQuery), r.ready()
     }()
 }(window);

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="loginShare"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/shareList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table rebateChargeoff">
+                <colgroup>
+                    <col width="150">
+                    <col width="150">
+                    <col width="250">
+                    <col width="180">
+                    <col width="180">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>层级</th>
+                        <th>账号</th>
+                        <th>讯息</th>
+                        <th>登录时间</th>
+                        <th>登录IP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>股东</td>
+                        <td>zzz1111</td>
+                        <td>登出</td>
+                        <td>2018-05-23 23:21:44</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>股东</td>
+                        <td>zzz1111</td>
+                        <td>登录成功     http://huycaitian.sharksu.com/agent/agent</td>
+                        <td>2018-05-23 23:21:42</td>
+                        <td>182.18.239.162</td>
+                    </tr>
+                    <tr>
+                        <td>股东</td>
+                        <td>zzz1111</td>
+                        <td>登出</td>
+                        <td>2018-05-01 02:26:16</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>股东</td>
+                        <td>zzz1111</td>
+                        <td>登录成功     http://huycaitian.sharksu.com/agent/agent</td>
+                        <td>2018-05-01 02:21:12</td>
+                        <td>182.18.239.162</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="magt10 layui-center">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+            <!-- <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">返回</button> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

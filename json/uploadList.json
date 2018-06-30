@@ -1,0 +1,54 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 4,
+    "data": [{
+            "rebateId": "25245",
+            "rebateModuleName": "关于我们",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        },
+        {
+            "rebateId": "25243",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        },
+        {
+            "rebateId": "25240",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25245",
+            "rebateModuleName": "关于我们",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25243",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25240",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25245",
+            "rebateModuleName": "关于我们",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25243",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "4"
+        }, {
+            "rebateId": "25240",
+            "rebateModuleName": "代理加盟",
+            "uploadListTime": "2018-05-23 03:39:32",
+            "uploadListEdit": "3"
+        }
+    ]
+}

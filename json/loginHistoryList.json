@@ -1,0 +1,34 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 4,
+    "data": [{
+            "loginHistoryLevel": "0",
+            "loginHistoryAccount": "okok111",
+            "loginHistoryMsg": "登录成功 访问设备：手机 http://www.try1024.com/api/wap/wapLogin/login,sessionid=63726523D4264A256AB84F1A41748276",
+            "loginHistoryTime": "2018-05-26 02:45:01",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryLevel": "0",
+            "loginHistoryAccount": "okok111",
+            "loginHistoryMsg": "密码错误 访问设备：手机 http://www.try1024.com/api/wap/wapLogin/login,sessionid=63726523D4264A256AB84F1A41748276",
+            "loginHistoryTime": "2018-05-26 02:44:56",
+            "loginHistoryIP": "180.232.84.51"
+        },
+        {
+            "loginHistoryLevel": "0",
+            "loginHistoryAccount": "okok111",
+            "loginHistoryMsg": "登录成功 访问设备：电脑 http://www.try1024.com/member/member,sessionid=9F090E10F07D8936E0E40B9660CFA494",
+            "loginHistoryTime": "2018-05-25 06:22:33",
+            "loginHistoryIP": "182.18.239.162"
+        },
+        {
+            "loginHistoryLevel": "0",
+            "loginHistoryAccount": "okok111",
+            "loginHistoryMsg": "会员登出 sessionid=4095BF6582E3F8EA5D4FC194641E57B1",
+            "loginHistoryTime": "2018-05-25 03:47:18",
+            "loginHistoryIP": ""
+        }
+    ]
+}

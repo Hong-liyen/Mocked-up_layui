@@ -16,6 +16,7 @@
 
 <body class="childrenBody">
     <div class="addagent">
+        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="agentList.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
         <div class="layui-form">
             <table class="layui-table">
                 <colgroup>
@@ -24,11 +25,6 @@
                     <col width="80">
                     <col width="250">
                 </colgroup>
-                <thead>
-                    <tr>
-                        <th colspan="4">账户管理>添加代理账号</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                         <td>上级用户：</td>
@@ -42,25 +38,33 @@
                         <td>
                             <div class="layui-inline">
                                 <select name="">
-                                <option value="0">会员</option>
-                                <option value="1">代理</option>
+                                <option value="0">代理</option>
+                                <option value="1">会员</option>
                             </div>
                         </td>
-                        <td>昵称</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>昵称：
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span></td>
+                            <!--  -->
+                        </td>
                     </tr>
                     <tr>
-                        <td>用戶名：</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>用戶名：
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span></td>
-                        <td>昵称状态</td>
+                            <!--  -->
+                        </td>
+                        <td>昵称状态：</td>
                         <td>
                             <div class="layui-inline">
                                 <select name="">
@@ -71,13 +75,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>密码：</td>
+                        <td>
+                            <!-- uifix_105 -->
+                            <span>*</span>密码：
+                        </td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span class="mark">*</span></td>
-                        <td>投注状态</td>
+                            <!--  -->
+                        </td>
+                        <td>投注状态：</td>
                         <td>
                             <div class="layui-inline">
                                 <select name="">
@@ -92,39 +100,39 @@
                         <td colspan="3">
                             <div class="rebasebox">
                                 <div class="title">
-                                    <span class="mark">*</span> AG
+                                    <span>*</span> AG
                                 </div>
                                 <div class="layui-inline">
                                     <input type="text" class="layui-input">
                                 </div>
-                                <div class="desc">可设置范围：0-0.4</div>
+                                <div class="desc">可设置范围：0-0.4％</div>
                             </div>
                             <div class="rebasebox">
                                 <div class="title">
-                                    <span class="mark">*</span> OG
+                                    <span>*</span> OG
                                 </div>
                                 <div class="layui-inline">
                                     <input type="text" class="layui-input">
                                 </div>
-                                <div class="desc">可设置范围：0-0.4</div>
+                                <div class="desc">可设置范围：0-0.4％</div>
                             </div>
                             <div class="rebasebox">
                                 <div class="title">
-                                    <span class="mark">*</span> BB
+                                    <span>*</span> BB
                                 </div>
                                 <div class="layui-inline">
                                     <input type="text" class="layui-input">
                                 </div>
-                                <div class="desc">可设置范围：0-0.4</div>
+                                <div class="desc">可设置范围：0-0.4％</div>
                             </div>
                             <div class="rebasebox">
                                 <div class="title">
-                                    <span class="mark">*</span> ALLBET
+                                    <span>*</span> ALLBET
                                 </div>
                                 <div class="layui-inline">
                                     <input type="text" class="layui-input">
                                 </div>
-                                <div class="desc">可设置范围：0-0.4</div>
+                                <div class="desc">可设置范围：0-0.4％</div>
                             </div>
                         </td>
                     </tr>
@@ -133,7 +141,6 @@
         </div>
         <div class="magt10 layui-center">
             <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
-            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
         </div>
     </div>
     <script type="text/javascript" src="../../layui/layui.js"></script>

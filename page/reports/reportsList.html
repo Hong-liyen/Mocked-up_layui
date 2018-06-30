@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>报表列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <form class="layui-form reportList">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">选择平台：</label>
+                        <div class="layui-input-block">
+                            <select name="">
+                        <option value="0">全部</option>
+                        <option value="1">BB视讯</option>
+                        <option value="2">AG视讯</option>
+                        <option value="3">OG视讯</option>
+                        <option value="4">AB视讯</option>
+                    </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <select name="">
+                <option value="0">大股东</option>
+                <option value="1">股东</option>
+                <option value="2">总代</option>
+                <option value="3">代理</option>
+                <option value="4">会员</option>
+            </select>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">账号：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" placeholder=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">日期查询：</label>
+                        <div class="layui-input-block">
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+                            </div>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <select name="">
+                <option value="0">快选日期</option>
+                <option value="1">今日</option>
+                <option value="2">本周</option>
+                <option value="3">上周</option>
+                <option value="4">本月</option>
+                <option value="5">上月</option>
+            </select>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+            </form>
+        </blockquote>
+        <table id="reportsList" lay-filter="reportsList">
+        </table>
+        <!--审核状态-->
+        <script type="text/html" id="agentAccount">
+            {{# if( d.agentAccount == "0"){ }}
+            <span class="layui-blue">启用</span> {{# } else if( d.agentAccount == "1") { }}
+            <span class="layui-red">停用</span> {{# } else if( d.agentAccount == "2") { }}
+            <span class="layui-red">冻结</span> {{# }}}
+        </script>
+
+        <script type="text/html" id="agentBet">
+            {{# if( d.agentBet == "0"){ }}
+            <span class="layui-blue">启用</span> {{# } else { }}
+            <span class="layui-red">停用</span> {{# }}}
+        </script>
+
+        <!--操作-->
+        <script type="text/html" id="agentListBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/addnone1stagent.html">添加</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/infoAgent.html">信息</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/editnone1stagent.html">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/authorityAgent.html">权限</a>
+        </script>
+    </form>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="reportsList.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
+</body>
+
+</html>

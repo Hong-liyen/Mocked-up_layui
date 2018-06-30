@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加股东</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+    <div class="addagent"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="remitStoreList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="120">
+                    <col>
+                </colgroup>
+                <!-- <thead>
+                    <tr>
+                        <th colspan="4">账户管理>会员修改</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td>支付方式</td>
+                        <td>
+                            <div class="layui-inline">
+                                <select name="search" id="search" lay-search lay-filter="searchPage">
+                                    <option value="0">remitment乾一出款</option>
+                                    <option value="1">remitment速付出款</option>
+                                    <option value="2">remitment顺心付网银出款</option>
+                                    <option value="3">remitment付聚宝出款</option>
+                                    <option value="4">remitmentE汇出款</option>
+                                    <option value="5">remitment随意付网银出款</option>
+                                    <option value="6">remitment全银网银出款</option>
+                                    <option value="7">remitment呈杞源网银出款</option>
+                                    <option value="8">remitment久通网银出款</option>
+                                    <option value="9">新秒付出款</option>
+                                    <option value="10">新易聚合云网银出款</option>
+                                    <option value="11">久通网银出款</option>
+                                    <option value="12">Npay网银出款</option>
+                                    <option value="13">32pay网银出款</option>
+                                    <option value="14">泽圣网银出款</option>
+                                    <option value="15">好利宝网银出款</option>
+                                    <option value="16">芒果网银出款</option>
+                                    <option value="17">必付网银出款4.0.1</option>
+                                    <option value="18">天付宝网银出款</option>
+                                    <option value="19">高通网银出款</option>
+                                    <option value="20">聚合网银出款</option>
+                                    <option value="21">必付网银出款</option>
+                                    <option value="22">易转网银出款</option>
+                                    <option value="23">汇博网银出款</option>
+                                    <option value="24">新秒付网银出款</option>
+                                    <option value="25">科讯网银出款</option>
+                                    <option value="26">智惠网银出款.0.1</option>
+                                    <option value="27">新e付网银出款</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>商号代称</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="秒付网银owen">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>商号</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="19******69">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密钥</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="05******2f">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>终端号</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="">
+                            </div>
+                            <span>不需要填写</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>支付域名</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="pay1.mgh244.top">
+                            </div>
+                            <span>支付域名为交易时使用的域名</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>支付网关</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>默认网关</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="http://pay.miaofupay.com">
+                            </div>
+                            <spn>支付网关与默认网关不一致时才需要填写</spn>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>层级</td>
+                        <td>
+                            <div class="layui-form-item" pane="">
+                                <div class="layui-block">
+                                    <input type="checkbox" name="like1[selectAll]" lay-skin="primary" title="全选" >
+                                </div>
+                                <div class="layui-inline">
+                                    <input type="checkbox" name="like1[None]" lay-skin="primary" title="未分层" checked>
+                                    <input type="checkbox" name="like1[1]" lay-skin="primary" title="洗码层1" checked>
+                                    <input type="checkbox" name="like1[BWT]" lay-skin="primary" title="BWT" checked>
+                                    <input type="checkbox" name="like1[000]" lay-skin="primary" title="000">
+                                    <input type="checkbox" name="like1[Kelly测试层001]" lay-skin="primary" title="Kelly测试层001">
+                                    <input type="checkbox" name="like1[VIP级别(Jimmy)]" lay-skin="primary" title="VIP级别(Jimmy)" checked>
+                                    <input type="checkbox" name="like1[测试]" lay-skin="primary" title="测试">
+                                    <input type="checkbox" name="like1[426测试新增层级]" lay-skin="primary" title="426测试新增层级">
+                                    <input type="checkbox" name="like1[科伦vip层]" lay-skin="primary" title="科伦vip层">
+                                    <input type="checkbox" name="like1[qwewr12]" lay-skin="primary" title="qwewr12">
+                                    <input type="checkbox" name="like1[nina001]" lay-skin="primary" title="nina001">
+                                    <input type="checkbox" name="like1[kelly001]" lay-skin="primary" title="kelly001">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>最高限额</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="9999">
+                            </div>
+                            <span>填写支付方最高出款金额，必须介于新线上设定的最低出款和最高出款之间</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>动态口令(操作人)</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input" placeholder="">
+                            </div>
+                            <span>（未绑定请留空）</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="layui-center">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">修改</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../layui/layui.all.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form,
+            upload = layui.upload;
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+        
+        layui.use('upload', function(){
+            var $ = layui.jquery,
+            upload = layui.upload;
+            //普通图片上传
+            upload.render({
+                elem: '#uploadDoc'
+                ,url: '/upload/'
+                ,accept: 'file' //普通文件
+                ,done: function(res){
+                console.log(res)
+                }
+            });
+            var uploadInst = upload.render({
+                elem: '#uploadImg'
+                ,url: '/upload/'
+                ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                });
+                }
+                ,done: function(res){
+                //如果上传失败
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+                }
+                ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

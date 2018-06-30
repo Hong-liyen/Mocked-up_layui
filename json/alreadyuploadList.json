@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 5,
+    "data": [{
+            "alreadyCaseNumber": "25241",
+            "alreadyCaseName": "关于我们",
+            "alreadyCaseTime": "2018-05-23 02:43:35",
+            "alreadyuploadStatus": "0"
+        },
+        {
+            "alreadyCaseNumber": "25240",
+            "alreadyCaseName": "代理加盟",
+            "alreadyCaseTime": "2018-05-23 02:43:35",
+            "alreadyuploadStatus": "0"
+        },
+        {
+            "alreadyCaseNumber": "25238",
+            "alreadyCaseName": "关于我们",
+            "alreadyCaseTime": "2018-05-23 02:43:35",
+            "alreadyuploadStatus": "0"
+        },
+        {
+            "alreadyCaseNumber": "25236",
+            "alreadyCaseName": "手机版优惠活动",
+            "alreadyCaseTime": "2018-05-23 02:43:35",
+            "alreadyuploadStatus": "0"
+        },
+        {
+            "alreadyCaseNumber": "25234",
+            "alreadyCaseName": "代理加盟",
+            "alreadyCaseTime": "2018-05-23 02:43:35",
+            "alreadyuploadStatus": "0"
+        }
+    ]
+}
